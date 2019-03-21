@@ -1,0 +1,28 @@
+new_alias_def[chance_block] = {
+    base = float
+
+    ## cardinality = 0..inf
+    modifier = {
+        add = float_field
+        add = {
+            value = float_field
+            ## cardinality = 0..1
+            multiply = {
+                value = float_field
+            }
+        }
+
+        ## cardinality = 1..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}
+
+new_alias_def[weight_block] = {
+    ## cardinality = 0..inf
+    modifier = {
+        add = float_field
+
+        ## cardinality = 1..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}

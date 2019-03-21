@@ -47,8 +47,5 @@ ai_objective = {
 
     mode = enum[ai_objective_weight_modes]
 
-    weight = {
-        ## cardinality = 0..inf
-        alias_name[weight_chance_modifier] = alias_match_left[weight_chance_modifier]
-    }
+	new_alias_left[weight_block:weight] = new_alias_right[weight_block:weight]
 }
