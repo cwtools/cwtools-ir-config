@@ -115,6 +115,7 @@ ai_diplochance_validation = {
     enum[ai_diplochance_types] = {
         ## cardinality = 0..inf
         enum[ai_diplochance_factors] = {
+            # TODO: offset is probably int. dunno how to implement atm
             enum[ai_diplochance_offset_scale] = float
         }
     }
