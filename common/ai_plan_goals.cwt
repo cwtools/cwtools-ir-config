@@ -44,7 +44,7 @@ ai_plan_goal = {
 
     # TODO: Confirm! I'm fairly sure that's how it works, though
     ## cardinality = 0..inf
-    alias_name[modifier_country] = alias_match_left[modifier_country]
+    alias_name[modifier] = alias_match_left[modifier]
 
     ## cardinality = 0..1
     aggressive = int

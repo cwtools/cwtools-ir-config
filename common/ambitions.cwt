@@ -51,6 +51,6 @@ ambition = {
 	modifier = {
 		# TODO: Are modifiers even going to be aliases or something else like enums or types?
 		## cardinality = 0..inf
-		alias_name[modifier_character] = alias_match_left[modifier_character]
+		alias_name[modifier] = alias_match_left[modifier]
 	}
 }
