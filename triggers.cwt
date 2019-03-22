@@ -1,0 +1,1288 @@
+###does the province have the required tax income?
+## scopes = province
+alias[trigger:province_tax_income] = replace_me
+###Is the scope character a General?
+## scopes = character
+alias[trigger:is_general] = replace_me
+###Compare the current date.
+## scopes = none
+alias[trigger:current_date] = replace_me
+###is the character imprisoned?
+## scopes = character
+alias[trigger:prisoner] = replace_me
+###Checks if a target is in a variable list is_target_in_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+## scopes = none
+alias[trigger:is_target_in_local_variable_list] = replace_me
+###The total population of a country
+## scopes = country
+alias[trigger:country_population] = replace_me
+###a negated AND trigger
+## scopes = none
+alias[trigger:nand] = replace_me
+###does the character have this many traits?
+## scopes = character
+alias[trigger:number_of_traits] = replace_me
+###Is the scope character a ClanChief?
+## scopes = character
+alias[trigger:is_clan_chief] = replace_me
+###Does this country have this active omen?
+## scopes = country
+alias[trigger:has_this_omen] = replace_me
+###How many percent morale does this unit have???
+## scopes = unit
+alias[trigger:morale_percentage] = replace_me
+###does the country have an opinion type towards another country?
+## scopes = country
+alias[trigger:has_opinion] = replace_me
+###Checks
+## scopes = country
+alias[trigger:populist_party_support] = replace_me
+###is the country an ai or not?
+## scopes = country
+alias[trigger:is_ai] = replace_me
+###check if a Unit has a specific modifier
+## scopes = unit
+alias[trigger:has_unit_modifier] = replace_me
+###Iterate through all subunits in a unit any_sub_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = unit
+alias[trigger:any_sub_unit] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the country have the required Treasury?
+## scopes = country
+alias[trigger:treasury] = replace_me
+###Does the character have the same culture group as the target?
+## scopes = character
+alias[trigger:has_same_culture_group_as] = replace_me
+###Is the scope character a InCommand?
+## scopes = character
+alias[trigger:in_command] = replace_me
+###Checks the size of a variable list variable_list_size = { name = X target >= Y } Where X is the name of the variable Where Y is a script value or number
+## scopes = none
+alias[trigger:global_variable_list_size] = replace_me
+###Checks if a province has a specific trade_goods
+## scopes = province
+alias[trigger:trade_goods] = replace_me
+###countryis in civil war ?
+## scopes = country
+alias[trigger:has_civil_war] = replace_me
+###does the province have the required num_other_religion ?
+## scopes = province
+alias[trigger:num_other_religion] = replace_me
+###does the country have the required MILITARY Power level?
+## scopes = country
+alias[trigger:military_power] = replace_me
+###does the character have required amount of military traits?
+## scopes = character
+alias[trigger:number_of_military_traits] = replace_me
+###does the character have the required zeal skill level?
+## scopes = character
+alias[trigger:zeal] = replace_me
+###does the country have the required RELIGIOUS Power level?
+## scopes = country
+alias[trigger:religious_power] = replace_me
+###Iterate through all provinces in a area any_area_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = area
+alias[trigger:any_area_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks
+## scopes = country
+alias[trigger:civic_tech] = replace_me
+###Is this a neighbour of the target province?
+## scopes = province
+alias[trigger:is_neighbor] = replace_me
+###does the country have this many families?
+## scopes = country
+alias[trigger:num_of_families] = replace_me
+###Returns true if the specified number of sub-triggers return true calc_true_if = { amount = 2 <trigger> <trigger> <trigger> }
+## scopes = none
+alias[trigger:calc_true_if] = replace_me
+###unit is movement locked
+## scopes = unit
+alias[trigger:is_movement_locked] = replace_me
+###check if a country has a specific modifier
+## scopes = country
+alias[trigger:has_country_modifier] = replace_me
+###Iterate through all existing countries any_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_country] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Iterate through all friends any_friend = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_friend] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the character have the required Health?
+## scopes = character
+alias[trigger:health] = replace_me
+###if a country can pay price X
+## scopes = country
+alias[trigger:can_pay_price] = replace_me
+###Does the character have the same culture as the target?
+## scopes = character
+alias[trigger:has_same_culture_as] = replace_me
+###does the characer have an office or not?
+## scopes = character
+alias[trigger:has_any_office] = replace_me
+###Does the scoped city belong to a given named Region or the same Region as the target city Region = my_Region_name OR Region = from.capital_scope
+## scopes = province
+alias[trigger:region] = replace_me
+###if a country is a war with another country
+## scopes = country
+alias[trigger:war_with] = replace_me
+###Iterate through all states in a region any_region_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = region
+alias[trigger:any_region_state] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Is the country this culture group?
+## scopes = country
+alias[trigger:country_culture_group] = replace_me
+###Switch on a trigger for the evaluation of another trigger with an optional fallback trigger. switch = { 	trigger = simple_assign_trigger 	case_1 = { <triggers> } 	case_2 = { <triggers> } 	case_n = { <triggers> } 	fallback = { <triggers> }
+## scopes = none
+alias[trigger:switch] = replace_me
+###Is the character a parent of the target character?
+## scopes = character
+alias[trigger:is_parent_of] = replace_me
+###Is the scope character a Admiral?
+## scopes = character
+alias[trigger:is_admiral] = replace_me
+###does the province have the required commerce income?
+## scopes = province
+alias[trigger:province_commerce_income] = replace_me
+###does the country have the required Max Manpower?
+## scopes = country
+alias[trigger:max_manpower] = replace_me
+###does the country have the required ORATORY Power level?
+## scopes = country
+alias[trigger:oratory_power] = replace_me
+###Iterate through all states in a area any_area_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = area
+alias[trigger:any_area_state] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the family have the required members?
+## scopes = family
+alias[trigger:num_of_members] = replace_me
+###Iterate through all supportasHeir any_support_as_heir = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_support_as_heir] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Does the character have this religion?
+## scopes = character
+alias[trigger:has_religion] = replace_me
+###number of months to planned war, or 0 if already at war
+## scopes = country
+alias[trigger:months_to_war] = replace_me
+###Checks whether the specified scope target is a valid character
+## scopes = none
+alias[trigger:target_is_valid_character] = replace_me
+###Is the target character alive?
+## scopes = none
+alias[trigger:is_target_alive] = replace_me
+###Does the scoped country own any provinces
+## scopes = country
+alias[trigger:has_land] = replace_me
+###Checks if a culture is dominant in a province
+## scopes = province
+alias[trigger:dominant_province_culture] = replace_me
+###Is the character currently in the same province as the target character?
+## scopes = character
+alias[trigger:is_at_same_location] = replace_me
+###Iterate through all items in local list. list = name or variable = name any_in_local_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_in_local_list] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks if any province meets the specified criteria any_province = { triggers }
+## scopes = none
+alias[trigger:any_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###is the province a capital or not?
+## scopes = province
+alias[trigger:is_capital] = replace_me
+###Can the scope character get Friends?
+## scopes = character
+alias[trigger:can_get_friends] = replace_me
+###Iterate through all allied countries any_allied_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_allied_country] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###check if a Province has a specific modifier
+## scopes = province
+alias[trigger:has_province_modifier] = replace_me
+###is the province a Port or not?
+## scopes = province
+alias[trigger:is_port] = replace_me
+###does the character lead the specific party?
+## scopes = character
+alias[trigger:is_party_leader_of] = replace_me
+###does the character have a valid Job?
+## scopes = character
+alias[trigger:has_job] = replace_me
+###Iterate through all characters in a country any_character = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_character] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks hapiness for population of a specified type
+## scopes = province
+alias[trigger:freemen_happiness] = replace_me
+###Iterate through all subunits in all units in a country any_country_sub_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_country_sub_unit] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the province have the required num_foreign_culture ?
+## scopes = province
+alias[trigger:num_foreign_culture] = replace_me
+###Does AI for a country want to build road in this province?
+## scopes = province
+alias[trigger:ai_wants_road] = replace_me
+###Check if a Unit is locked
+## scopes = unit
+alias[trigger:is_unit_locked] = replace_me
+###Compare the date of the bookmarked game launched.
+## scopes = none
+alias[trigger:game_start_date] = replace_me
+###Checks whether the current scope has the specified variable list set has_variable_list = name
+## scopes = none
+alias[trigger:has_variable_list] = replace_me
+###does the character have a specific modifier
+## scopes = character
+alias[trigger:has_character_modifier] = replace_me
+###Does the character have this Ambition?
+## scopes = character
+alias[trigger:has_ambition] = replace_me
+###Is the scope character in a tech office?
+## scopes = character
+alias[trigger:has_tech_office] = replace_me
+###The religous unity of the country
+## scopes = country
+alias[trigger:religious_unity] = replace_me
+###does the country have the required Monthly Income?
+## scopes = country
+alias[trigger:has_monthly_income] = replace_me
+###Iterate through all provinces in a state any_state_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = state
+alias[trigger:any_state_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks whether the current scope has the specified variable list set has_variable_list = name
+## scopes = none
+alias[trigger:has_local_variable_list] = replace_me
+###does the country have the required number of provinces?
+## scopes = country
+alias[trigger:num_of_provinces] = replace_me
+###which government a country has
+## scopes = country
+alias[trigger:government] = replace_me
+###Can the character have this Office?
+## scopes = character
+alias[trigger:can_hold_office] = replace_me
+###if a country is in diplomatic range with another country
+## scopes = country
+alias[trigger:in_diplomatic_range] = replace_me
+###Iterate through all commanders in a country any_commander = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_commander] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###negates content of trigger
+## scopes = none
+alias[trigger:not] = replace_me
+###is this party the biggest
+## scopes = country
+alias[trigger:biggest_party] = replace_me
+###is the character old/young enough?
+## scopes = character
+alias[trigger:age] = replace_me
+###Is the character a sibling of the target character?
+## scopes = character
+alias[trigger:is_sibling_of] = replace_me
+###Iterate through all armies in a country any_army = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_army] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks
+## scopes = country
+alias[trigger:oratory_tech] = replace_me
+###Is the character a spouse of the target character?
+## scopes = character
+alias[trigger:is_spouse_of] = replace_me
+###if a country exports to another country
+## scopes = country
+alias[trigger:exports_to] = replace_me
+###does the country have the required Legitimacy?
+## scopes = country
+alias[trigger:legitimacy] = replace_me
+###Returns true if the sum of weights of fulfilled sub-triggers amount to the specified sum weighted_calc_true_if = { amount = 10 5 = { <trigger> } 15 = { <trigger> } 7 = { <trigger> } }
+## scopes = none
+alias[trigger:weighted_calc_true_if] = replace_me
+###checks the title importance a character has.
+## scopes = character
+alias[trigger:title_importance] = replace_me
+###Check number of clan retinues in a unit
+## scopes = unit
+alias[trigger:num_of_clan_retinues] = replace_me
+###Checks the size of a variable list variable_list_size = { name = X target >= Y } Where X is the name of the variable Where Y is a script value or number
+## scopes = none
+alias[trigger:variable_list_size] = replace_me
+###Is this office empty for the country?
+## scopes = country
+alias[trigger:office_is_empty] = replace_me
+###Is the pop this Religion?
+## scopes = pop
+alias[trigger:pop_religion] = replace_me
+###subunit is clan retinue
+## scopes = subunit
+alias[trigger:is_clan_retinue] = replace_me
+###does the country have the required War Exhaustion?
+## scopes = country
+alias[trigger:has_war_exhaustion] = replace_me
+###does the country have this many characters below max loyalty?
+## scopes = country
+alias[trigger:num_characters_below_max_loyalty] = replace_me
+###Iterate through all areas in a region any_region_area = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = region
+alias[trigger:any_region_area] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the province have this ID?
+## scopes = province
+alias[trigger:province_id] = replace_me
+###The rank w.r.t. to number of subunits compared to other units of country
+## scopes = unit
+alias[trigger:unit_size_rank] = replace_me
+###is the character a successor?
+## scopes = character
+alias[trigger:is_successor] = replace_me
+###Checks if a province is of a specific terrain type
+## scopes = province
+alias[trigger:terrain] = replace_me
+###is the tutorial active?
+## scopes = country
+alias[trigger:is_tutorial_active] = replace_me
+###does the province has an enemy army of target?
+## scopes = province
+alias[trigger:has_enemy_army] = replace_me
+###does the character have the required number of loyal cohorts?
+## scopes = character
+alias[trigger:num_loyal_cohorts] = replace_me
+###does the character have the required conviction for its party?
+## scopes = character
+alias[trigger:current_party_conviction] = replace_me
+###does the province have an owner or not?
+## scopes = province
+alias[trigger:has_owner] = replace_me
+###does the character have required amount of personality traits?
+## scopes = character
+alias[trigger:number_of_personality_traits] = replace_me
+###Iterate through all provinces in a region any_region_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = region
+alias[trigger:any_region_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks hapiness for population of a specified type
+## scopes = province
+alias[trigger:slaves_happiness] = replace_me
+###does the province has an enemy navy of target?
+## scopes = province
+alias[trigger:has_enemy_navy] = replace_me
+###Does the country have this religion?
+## scopes = country
+alias[trigger:religion] = replace_me
+###if a country in civil war with a another country
+## scopes = country
+alias[trigger:civil_war_with] = replace_me
+###unit is Migration
+## scopes = subunit
+alias[trigger:is_migration] = replace_me
+###Does the character have this culture group?
+## scopes = character
+alias[trigger:has_culture_group] = replace_me
+###does the character have the required Loyalty?
+## scopes = character
+alias[trigger:loyalty] = replace_me
+###Checks
+## scopes = character
+alias[trigger:civic_party_conviction] = replace_me
+###Checks hapiness for population of a specified type
+## scopes = province
+alias[trigger:tribesmen_happiness] = replace_me
+###Does the character have this Office?
+## scopes = character
+alias[trigger:has_office] = replace_me
+###Is the pop this culture?
+## scopes = pop
+alias[trigger:pop_culture] = replace_me
+###does the country have the required manpower percentage?
+## scopes = country
+alias[trigger:manpower_percentage] = replace_me
+###Is the scope character a PrimaryHeir?
+## scopes = character
+alias[trigger:is_primary_heir] = replace_me
+###Is the pop this culture group?
+## scopes = pop
+alias[trigger:pop_culture_group] = replace_me
+###does the family have the required Prestige?
+## scopes = family
+alias[trigger:prestige] = replace_me
+###Checks if a target is in a variable list is_target_in_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+## scopes = none
+alias[trigger:is_target_in_global_variable_list] = replace_me
+###Is the skill the highest skill of the character? True even when there are multiple skills with the same highest value.
+## scopes = character
+alias[trigger:highest_skill] = replace_me
+###is the country at republic or not?
+## scopes = country
+alias[trigger:is_republic] = replace_me
+###does the character have the required gold?
+## scopes = character
+alias[trigger:wealth] = replace_me
+###does the province have the required state_loyalty?
+## scopes = province
+alias[trigger:state_loyalty] = replace_me
+###Checks if the dominant culture in a province belongs to a certain group
+## scopes = province
+alias[trigger:province_dominant_culture_group] = replace_me
+###How many percent morale does this unit have???
+## scopes = unit
+alias[trigger:unit_threat] = replace_me
+###is the province a core of target  or not?
+## scopes = province
+alias[trigger:is_core_of] = replace_me
+###does the character have a specific triggered modifier
+## scopes = character
+alias[trigger:has_triggered_character_modifier] = replace_me
+###Check number of cohorts with personal loyalty in a Uni
+## scopes = unit
+alias[trigger:num_of_loyal_cohorts] = replace_me
+###Iterate through all states in a governorship any_governorship_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = governorship
+alias[trigger:any_governorship_state] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the character have a valid living mother?
+## scopes = character
+alias[trigger:has_mother] = replace_me
+###Checks hapiness for population of a specified type
+## scopes = province
+alias[trigger:citizen_happiness] = replace_me
+###Iterate through all ownable provinces in the world any_ownable_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_ownable_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###is the province a sea province?
+## scopes = province
+alias[trigger:is_sea] = replace_me
+###Iterate through all existing areas any_area = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_area] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks if the game has gender-equality rules
+## scopes = none
+alias[trigger:gender_rules] = replace_me
+###Iterate through all countries at war with any_countries_at_war_with = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_countries_at_war_with] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###true if all children are false (equivalent to NOR)
+## scopes = none
+alias[trigger:all_false] = replace_me
+###How many percent strength does this unit have???
+## scopes = unit
+alias[trigger:strength_percentage] = replace_me
+###Checks if the game is in iron man mode.
+## scopes = none
+alias[trigger:is_iron_man] = replace_me
+###if a country is at truce a another country
+## scopes = country
+alias[trigger:has_truce_with] = replace_me
+###is the province sieged or not?
+## scopes = province
+alias[trigger:has_siege] = replace_me
+###Iterate through all subject countries any_subject = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_subject] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Is the target character alive?
+## scopes = character
+alias[trigger:is_friend] = replace_me
+###Does the character have the same religion as the target?
+## scopes = character
+alias[trigger:has_same_religion_as] = replace_me
+###unit is in Siege
+## scopes = unit
+alias[trigger:in_siege] = replace_me
+###Checks the size of a variable list variable_list_size = { name = X target >= Y } Where X is the name of the variable Where Y is a script value or number
+## scopes = none
+alias[trigger:local_variable_list_size] = replace_me
+###Conditionally cause an assert during read time assert_read = X, where X is yes or the string to be printed in the assert
+## scopes = none
+alias[trigger:assert_read] = replace_me
+###Saves a temporary target for use during the trigger execution
+## scopes = none
+alias[trigger:add_to_temporary_list] = replace_me
+###does the province have the required province_unrest?
+## scopes = province
+alias[trigger:province_unrest] = replace_me
+###Iterate through all items in global list. list = name or variable = name any_in_global_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_in_global_list] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks if the game is in debug mode or not.
+## scopes = none
+alias[trigger:debug_only] = replace_me
+###Checks whether the current scope has the specified variable set has_variable = name
+## scopes = none
+alias[trigger:has_global_variable] = replace_me
+###true if any child is false (equivalent to NAND)
+## scopes = none
+alias[trigger:any_false] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Is province in control range of country
+## scopes = province
+alias[trigger:control_range] = replace_me
+###Iterate through all states in a country any_country_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_country_state] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###a negated OR trigger
+## scopes = none
+alias[trigger:nor] = replace_me
+###does the country have the required Subject Loyalty?
+## scopes = country
+alias[trigger:has_subject_loyalty] = replace_me
+###Is the country a subject to any other country?
+## scopes = country
+alias[trigger:is_subject] = replace_me
+###Iterate through all items in list. list = name or variable = name any_in_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_in_list] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###number of Friends of character?
+## scopes = character
+alias[trigger:num_of_friends] = replace_me
+###is the character alive or dead?
+## scopes = character
+alias[trigger:is_alive] = replace_me
+###subunit is clan retinue
+## scopes = subunit
+alias[trigger:has_personal_loyalty] = replace_me
+###Is the target province owned by this country or one of its subjects?
+## scopes = country
+alias[trigger:owns_or_subject_owns] = replace_me
+###Does this country have this diplomatic stance?
+## scopes = country
+alias[trigger:diplomatic_stance] = replace_me
+###does the character have the required popularity?
+## scopes = character
+alias[trigger:popularity] = replace_me
+###does the country have an active omen or not?
+## scopes = country
+alias[trigger:has_any_omen] = replace_me
+###Evaluates the triggers if the display_triggers of preceding 'trigger_if' or 'trigger_else_if' is not mettrigger_if = { limit = { <display_triggers> } <triggers> }  trigger_else = { <triggers> }
+## scopes = none
+alias[trigger:trigger_else] = replace_me
+###Checks population of a specified type
+## scopes = province
+alias[trigger:num_of_slaves] = replace_me
+###Checks population of a specified type
+## scopes = province
+alias[trigger:num_of_freemen] = replace_me
+###Iterate through all units in a province any_unit_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = province
+alias[trigger:any_unit_in_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the character have required amount of personality traits?
+## scopes = character
+alias[trigger:number_of_status_traits] = replace_me
+###does the character have the required martial skill level?
+## scopes = character
+alias[trigger:martial] = replace_me
+###Always the same value
+## scopes = none
+alias[trigger:always] = replace_me
+###Does the character have this culture?
+## scopes = character
+alias[trigger:has_culture] = replace_me
+###does the country have a primary heir or not?
+## scopes = country
+alias[trigger:has_primary_heir] = replace_me
+###Is the character a close relative (Child, Parent, Sibling/Half-sibling, Nephew/Niece, Aunt/Uncle, Grandparent or Grandchild) of the target character?
+## scopes = character
+alias[trigger:is_close_relative] = replace_me
+###check if a State has a specific modifier
+## scopes = state
+alias[trigger:has_state_modifier] = replace_me
+###Is the scope character a head of a family?
+## scopes = character
+alias[trigger:is_head_of_family] = replace_me
+###is the country at war or not?
+## scopes = country
+alias[trigger:war] = replace_me
+###Iterate through all siblings any_sibling = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_sibling] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the country have the required Monthly Balance?
+## scopes = country
+alias[trigger:has_monthly_balance] = replace_me
+###Does the country have a certain military Tradition
+## scopes = country
+alias[trigger:has_military_Tradition] = replace_me
+###Does the scope character have a nickname?
+## scopes = character
+alias[trigger:has_nickname] = replace_me
+###does the country have the required amount of ships?
+## scopes = country
+alias[trigger:num_of_ships] = replace_me
+###Is the scope character a ruler?
+## scopes = character
+alias[trigger:is_ruler] = replace_me
+###does the character have the required charisma skill level?
+## scopes = character
+alias[trigger:charisma] = replace_me
+###Is the scope character Mercenary?
+## scopes = character
+alias[trigger:is_mercenary] = replace_me
+###Iterate through all navies in a country any_navy = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_navy] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Iterate through all pops in a province any_pops_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = province
+alias[trigger:any_pops_in_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks if a religion is dominant in a province
+## scopes = province
+alias[trigger:dominant_province_religion] = replace_me
+###Evaluates the enclosed triggers if the display_triggers of the preceding `trigger_if` or `trigger_else_if` is not met and its own display_trigger of the limit is mettrigger_if = { limit = { <display_triggers> } <triggers> } trigger_else_if = { limit = { <display_triggers> } <triggers> }
+## scopes = none
+alias[trigger:trigger_else_if] = replace_me
+###Does the host have this DLC
+## scopes = none
+alias[trigger:has_dlc] = replace_me
+###Checks whether the specified socope target exists (check for not being the null object) exists = from.owner.var:cool_var.mother
+## scopes = none
+alias[trigger:exists] = replace_me
+###does the province have the amount of free building slots?
+## scopes = province
+alias[trigger:free_building_slots] = replace_me
+###unit is cohort
+## scopes = subunit
+alias[trigger:is_cohort] = replace_me
+###How many sub units does this unit have?
+## scopes = unit
+alias[trigger:unit_size] = replace_me
+###does the country have the required Tyranny?
+## scopes = country
+alias[trigger:tyranny] = replace_me
+###unit is in combat
+## scopes = unit
+alias[trigger:in_combat] = replace_me
+###does the character have the required Corruption?
+## scopes = character
+alias[trigger:corruption] = replace_me
+###The rank w.r.t. to number of subunits compared to other units of country
+## scopes = unit
+alias[trigger:unit_size_rank_percentage] = replace_me
+###does the country have the required Stability?
+## scopes = country
+alias[trigger:stability] = replace_me
+###Checks
+## scopes = country
+alias[trigger:religious_party_support] = replace_me
+###number of children of character?
+## scopes = character
+alias[trigger:num_of_children] = replace_me
+###Checks
+## scopes = character
+alias[trigger:populist_party_conviction] = replace_me
+###Is the character same Party as the target character?
+## scopes = character
+alias[trigger:is_same_party_as] = replace_me
+###Checks whether the current scope has the specified variable list set has_variable_list = name
+## scopes = none
+alias[trigger:has_global_variable_list] = replace_me
+###which Idea a country has
+## scopes = country
+alias[trigger:idea] = replace_me
+###country has gender equality or not ?
+## scopes = country
+alias[trigger:gender_equality] = replace_me
+###Checks population of a specified type
+## scopes = province
+alias[trigger:num_of_citizen] = replace_me
+###Does the country have a certain military bonus
+## scopes = country
+alias[trigger:has_military_bonus] = replace_me
+###The total number of trade routes in this state
+## scopes = state
+alias[trigger:trade_routes] = replace_me
+###subunit is Ship
+## scopes = subunit
+alias[trigger:is_ship] = replace_me
+###Checks
+## scopes = character
+alias[trigger:military_party_conviction] = replace_me
+###check if a Unit has a specific modifier
+## scopes = unit
+alias[trigger:is_dominant_unit] = replace_me
+###does the character have the required fertility?
+## scopes = character
+alias[trigger:fertility] = replace_me
+###Iterate through all owned provinces in a country any_owned_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_owned_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the country have the required NumOfPorts?
+## scopes = country
+alias[trigger:num_of_ports] = replace_me
+###does the country have the required NumOfCities?
+## scopes = country
+alias[trigger:num_of_cities] = replace_me
+###unit is Army
+## scopes = unit
+alias[trigger:is_army] = replace_me
+###Conditionally cause an assert during run time assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
+## scopes = none
+alias[trigger:assert_if] = replace_me
+###does the character have required amount of personality traits?
+## scopes = character
+alias[trigger:number_of_health_traits] = replace_me
+###Is the scope character a Governor?
+## scopes = character
+alias[trigger:is_governor] = replace_me
+###Checks if a target is in a variable list is_target_in_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+## scopes = none
+alias[trigger:is_target_in_variable_list] = replace_me
+###does the province have the required CivilizationValue?
+## scopes = province
+alias[trigger:civilization_value] = replace_me
+###Checks whether the current scope has the specified variable set has_variable = name
+## scopes = none
+alias[trigger:has_variable] = replace_me
+###is the province inhabitable or not?
+## scopes = province
+alias[trigger:is_inhabitable] = replace_me
+###Iterate through all neighbour countries any_neighbour_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_neighbour_country] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks
+## scopes = country
+alias[trigger:military_tech] = replace_me
+###which HasLaw a country has
+## scopes = country
+alias[trigger:has_law] = replace_me
+###Can the province build a specific building?
+## scopes = province
+alias[trigger:can_build_building] = replace_me
+###all inside trigger must be true
+## scopes = none
+alias[trigger:and] = replace_me
+###Is the pop this PopType?
+## scopes = pop
+alias[trigger:pop_type] = replace_me
+###Check number of migrant cohorts in a unit
+## scopes = unit
+alias[trigger:num_of_migrants] = replace_me
+###Checks if any living character meets the specified criteria any_living_character = { triggers }
+## scopes = none
+alias[trigger:any_living_character] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###if a country is allied with a another country
+## scopes = country
+alias[trigger:alliance_with] = replace_me
+###size of enemy forces (1 = 1000 men) in country's lands
+## scopes = country
+alias[trigger:threat_in_owned_land] = replace_me
+###Is the character currently in the target province?
+## scopes = character
+alias[trigger:is_at_location] = replace_me
+###if a country has an invention
+## scopes = country
+alias[trigger:invention] = replace_me
+###Is the country a subject of the specified type?
+## scopes = country
+alias[trigger:is_subject_type] = replace_me
+###Checks
+## scopes = character
+alias[trigger:religious_party_conviction] = replace_me
+###does a country own a specific propvince
+## scopes = country
+alias[trigger:owns] = replace_me
+###Is the scope character a PartyLeader?
+## scopes = character
+alias[trigger:is_party_leader] = replace_me
+###Is the scope character a bastard?
+## scopes = character
+alias[trigger:is_bastard] = replace_me
+###does the country have the required centralization?
+## scopes = country
+alias[trigger:centralization] = replace_me
+###checks amount of supporters as heir.
+## scopes = character
+alias[trigger:num_of_supporters] = replace_me
+###does the province have the required fort level?
+## scopes = province
+alias[trigger:fort_level] = replace_me
+###Does the current country scope have the given support
+## scopes = party
+alias[trigger:party_support] = replace_me
+###Checks population of a specified type
+## scopes = province
+alias[trigger:num_of_tribesmen] = replace_me
+###Checks if any parent meets the specified criteria any_parent = { triggers }
+## scopes = character
+alias[trigger:any_parent] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Checks if the state of a province is importing a certain trade good.
+## scopes = province
+alias[trigger:is_importing_trade_good] = replace_me
+###is the character Scorned or dead?
+## scopes = family
+alias[trigger:is_scorned] = replace_me
+###Is the scope character adult?
+## scopes = character
+alias[trigger:is_adult] = replace_me
+###does the province have the required TotalPopulation?
+## scopes = province
+alias[trigger:total_population] = replace_me
+###does the province have the required number of produced goods ?
+## scopes = province
+alias[trigger:num_goods_produced] = replace_me
+###Is the province owned by the target country or one of its subjects?
+## scopes = province
+alias[trigger:owned_or_subject_owned] = replace_me
+###is the character banished
+## scopes = character
+alias[trigger:is_banished] = replace_me
+###unit has a commander
+## scopes = unit
+alias[trigger:has_commander] = replace_me
+###Iterate through all families in a country any_family = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_family] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Is the scope character male?
+## scopes = character
+alias[trigger:is_male] = replace_me
+###Is the scope character  Courtier (without title / job)?
+## scopes = character
+alias[trigger:is_courtier] = replace_me
+###is the country's opinion of the target greater or equal than the value? opinion = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+## scopes = country
+alias[trigger:opinion] = replace_me
+###Checks
+## scopes = country
+alias[trigger:civic_party_support] = replace_me
+###is the country at monarchy or not?
+## scopes = country
+alias[trigger:is_monarchy] = replace_me
+###Is the scope character a previous ruler?
+## scopes = character
+alias[trigger:is_previous_ruler] = replace_me
+###does the character have the required Prominence?
+## scopes = character
+alias[trigger:prominence] = replace_me
+###is the province uninhabitable?
+## scopes = province
+alias[trigger:is_uninhabitable] = replace_me
+###Is there a road to the target province?
+## scopes = province
+alias[trigger:has_road_towards] = replace_me
+###Iterate through all states a governor is governor of any_governor_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_governor_state] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###number of Rivals of character?
+## scopes = character
+alias[trigger:num_of_rivals] = replace_me
+###Is the character same gender as the target character?
+## scopes = character
+alias[trigger:is_same_gender] = replace_me
+###Iterate through all existing regions any_region = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = none
+alias[trigger:any_region] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Does the character belong to this party?
+## scopes = character
+alias[trigger:party] = replace_me
+###Is the country a subject to the specified country?
+## scopes = country
+alias[trigger:is_subject_of] = replace_me
+###Checks
+## scopes = character
+alias[trigger:mercantile_party_conviction] = replace_me
+###Iterate through all successors in a country any_successor = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_successor] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Iterate through all Rivals any_rival = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_rival] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the province have the required income?
+## scopes = province
+alias[trigger:province_income] = replace_me
+###Is the scope character same family as ruler ?
+## scopes = character
+alias[trigger:from_ruler_family] = replace_me
+###Checks
+## scopes = country
+alias[trigger:mercantile_party_support] = replace_me
+###does the country have the required CIVIC Power level?
+## scopes = country
+alias[trigger:civic_power] = replace_me
+###Is the character a child of the target character?
+## scopes = character
+alias[trigger:is_child_of] = replace_me
+###Does the scoped city belong to a given named area or the same area as the target city area = my_area_name OR area = from.capital_scope
+## scopes = province
+alias[trigger:is_in_area] = replace_me
+###Does the character have this trait?
+## scopes = character
+alias[trigger:has_tech_office_of] = replace_me
+###Iterate through all members of a family any_family_member = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = family
+alias[trigger:any_family_member] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the character have the required finesse skill level?
+## scopes = character
+alias[trigger:finesse] = replace_me
+###Is the scope character female?
+## scopes = character
+alias[trigger:is_female] = replace_me
+###Check if the scoped color is the same as another color. The right hand side can be either a hex, rgb, or hsv color,  or a named color, or another color scope.
+## scopes = color
+alias[trigger:is_color] = replace_me
+###does the country have this party?
+## scopes = country
+alias[trigger:has_party] = replace_me
+###Is the country this culture?
+## scopes = country
+alias[trigger:country_culture] = replace_me
+###is the country at tribal or not?
+## scopes = country
+alias[trigger:is_tribal] = replace_me
+###checks the days since last victory on the battlefield.
+## scopes = character
+alias[trigger:days_since_last_victory] = replace_me
+###Does the character belong to the same family as the target character?
+## scopes = character
+alias[trigger:has_same_family] = replace_me
+###Is the country an overlord to any other country?
+## scopes = country
+alias[trigger:is_overlord] = replace_me
+###is the state's trade good surplus greater or equal than the value? trade_good_surplus = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+## scopes = state
+alias[trigger:trade_good_surplus] = replace_me
+###if a country is a specific tag
+## scopes = country
+alias[trigger:tag] = replace_me
+###Checks hapiness for this pop
+## scopes = pop
+alias[trigger:pop_hapiness] = replace_me
+###Is the scope character married?
+## scopes = character
+alias[trigger:is_married] = replace_me
+###Checks if a province is in a state that has a specific governor_policy
+## scopes = province
+alias[trigger:governor_policy] = replace_me
+###Checks
+## scopes = country
+alias[trigger:military_party_support] = replace_me
+###is the character pregnant?
+## scopes = character
+alias[trigger:is_pregnant] = replace_me
+###unit is Navy
+## scopes = unit
+alias[trigger:is_navy] = replace_me
+###does the country have the required amount of cohorts?
+## scopes = country
+alias[trigger:num_of_cohorts] = replace_me
+###Checks if a province has a specific building
+## scopes = province
+alias[trigger:has_building] = replace_me
+###Checks
+## scopes = country
+alias[trigger:religious_tech] = replace_me
+###does the country have the required Manpower?
+## scopes = country
+alias[trigger:manpower] = replace_me
+###Iterate through all children any_child = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = character
+alias[trigger:any_child] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###at least one entry inside trigger must be true
+## scopes = none
+alias[trigger:or] = replace_me
+###Evaluates the triggers if the display_triggers of the limit are met trigger_if = { limit = { <display_triggers> } <triggers> }
+## scopes = none
+alias[trigger:trigger_if] = replace_me
+###is the character Pretender or dead?
+## scopes = character
+alias[trigger:is_pretender] = replace_me
+###Can the scope character get rivals?
+## scopes = character
+alias[trigger:can_get_rivals] = replace_me
+###Replaces the tooltips for the enclosed triggers with a custom text custom_tooltip = { 	text = <text> 	<trigger> }
+## scopes = none
+alias[trigger:custom_tooltip] = replace_me
+###Checks whether the current scope has the specified variable set has_variable = name
+## scopes = none
+alias[trigger:has_local_variable] = replace_me
+###if a country imports from another country
+## scopes = country
+alias[trigger:imports_from] = replace_me
+###Check number of days since last war
+## scopes = country
+alias[trigger:days_since_last_war] = replace_me
+###Is the target character alive?
+## scopes = character
+alias[trigger:is_rival] = replace_me
+###unit is moving
+## scopes = unit
+alias[trigger:is_moving] = replace_me
+###is the province coastal or not?
+## scopes = province
+alias[trigger:is_coastal] = replace_me
+###Iterate through all neighbors of a province any_neighbor_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = province
+alias[trigger:any_neighbor_province] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###Check number of days since last victory
+## scopes = unit
+alias[trigger:days_since_last_unit_victory] = replace_me
+###Saves a temporary target for use during the trigger execution
+## scopes = none
+alias[trigger:save_temporary_scope_as] = replace_me
+###unit is Exiled
+## scopes = unit
+alias[trigger:is_exiled] = replace_me
+###Iterate through all units in a country any_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
+## scopes = country
+alias[trigger:any_unit] = {
+    ## cardinality = 0..1
+    percent = value_float[0.0..1.0]
+    ## cardinality = 0..1
+    count = int_field
+    alias_name[trigger] = alias_match_left[trigger]
+}
+###does the character have a valid living father?
+## scopes = character
+alias[trigger:has_father] = replace_me
+###Does the character have this trait?
+## scopes = character
+alias[trigger:has_trait] = replace_me
+###Check if the scoped color is part of the given color list
+## scopes = color
+alias[trigger:in_color_list] = replace_me
+###Does the country have this amount of (type = <type> value = <val>)?
+## scopes = country
+alias[trigger:num_of_unit_type] = replace_me
+###Checks if a target in in a list
+## scopes = none
+alias[trigger:is_in_list] = replace_me
+
