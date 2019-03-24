@@ -32,7 +32,7 @@ ambition = {
 	}
 
 	## cardinality = 0..1
-	new_alias_left[chance_block:chance] = new_alias_right[chance_block:chance]
+	chance = single_alias_right[chance_block]
 
 	## cardinality = 0..1
 	### Defaults to no.

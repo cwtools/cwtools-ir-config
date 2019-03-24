@@ -1,0 +1,4 @@
+###Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain save_event_target_as = <string>
+## scopes = none
+alias[effect:save_scope_as] = value_set[event_target]
+

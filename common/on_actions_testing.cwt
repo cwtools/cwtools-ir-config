@@ -1,0 +1,11 @@
+types = {
+    type[on_action] = {
+        path = "game/common/on_action"
+    }
+}
+
+on_action = {
+    effect = {
+        alias_name[effect] = alias_match_left[effect]
+    }
+}

@@ -1,13 +1,16 @@
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 ## scopes = none
 alias[effect:set_local_variable] = replace_me
-###Creates a specific poptype in a province
+
+###Creates a specific poptype in a province
 ## scopes = province
 alias[effect:create_pop] = replace_me
-###Empties the list clear_variable_list = variable_name
+
+###Empties the list clear_variable_list = variable_name
 ## scopes = none
 alias[effect:clear_variable_list] = replace_me
-###Iterate through all friends ordered_friend = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all friends ordered_friend = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_friend] = {
     ## cardinality = 0..1
@@ -20,16 +23,20 @@ alias[effect:ordered_friend] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
+
+###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
 ## scopes = none
 alias[effect:clamp_local_variable] = replace_me
-###Removes a friend from the character
+
+###Removes a friend from the character
 ## scopes = character
 alias[effect:remove_friend] = replace_me
-###Removes an opinion modifier, remove_opinion = { modifier = X  target = Z  } X is a scripted modifier name. 
+
+###Removes an opinion modifier, remove_opinion = { modifier = X  target = Z  } X is a scripted modifier name.
 ## scopes = country
 alias[effect:remove_opinion] = replace_me
-###Iterate through all members of a family random_family_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all members of a family random_family_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = family
 alias[effect:random_family_member] = {
     ## cardinality = 0..1
@@ -42,25 +49,32 @@ alias[effect:random_family_member] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Unlocks a locked Unit
+
+###Unlocks a locked Unit
 ## scopes = unit
 alias[effect:unlock_unit] = replace_me
-###Removes a triggered modifier from a Character
+
+###Removes a triggered modifier from a Character
 ## scopes = character
 alias[effect:remove_triggered_character_modifier] = replace_me
-###Sets the trade goods in a province
+
+###Sets the trade goods in a province
 ## scopes = province
 alias[effect:set_trade_goods] = replace_me
-###Banishes a character to another country
+
+###Banishes a character to another country
 ## scopes = character
 alias[effect:banish] = replace_me
-###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
+
+###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
 ## scopes = none
 alias[effect:change_variable] = replace_me
-###Destroys the unit from the current scope
+
+###Destroys the unit from the current scope
 ## scopes = unit
 alias[effect:destroy_unit] = replace_me
-###Iterate through all Rivals ordered_rival = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all Rivals ordered_rival = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_rival] = {
     ## cardinality = 0..1
@@ -73,13 +87,16 @@ alias[effect:ordered_rival] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###adds one level of the specified Building
+
+###adds one level of the specified Building
 ## scopes = province
 alias[effect:add_building_level] = replace_me
-###Marries two characters
+
+###Marries two characters
 ## scopes = character
 alias[effect:marry_character] = replace_me
-###Iterate through all allied countries random_allied_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all allied countries random_allied_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_allied_country] = {
     ## cardinality = 0..1
@@ -92,16 +109,20 @@ alias[effect:random_allied_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Set the culture for this character
+
+###Set the culture for this character
 ## scopes = character
 alias[effect:set_culture] = replace_me
-###Clear the ambition for this character
+
+###Clear the ambition for this character
 ## scopes = character
 alias[effect:clear_ambition] = replace_me
-###adds a new family with the specified name (must be valid from culture files)
+
+###adds a new family with the specified name (must be valid from culture files)
 ## scopes = country
 alias[effect:add_new_family] = replace_me
-###Iterate through all subject countries random_subject = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all subject countries random_subject = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_subject] = {
     ## cardinality = 0..1
@@ -114,7 +135,8 @@ alias[effect:random_subject] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country random_successor = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all successors in a country random_successor = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_successor] = {
     ## cardinality = 0..1
@@ -127,10 +149,12 @@ alias[effect:random_successor] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###kills a character, death = { killer = X death_reason = Y }, where X is a character and Y is one of the death reason keys
+
+###kills a character, death = { killer = X death_reason = Y }, where X is a character and Y is one of the death reason keys
 ## scopes = character
 alias[effect:death] = replace_me
-###Iterate through all neighbors of a province every_neighbor_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all neighbors of a province every_neighbor_province = { limit = { <triggers> } <effects> }
 ## scopes = province
 alias[effect:every_neighbor_province] = {
     ## cardinality = 0..1
@@ -143,10 +167,12 @@ alias[effect:every_neighbor_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) Tyranny to a country
+
+###gives (or takes) Tyranny to a country
 ## scopes = country
 alias[effect:add_tyranny] = replace_me
-###Iterate through all existing regions random_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all existing regions random_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_region] = {
     ## cardinality = 0..1
@@ -159,10 +185,12 @@ alias[effect:random_region] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###makes the currrent province owned and controlled by the target country
+
+###makes the currrent province owned and controlled by the target country
 ## scopes = province
 alias[effect:set_conquered_by] = replace_me
-###Iterate through all children every_child = { limit = { <triggers> } <effects> }
+
+###Iterate through all children every_child = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_child] = {
     ## cardinality = 0..1
@@ -175,13 +203,16 @@ alias[effect:every_child] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes a variable remove_variable = variable_name
+
+###Removes a variable remove_variable = variable_name
 ## scopes = none
 alias[effect:remove_local_variable] = replace_me
-###conditionally break execution of effects, break_if = { X }, where X is a trigger
+
+###conditionally break execution of effects, break_if = { X }, where X is a trigger
 ## scopes = none
 alias[effect:break_if] = replace_me
-###Iterate through all characters in a country random_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all characters in a country random_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_character] = {
     ## cardinality = 0..1
@@ -194,10 +225,12 @@ alias[effect:random_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds CIVIC Power
+
+###Adds CIVIC Power
 ## scopes = none
 alias[effect:add_civic_power] = replace_me
-###Iterate through all characters in a country ordered_character = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all characters in a country ordered_character = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_character] = {
     ## cardinality = 0..1
@@ -210,16 +243,20 @@ alias[effect:ordered_character] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Destroys the unit from the current scope
+
+###Destroys the unit from the current scope
 ## scopes = unit
 alias[effect:change_unit_owner] = replace_me
-###just a tooltip, the scope as object (for grouping, localization)
+
+###just a tooltip, the scope as object (for grouping, localization)
 ## scopes = none
 alias[effect:custom_label] = replace_me
-###Set the religion for this character
+
+###Set the religion for this character
 ## scopes = character
 alias[effect:set_character_religion] = replace_me
-###Iterate through all existing countries ordered_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all existing countries ordered_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_country] = {
     ## cardinality = 0..1
@@ -232,13 +269,16 @@ alias[effect:ordered_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Moves a family to another country
+
+###Moves a family to another country
 ## scopes = family
 alias[effect:move_family] = replace_me
-###adds a truce for a country towards another country
+
+###adds a truce for a country towards another country
 ## scopes = country
 alias[effect:add_truce] = replace_me
-###Iterate through all items in list. list = name or variable = name ordered_in_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all items in list. list = name or variable = name ordered_in_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_in_list] = {
     ## cardinality = 0..1
@@ -251,19 +291,24 @@ alias[effect:ordered_in_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Sets the number of people in each Cohort in the Unit to the given percentage of maximum
+
+###Sets the number of people in each Cohort in the Unit to the given percentage of maximum
 ## scopes = unit
 alias[effect:set_unit_size] = replace_me
-###Removes a modifier from a country
+
+###Removes a modifier from a country
 ## scopes = country
 alias[effect:remove_country_modifier] = replace_me
-###makes the currrent province owned and controlled by the target country, without incurring any penalties
+
+###makes the currrent province owned and controlled by the target country, without incurring any penalties
 ## scopes = province
 alias[effect:set_owned_by] = replace_me
-###Adds a subunit to a Unit
+
+###Adds a subunit to a Unit
 ## scopes = unit
 alias[effect:add_loyal_subunit] = replace_me
-###Iterate through all states a governor is governor of every_governor_state = { limit = { <triggers> } <effects> }
+
+###Iterate through all states a governor is governor of every_governor_state = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_governor_state] = {
     ## cardinality = 0..1
@@ -276,13 +321,16 @@ alias[effect:every_governor_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###changes the adjective of a country
+
+###changes the adjective of a country
 ## scopes = country
 alias[effect:change_country_adjective] = replace_me
-###sets the governor of a province to the specified character
+
+###sets the governor of a province to the specified character
 ## scopes = province
 alias[effect:set_as_governor] = replace_me
-###Iterate through all children random_child = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all children random_child = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_child] = {
     ## cardinality = 0..1
@@ -295,7 +343,8 @@ alias[effect:random_child] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbour countries random_neighbour_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all neighbour countries random_neighbour_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_neighbour_country] = {
     ## cardinality = 0..1
@@ -308,7 +357,8 @@ alias[effect:random_neighbour_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country ordered_country_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all states in a country ordered_country_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_country_state] = {
     ## cardinality = 0..1
@@ -321,10 +371,12 @@ alias[effect:ordered_country_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Switch on a trigger for the evaluation of another trigger with an optional fallback trigger. switch = { 	trigger = simple_assign_trigger 	case_1 = { <effects> } 	case_2 = { <effects> } 	case_n = { <effects> } 	fallback = { <effects> }
+
+###Switch on a trigger for the evaluation of another trigger with an optional fallback trigger. switch = { 	trigger = simple_assign_trigger 	case_1 = { <effects> } 	case_2 = { <effects> } 	case_n = { <effects> } 	fallback = { <effects> }
 ## scopes = none
 alias[effect:switch] = replace_me
-###Iterate through all existing regions ordered_region = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all existing regions ordered_region = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_region] = {
     ## cardinality = 0..1
@@ -337,10 +389,12 @@ alias[effect:ordered_region] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###changes the historical tag of a country
+
+###changes the historical tag of a country
 ## scopes = country
 alias[effect:change_country_tag] = replace_me
-###Iterate through all navies in a country random_navy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all navies in a country random_navy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_navy] = {
     ## cardinality = 0..1
@@ -353,7 +407,8 @@ alias[effect:random_navy] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing areas every_area = { limit = { <triggers> } <effects> }
+
+###Iterate through all existing areas every_area = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_area] = {
     ## cardinality = 0..1
@@ -366,19 +421,24 @@ alias[effect:every_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) morale to a unit
+
+###gives (or takes) morale to a unit
 ## scopes = unit
 alias[effect:add_morale] = replace_me
-###Locks a Unit for the specified number of days
+
+###Locks a Unit for the specified number of days
 ## scopes = unit
 alias[effect:lock_unit] = replace_me
-###Character stops being a researcher
+
+###Character stops being a researcher
 ## scopes = character
 alias[effect:remove_as_researcher] = replace_me
-###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
+
+###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 ## scopes = none
 alias[effect:set_variable] = replace_me
-###Iterate through all neighbors of a province random_neighbor_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all neighbors of a province random_neighbor_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = province
 alias[effect:random_neighbor_province] = {
     ## cardinality = 0..1
@@ -391,7 +451,8 @@ alias[effect:random_neighbor_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all families in a country ordered_family = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all families in a country ordered_family = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_family] = {
     ## cardinality = 0..1
@@ -404,7 +465,8 @@ alias[effect:ordered_family] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all armies in a country every_army = { limit = { <triggers> } <effects> }
+
+###Iterate through all armies in a country every_army = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_army] = {
     ## cardinality = 0..1
@@ -417,7 +479,8 @@ alias[effect:every_army] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all supportasHeir every_support_as_heir = { limit = { <triggers> } <effects> }
+
+###Iterate through all supportasHeir every_support_as_heir = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_support_as_heir] = {
     ## cardinality = 0..1
@@ -430,10 +493,12 @@ alias[effect:every_support_as_heir] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds a friend to the character
+
+###Adds a friend to the character
 ## scopes = character
 alias[effect:add_friend] = replace_me
-###Iterate through all ownable provinces in the world random_ownable_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all ownable provinces in the world random_ownable_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_ownable_province] = {
     ## cardinality = 0..1
@@ -446,7 +511,8 @@ alias[effect:random_ownable_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all owned provinces in a country every_owned_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all owned provinces in a country every_owned_province = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_owned_province] = {
     ## cardinality = 0..1
@@ -459,7 +525,8 @@ alias[effect:every_owned_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country random_country_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all states in a country random_country_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_country_state] = {
     ## cardinality = 0..1
@@ -472,10 +539,12 @@ alias[effect:random_country_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Applies the given morale damage to each Cohort in the unit as a percentage of their current morale
+
+###Applies the given morale damage to each Cohort in the unit as a percentage of their current morale
 ## scopes = unit
 alias[effect:damage_unit_morale_percent] = replace_me
-###Iterate through all states in a region random_region_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all states in a region random_region_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = region
 alias[effect:random_region_state] = {
     ## cardinality = 0..1
@@ -488,10 +557,12 @@ alias[effect:random_region_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds a trait to a character (will show tooltip even if already having the trait)
+
+###Adds a trait to a character (will show tooltip even if already having the trait)
 ## scopes = character
 alias[effect:force_add_trait] = replace_me
-###Iterate through all countries at war with every_countries_at_war_with = { limit = { <triggers> } <effects> }
+
+###Iterate through all countries at war with every_countries_at_war_with = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_countries_at_war_with] = {
     ## cardinality = 0..1
@@ -504,13 +575,16 @@ alias[effect:every_countries_at_war_with] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds charisma skill
+
+###Adds charisma skill
 ## scopes = none
 alias[effect:add_charisma] = replace_me
-###Makes the currently scoped character adopt another character
+
+###Makes the currently scoped character adopt another character
 ## scopes = character
 alias[effect:adopt] = replace_me
-###Iterate through all subunits in a unit ordered_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all subunits in a unit ordered_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = unit
 alias[effect:ordered_sub_unit] = {
     ## cardinality = 0..1
@@ -523,28 +597,36 @@ alias[effect:ordered_sub_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Moves a character to another country (with message popups)
+
+###Moves a character to another country (with message popups)
 ## scopes = character
 alias[effect:move_country_with_message] = replace_me
-###Set the culture for this pop
+
+###Set the culture for this pop
 ## scopes = pop
 alias[effect:set_pop_culture] = replace_me
-###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:remove_list_local_variable] = replace_me
-###Adds a rival to the character
+
+###Adds a rival to the character
 ## scopes = character
 alias[effect:add_rival] = replace_me
-###Removes a trait from a character
+
+###Removes a trait from a character
 ## scopes = character
 alias[effect:remove_trait] = replace_me
-###creates a country in the given province
+
+###creates a country in the given province
 ## scopes = none
 alias[effect:create_country] = replace_me
-###Set the pop_type for this pop
+
+###Set the pop_type for this pop
 ## scopes = pop
 alias[effect:set_pop_type] = replace_me
-###Iterate through all Rivals random_rival = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all Rivals random_rival = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_rival] = {
     ## cardinality = 0..1
@@ -557,7 +639,8 @@ alias[effect:random_rival] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all children ordered_child = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all children ordered_child = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_child] = {
     ## cardinality = 0..1
@@ -570,7 +653,8 @@ alias[effect:ordered_child] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbors of a province ordered_neighbor_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all neighbors of a province ordered_neighbor_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = province
 alias[effect:ordered_neighbor_province] = {
     ## cardinality = 0..1
@@ -583,7 +667,8 @@ alias[effect:ordered_neighbor_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all areas in a region ordered_region_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all areas in a region ordered_region_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = region
 alias[effect:ordered_region_area] = {
     ## cardinality = 0..1
@@ -596,13 +681,16 @@ alias[effect:ordered_region_area] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###sets the ruler of a country to the specified character
+
+###sets the ruler of a country to the specified character
 ## scopes = country
 alias[effect:set_as_ruler] = replace_me
-###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:add_to_local_variable_list] = replace_me
-###Iterate through all states a governor is governor of ordered_governor_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all states a governor is governor of ordered_governor_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_governor_state] = {
     ## cardinality = 0..1
@@ -615,10 +703,12 @@ alias[effect:ordered_governor_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###break execution of effects, break = yes/no/boolean event target
+
+###break execution of effects, break = yes/no/boolean event target
 ## scopes = none
 alias[effect:break] = replace_me
-###Iterate through all commanders in a country random_commander = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all commanders in a country random_commander = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_commander] = {
     ## cardinality = 0..1
@@ -631,13 +721,16 @@ alias[effect:random_commander] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds finesse skill
+
+###Adds finesse skill
 ## scopes = none
 alias[effect:add_finesse] = replace_me
-###end a pregnancy
+
+###end a pregnancy
 ## scopes = character
 alias[effect:end_pregnancy] = replace_me
-###Iterate through all existing areas random_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all existing areas random_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_area] = {
     ## cardinality = 0..1
@@ -650,22 +743,28 @@ alias[effect:random_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###changes the color of a country
+
+###changes the color of a country
 ## scopes = country
 alias[effect:change_country_color] = replace_me
-###Removes a variable remove_variable = variable_name
+
+###Removes a variable remove_variable = variable_name
 ## scopes = none
 alias[effect:remove_variable] = replace_me
-###Empties the list clear_variable_list = variable_name
+
+###Empties the list clear_variable_list = variable_name
 ## scopes = none
 alias[effect:clear_local_variable_list] = replace_me
-###gives (or takes) Corruption to a character
+
+###gives (or takes) Corruption to a character
 ## scopes = character
 alias[effect:add_corruption] = replace_me
-###Destroys the unit from the current scope
+
+###Destroys the unit from the current scope
 ## scopes = subunit
 alias[effect:destroy_subunit] = replace_me
-###Iterate through all areas in a region random_region_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all areas in a region random_region_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = region
 alias[effect:random_region_area] = {
     ## cardinality = 0..1
@@ -678,16 +777,20 @@ alias[effect:random_region_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes a modifier from a Province
+
+###Removes a modifier from a Province
 ## scopes = province
 alias[effect:remove_province_modifier] = replace_me
-###gives (or takes) gold to a character
+
+###gives (or takes) gold to a character
 ## scopes = character
 alias[effect:add_gold] = replace_me
-###Changes a law in a country
+
+###Changes a law in a country
 ## scopes = country
 alias[effect:change_law] = replace_me
-###Iterate through all members of a family every_family_member = { limit = { <triggers> } <effects> }
+
+###Iterate through all members of a family every_family_member = { limit = { <triggers> } <effects> }
 ## scopes = family
 alias[effect:every_family_member] = {
     ## cardinality = 0..1
@@ -700,7 +803,8 @@ alias[effect:every_family_member] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in list. list = name or variable = name every_in_list = { limit = { <triggers> } <effects> }
+
+###Iterate through all items in list. list = name or variable = name every_in_list = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_in_list] = {
     ## cardinality = 0..1
@@ -713,7 +817,8 @@ alias[effect:every_in_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all friends random_friend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all friends random_friend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_friend] = {
     ## cardinality = 0..1
@@ -726,13 +831,16 @@ alias[effect:random_friend] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds MILITARY Power
+
+###Adds MILITARY Power
 ## scopes = none
 alias[effect:add_military_power] = replace_me
-###Declares a war between this country and the target country
+
+###Declares a war between this country and the target country
 ## scopes = country
 alias[effect:declare_war_with_wargoal] = replace_me
-###Iterate through all pops in a province random_pops_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all pops in a province random_pops_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = province
 alias[effect:random_pops_in_province] = {
     ## cardinality = 0..1
@@ -745,7 +853,8 @@ alias[effect:random_pops_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all armies in a country random_army = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all armies in a country random_army = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_army] = {
     ## cardinality = 0..1
@@ -758,10 +867,12 @@ alias[effect:random_army] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Moves a family to another country
+
+###Moves a family to another country
 ## scopes = none
 alias[effect:reset_scoring] = replace_me
-###Iterate through all provinces in a area ordered_area_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all provinces in a area ordered_area_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = area
 alias[effect:ordered_area_province] = {
     ## cardinality = 0..1
@@ -774,7 +885,8 @@ alias[effect:ordered_area_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing countries random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all existing countries random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_country] = {
     ## cardinality = 0..1
@@ -787,19 +899,24 @@ alias[effect:random_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Gives a Office to a character
+
+###Gives a Office to a character
 ## scopes = character
 alias[effect:give_office] = replace_me
-###Clears a saved scope from the top scope save_scope_as = cool_scope -> clear_saved_scope = cool_scope
+
+###Clears a saved scope from the top scope save_scope_as = cool_scope -> clear_saved_scope = cool_scope
 ## scopes = none
 alias[effect:clear_saved_scope] = replace_me
-###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
+
+###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
 ## scopes = none
 alias[effect:round_local_variable] = replace_me
-###Adds RELIGIOUS Power
+
+###Adds RELIGIOUS Power
 ## scopes = none
 alias[effect:add_religious_power] = replace_me
-###Iterate through all areas in a region every_region_area = { limit = { <triggers> } <effects> }
+
+###Iterate through all areas in a region every_region_area = { limit = { <triggers> } <effects> }
 ## scopes = region
 alias[effect:every_region_area] = {
     ## cardinality = 0..1
@@ -812,19 +929,24 @@ alias[effect:every_region_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###adds state loyalty to a province
+
+###adds state loyalty to a province
 ## scopes = province
 alias[effect:add_state_loyalty] = replace_me
-###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
+
+###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
 ## scopes = none
 alias[effect:round_variable] = replace_me
-###Set the ambition for this character
+
+###Set the ambition for this character
 ## scopes = character
 alias[effect:set_ambition] = replace_me
-###Kill the pop in the current scope
+
+###Kill the pop in the current scope
 ## scopes = pop
 alias[effect:kill_pop] = replace_me
-###Iterate through all subunits in a unit random_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all subunits in a unit random_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = unit
 alias[effect:random_sub_unit] = {
     ## cardinality = 0..1
@@ -837,7 +959,8 @@ alias[effect:random_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country ordered_country_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all subunits in all units in a country ordered_country_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_country_sub_unit] = {
     ## cardinality = 0..1
@@ -850,16 +973,20 @@ alias[effect:ordered_country_sub_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###a random effect, random = { chance = X modifier = Y effects... } where X is a chance of the enclosed effects being fired and can be modified by optional value modifier list (AKA MTTH) Y
+
+###a random effect, random = { chance = X modifier = Y effects... } where X is a chance of the enclosed effects being fired and can be modified by optional value modifier list (AKA MTTH) Y
 ## scopes = none
 alias[effect:random] = replace_me
-###creates a character in a country
+
+###creates a character in a country
 ## scopes = country
 alias[effect:create_character] = replace_me
-###Effect only shown in tooltips (but not executed)
+
+###Effect only shown in tooltips (but not executed)
 ## scopes = none
 alias[effect:show_as_tooltip] = replace_me
-###Iterate through all provinces in a area random_area_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all provinces in a area random_area_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = area
 alias[effect:random_area_province] = {
     ## cardinality = 0..1
@@ -872,7 +999,8 @@ alias[effect:random_area_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all allied countries ordered_allied_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all allied countries ordered_allied_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_allied_country] = {
     ## cardinality = 0..1
@@ -885,7 +1013,8 @@ alias[effect:ordered_allied_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region random_region_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all provinces in a region random_region_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = region
 alias[effect:random_region_province] = {
     ## cardinality = 0..1
@@ -898,25 +1027,32 @@ alias[effect:random_region_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes the personal loyalty of a specific subunit
+
+###Removes the personal loyalty of a specific subunit
 ## scopes = subunit
 alias[effect:remove_subunit_loyalty] = replace_me
-###Adds an reverse opinion modifier, reverse_add_opinion = { modifier = X target = Z } X is a scripted modifier name.
+
+###Adds an reverse opinion modifier, reverse_add_opinion = { modifier = X target = Z } X is a scripted modifier name.
 ## scopes = country
 alias[effect:reverse_add_opinion] = replace_me
-###Removes a variable remove_variable = variable_name
+
+###Removes a variable remove_variable = variable_name
 ## scopes = none
 alias[effect:remove_global_variable] = replace_me
-###Applies the given damage to each Cohort in the unit as a percentage of their current strength
+
+###Applies the given damage to each Cohort in the unit as a percentage of their current strength
 ## scopes = unit
 alias[effect:damage_unit_percent] = replace_me
-###adds a permanent modifier from a Province
+
+###adds a permanent modifier from a Province
 ## scopes = province
 alias[effect:add_permanent_province_modifier] = replace_me
-###Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain save_event_target_as = <string>
+
+###Saves the current scope as an arbitrarily-named target to be referenced later in the (unbroken) event chain save_event_target_as = <string>
 ## scopes = none
-alias[effect:save_scope_as] = replace_me
-###Iterate through all siblings random_sibling = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:save_scope_as] = value_set[event_target]
+
+###Iterate through all siblings random_sibling = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_sibling] = {
     ## cardinality = 0..1
@@ -929,7 +1065,8 @@ alias[effect:random_sibling] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a area ordered_area_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all states in a area ordered_area_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = area
 alias[effect:ordered_area_state] = {
     ## cardinality = 0..1
@@ -942,7 +1079,8 @@ alias[effect:ordered_area_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all characters in a country every_character = { limit = { <triggers> } <effects> }
+
+###Iterate through all characters in a country every_character = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_character] = {
     ## cardinality = 0..1
@@ -955,10 +1093,12 @@ alias[effect:every_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Conditionally cause an assert during read time assert_read = X, where X is yes or the string to be printed in the assert
+
+###Conditionally cause an assert during read time assert_read = X, where X is yes or the string to be printed in the assert
 ## scopes = none
 alias[effect:assert_read] = replace_me
-###Executes on a random parent
+
+###Executes on a random parent
 ## scopes = character
 alias[effect:random_parent] = {
     ## cardinality = 0..1
@@ -971,13 +1111,16 @@ alias[effect:random_parent] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent
+
+###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent
 ## scopes = none
 alias[effect:add_to_temporary_list] = replace_me
-###Removes a Office from a character
+
+###Removes a Office from a character
 ## scopes = character
 alias[effect:remove_office] = replace_me
-###Iterate through all members of a family ordered_family_member = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all members of a family ordered_family_member = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = family
 alias[effect:ordered_family_member] = {
     ## cardinality = 0..1
@@ -990,13 +1133,16 @@ alias[effect:ordered_family_member] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
+
+###Rounds a variable to the nearest specified value clamp_variable = { name = X nearest = Y } Where X is the name of the variable Where Y is a script value
 ## scopes = none
 alias[effect:round_global_variable] = replace_me
-###Removes the personal loyalty of all cohorts in a unit
+
+###Removes the personal loyalty of all cohorts in a unit
 ## scopes = unit
 alias[effect:remove_unit_loyalty] = replace_me
-###Executes on every province
+
+###Executes on every province
 ## scopes = none
 alias[effect:every_province] = {
     ## cardinality = 0..1
@@ -1009,7 +1155,8 @@ alias[effect:every_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subject countries ordered_subject = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all subject countries ordered_subject = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_subject] = {
     ## cardinality = 0..1
@@ -1022,7 +1169,8 @@ alias[effect:ordered_subject] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all navies in a country ordered_navy = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all navies in a country ordered_navy = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_navy] = {
     ## cardinality = 0..1
@@ -1035,13 +1183,16 @@ alias[effect:ordered_navy] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Imprisons the target character as this character's prisoner, imprison = { target = X  }, where X is a character
+
+###Imprisons the target character as this character's prisoner, imprison = { target = X  }, where X is a character
 ## scopes = country
 alias[effect:imprison] = replace_me
-###changes the name of a country
+
+###changes the name of a country
 ## scopes = country
 alias[effect:change_country_name] = replace_me
-###Iterate through all siblings ordered_sibling = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all siblings ordered_sibling = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_sibling] = {
     ## cardinality = 0..1
@@ -1054,10 +1205,12 @@ alias[effect:ordered_sibling] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Pays a Price from a country
+
+###Pays a Price from a country
 ## scopes = country
 alias[effect:pay_price] = replace_me
-###Iterate through all items in local list. list = name or variable = name ordered_in_local_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all items in local list. list = name or variable = name ordered_in_local_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_in_local_list] = {
     ## cardinality = 0..1
@@ -1070,19 +1223,24 @@ alias[effect:ordered_in_local_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes enclosed effects if limit criteria are met if = { limit = { <triggers> } <effects> }
+
+###Executes enclosed effects if limit criteria are met if = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:if] = replace_me
-###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
+
+###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 ## scopes = none
 alias[effect:set_global_variable] = replace_me
-###Removes a modifier from a country
+
+###Removes a modifier from a country
 ## scopes = country
 alias[effect:change_government] = replace_me
-###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
+
+###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
 ## scopes = none
 alias[effect:clamp_global_variable] = replace_me
-###Iterate through all supportasHeir random_support_as_heir = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all supportasHeir random_support_as_heir = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_support_as_heir] = {
     ## cardinality = 0..1
@@ -1095,7 +1253,8 @@ alias[effect:random_support_as_heir] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all navies in a country every_navy = { limit = { <triggers> } <effects> }
+
+###Iterate through all navies in a country every_navy = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_navy] = {
     ## cardinality = 0..1
@@ -1108,7 +1267,8 @@ alias[effect:every_navy] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country every_successor = { limit = { <triggers> } <effects> }
+
+###Iterate through all successors in a country every_successor = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_successor] = {
     ## cardinality = 0..1
@@ -1121,7 +1281,8 @@ alias[effect:every_successor] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country random_country_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all subunits in all units in a country random_country_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_country_sub_unit] = {
     ## cardinality = 0..1
@@ -1134,7 +1295,8 @@ alias[effect:random_country_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in a unit every_sub_unit = { limit = { <triggers> } <effects> }
+
+###Iterate through all subunits in a unit every_sub_unit = { limit = { <triggers> } <effects> }
 ## scopes = unit
 alias[effect:every_sub_unit] = {
     ## cardinality = 0..1
@@ -1147,10 +1309,12 @@ alias[effect:every_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###remove the leader from a party in a country
+
+###remove the leader from a party in a country
 ## scopes = country
 alias[effect:remove_party_leadership] = replace_me
-###Executes on a random province
+
+###Executes on a random province
 ## scopes = none
 alias[effect:random_province] = {
     ## cardinality = 0..1
@@ -1163,13 +1327,16 @@ alias[effect:random_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###removes the targetcountry's claim on the province.
+
+###removes the targetcountry's claim on the province.
 ## scopes = province
 alias[effect:remove_claim] = replace_me
-###gives (or takes) Stability to a country
+
+###gives (or takes) Stability to a country
 ## scopes = country
 alias[effect:add_stability] = replace_me
-###Iterate through all neighbour countries ordered_neighbour_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all neighbour countries ordered_neighbour_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_neighbour_country] = {
     ## cardinality = 0..1
@@ -1182,10 +1349,12 @@ alias[effect:ordered_neighbour_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
+
+###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
 ## scopes = none
 alias[effect:change_local_variable] = replace_me
-###Iterate through all units in a province every_unit_in_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all units in a province every_unit_in_province = { limit = { <triggers> } <effects> }
 ## scopes = province
 alias[effect:every_unit_in_province] = {
     ## cardinality = 0..1
@@ -1198,7 +1367,8 @@ alias[effect:every_unit_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all countries at war with ordered_countries_at_war_with = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all countries at war with ordered_countries_at_war_with = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_countries_at_war_with] = {
     ## cardinality = 0..1
@@ -1211,7 +1381,8 @@ alias[effect:ordered_countries_at_war_with] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a country every_unit = { limit = { <triggers> } <effects> }
+
+###Iterate through all units in a country every_unit = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_unit] = {
     ## cardinality = 0..1
@@ -1224,10 +1395,12 @@ alias[effect:every_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###adds a modifier from a Province
+
+###adds a modifier from a Province
 ## scopes = province
 alias[effect:add_province_modifier] = replace_me
-###Executes on every parent
+
+###Executes on every parent
 ## scopes = character
 alias[effect:every_parent] = {
     ## cardinality = 0..1
@@ -1240,19 +1413,24 @@ alias[effect:every_parent] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes a modifier from a State
+
+###Removes a modifier from a State
 ## scopes = state
 alias[effect:remove_state_modifier] = replace_me
-###Adds ruler conviction
+
+###Adds ruler conviction
 ## scopes = character
 alias[effect:add_ruler_conviction] = replace_me
-###Sets the personal loyalty of a specific subunit to the target character
+
+###Sets the personal loyalty of a specific subunit to the target character
 ## scopes = subunit
 alias[effect:set_personal_loyalty] = replace_me
-###Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met, and its own limit is met if = { limit = { <triggers> } <effects> } else_if = { limit = { <triggers> } <effects> }
+
+###Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met, and its own limit is met if = { limit = { <triggers> } <effects> } else_if = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:else_if] = replace_me
-###Iterate through all countries at war with random_countries_at_war_with = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all countries at war with random_countries_at_war_with = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_countries_at_war_with] = {
     ## cardinality = 0..1
@@ -1265,10 +1443,12 @@ alias[effect:random_countries_at_war_with] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###makes the target a subject of the current scope
+
+###makes the target a subject of the current scope
 ## scopes = country
 alias[effect:make_subject] = replace_me
-###Iterate through all units in a country ordered_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all units in a country ordered_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_unit] = {
     ## cardinality = 0..1
@@ -1281,10 +1461,12 @@ alias[effect:ordered_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes the current scope from a named list remove_from_list = <string>
+
+###Removes the current scope from a named list remove_from_list = <string>
 ## scopes = none
 alias[effect:remove_from_list] = replace_me
-###Iterate through all commanders in a country ordered_commander = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all commanders in a country ordered_commander = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_commander] = {
     ## cardinality = 0..1
@@ -1297,7 +1479,8 @@ alias[effect:ordered_commander] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country every_country_state = { limit = { <triggers> } <effects> }
+
+###Iterate through all states in a country every_country_state = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_country_state] = {
     ## cardinality = 0..1
@@ -1310,7 +1493,8 @@ alias[effect:every_country_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all commanders in a country every_commander = { limit = { <triggers> } <effects> }
+
+###Iterate through all commanders in a country every_commander = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_commander] = {
     ## cardinality = 0..1
@@ -1323,16 +1507,20 @@ alias[effect:every_commander] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds martial skill
+
+###Adds martial skill
 ## scopes = none
 alias[effect:add_martial] = replace_me
-###makes a character pregnant
+
+###makes a character pregnant
 ## scopes = none
 alias[effect:make_pregnant] = replace_me
-###gives (or takes) Loyalty to a character
+
+###gives (or takes) Loyalty to a character
 ## scopes = character
 alias[effect:add_loyalty] = replace_me
-###Executes on a random living character
+
+###Executes on a random living character
 ## scopes = none
 alias[effect:random_living_character] = {
     ## cardinality = 0..1
@@ -1345,19 +1533,24 @@ alias[effect:random_living_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###adds or removes aggressive expansion for a country
+
+###adds or removes aggressive expansion for a country
 ## scopes = country
 alias[effect:add_aggressive_expansion] = replace_me
-###changes the flag of a country
+
+###changes the flag of a country
 ## scopes = country
 alias[effect:change_country_flag] = replace_me
-###Character stops being a governor
+
+###Character stops being a governor
 ## scopes = character
 alias[effect:remove_as_governor] = replace_me
-###sets the culture of the pop to be the same as the culture of the target
+
+###sets the culture of the pop to be the same as the culture of the target
 ## scopes = pop
 alias[effect:set_pop_culture_same_as] = replace_me
-###Iterate through all items in global list. list = name or variable = name ordered_in_global_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all items in global list. list = name or variable = name ordered_in_global_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_in_global_list] = {
     ## cardinality = 0..1
@@ -1370,22 +1563,28 @@ alias[effect:ordered_in_global_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) Prestige to a family
+
+###gives (or takes) Prestige to a family
 ## scopes = family
 alias[effect:add_prestige] = replace_me
-###Effect not shown in tooltips
+
+###Effect not shown in tooltips
 ## scopes = none
 alias[effect:hidden_effect] = replace_me
-###Changes a characters employer, if they are mecenary
+
+###Changes a characters employer, if they are mecenary
 ## scopes = character
 alias[effect:change_mercenary_employer] = replace_me
-###sets the culture of the character to be the same as the culture of the target
+
+###sets the culture of the character to be the same as the culture of the target
 ## scopes = character
 alias[effect:set_culture_same_as] = replace_me
-###sets the commander of a unit to the specified character
+
+###sets the commander of a unit to the specified character
 ## scopes = unit
 alias[effect:set_as_commander] = replace_me
-###Iterate through all supportasHeir ordered_support_as_heir = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all supportasHeir ordered_support_as_heir = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = character
 alias[effect:ordered_support_as_heir] = {
     ## cardinality = 0..1
@@ -1398,13 +1597,16 @@ alias[effect:ordered_support_as_heir] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Creates a specific poptype with the countrys religion/culture in a province
+
+###Creates a specific poptype with the countrys religion/culture in a province
 ## scopes = province
 alias[effect:create_state_pop] = replace_me
-###Conditionally cause an assert during run time assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
+
+###Conditionally cause an assert during run time assert_if = { limit = { X } text = Y }, where X is a trigger and Y is an optional string
 ## scopes = none
 alias[effect:assert_if] = replace_me
-###Iterate through all items in global list. list = name or variable = name random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all items in global list. list = name or variable = name random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_in_global_list] = {
     ## cardinality = 0..1
@@ -1417,16 +1619,20 @@ alias[effect:random_in_global_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:remove_list_global_variable] = replace_me
-###the scope character pays gold to the target character, pay_gold = { target = X gold = Y }
+
+###the scope character pays gold to the target character, pay_gold = { target = X gold = Y }
 ## scopes = character
 alias[effect:pay_gold] = replace_me
-###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain add_to_list = <string> NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
+
+###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain add_to_list = <string> NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
 ## scopes = none
 alias[effect:add_to_list] = replace_me
-###Iterate through all states in a governorship every_governorship_state = { limit = { <triggers> } <effects> }
+
+###Iterate through all states in a governorship every_governorship_state = { limit = { <triggers> } <effects> }
 ## scopes = governorship
 alias[effect:every_governorship_state] = {
     ## cardinality = 0..1
@@ -1439,7 +1645,8 @@ alias[effect:every_governorship_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a governorship random_governorship_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all states in a governorship random_governorship_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = governorship
 alias[effect:random_governorship_state] = {
     ## cardinality = 0..1
@@ -1452,13 +1659,16 @@ alias[effect:random_governorship_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Release the target character if imprisoned, release_prisoner = { target = X  }, where X is a character
+
+###Release the target character if imprisoned, release_prisoner = { target = X  }, where X is a character
 ## scopes = country
 alias[effect:release_prisoner] = replace_me
-###adds civilisation to a province
+
+###adds civilisation to a province
 ## scopes = province
 alias[effect:add_civilization_value] = replace_me
-###Iterate through all provinces in a state random_state_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all provinces in a state random_state_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = state
 alias[effect:random_state_province] = {
     ## cardinality = 0..1
@@ -1471,13 +1681,16 @@ alias[effect:random_state_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###sets gender equality for a country
+
+###sets gender equality for a country
 ## scopes = country
 alias[effect:set_gender_equality] = replace_me
-###Empties the list clear_variable_list = variable_name
+
+###Empties the list clear_variable_list = variable_name
 ## scopes = none
 alias[effect:clear_global_variable_list] = replace_me
-###Iterate through all provinces in a state ordered_state_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all provinces in a state ordered_state_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = state
 alias[effect:ordered_state_province] = {
     ## cardinality = 0..1
@@ -1490,7 +1703,8 @@ alias[effect:ordered_state_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a region ordered_region_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all states in a region ordered_region_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = region
 alias[effect:ordered_region_state] = {
     ## cardinality = 0..1
@@ -1503,10 +1717,12 @@ alias[effect:ordered_region_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) morale to a subunit
+
+###gives (or takes) morale to a subunit
 ## scopes = subunit
 alias[effect:add_subunit_morale] = replace_me
-###Iterate through all siblings every_sibling = { limit = { <triggers> } <effects> }
+
+###Iterate through all siblings every_sibling = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_sibling] = {
     ## cardinality = 0..1
@@ -1519,7 +1735,8 @@ alias[effect:every_sibling] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in list. list = name or variable = name random_in_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all items in list. list = name or variable = name random_in_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_in_list] = {
     ## cardinality = 0..1
@@ -1532,7 +1749,8 @@ alias[effect:random_in_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country every_country_sub_unit = { limit = { <triggers> } <effects> }
+
+###Iterate through all subunits in all units in a country every_country_sub_unit = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_country_sub_unit] = {
     ## cardinality = 0..1
@@ -1545,13 +1763,16 @@ alias[effect:every_country_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###adds a modifier to a Character
+
+###adds a modifier to a Character
 ## scopes = character
 alias[effect:add_character_modifier] = replace_me
-###Repeats enclosed effects while limit criteria are met or until set iteration count is reached while = { limit = { <triggers> } <effects> }  while = { count = 3 <effects> } Default max of 1000.
+
+###Repeats enclosed effects while limit criteria are met or until set iteration count is reached while = { limit = { <triggers> } <effects> }  while = { count = 3 <effects> } Default max of 1000.
 ## scopes = none
 alias[effect:while] = replace_me
-###Iterate through all items in local list. list = name or variable = name random_in_local_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all items in local list. list = name or variable = name random_in_local_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = none
 alias[effect:random_in_local_list] = {
     ## cardinality = 0..1
@@ -1564,10 +1785,12 @@ alias[effect:random_in_local_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
+
+###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
 ## scopes = none
 alias[effect:change_global_variable] = replace_me
-###Iterate through all armies in a country ordered_army = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all armies in a country ordered_army = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_army] = {
     ## cardinality = 0..1
@@ -1580,13 +1803,16 @@ alias[effect:ordered_army] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds an opinion modifier, add_opinion = { modifier = X  target = Z  } X is a scripted modifier name. 
+
+###Adds an opinion modifier, add_opinion = { modifier = X  target = Z  } X is a scripted modifier name.
 ## scopes = country
 alias[effect:add_opinion] = replace_me
-###Moves a character to another country (without message_popups)
+
+###Moves a character to another country (without message_popups)
 ## scopes = character
 alias[effect:move_country] = replace_me
-###Iterate through all items in global list. list = name or variable = name every_in_global_list = { limit = { <triggers> } <effects> }
+
+###Iterate through all items in global list. list = name or variable = name every_in_global_list = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_in_global_list] = {
     ## cardinality = 0..1
@@ -1599,7 +1825,8 @@ alias[effect:every_in_global_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all Rivals every_rival = { limit = { <triggers> } <effects> }
+
+###Iterate through all Rivals every_rival = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_rival] = {
     ## cardinality = 0..1
@@ -1612,13 +1839,16 @@ alias[effect:every_rival] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes a rival from the character
+
+###Removes a rival from the character
 ## scopes = character
 alias[effect:remove_rival] = replace_me
-###sets the Religion of the pop to be the same as the Religion of the target
+
+###sets the Religion of the pop to be the same as the Religion of the target
 ## scopes = pop
 alias[effect:set_pop_religion_same_as] = replace_me
-###Iterate through all states in a region every_region_state = { limit = { <triggers> } <effects> }
+
+###Iterate through all states in a region every_region_state = { limit = { <triggers> } <effects> }
 ## scopes = region
 alias[effect:every_region_state] = {
     ## cardinality = 0..1
@@ -1631,13 +1861,16 @@ alias[effect:every_region_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) Manpower to a country
+
+###gives (or takes) Manpower to a country
 ## scopes = country
 alias[effect:add_manpower] = replace_me
-###sets the graphical culture of a country
+
+###sets the graphical culture of a country
 ## scopes = country
 alias[effect:set_graphical_culture] = replace_me
-###Iterate through all states in a area random_area_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all states in a area random_area_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = area
 alias[effect:random_area_state] = {
     ## cardinality = 0..1
@@ -1650,16 +1883,20 @@ alias[effect:random_area_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Creates a Unit with a single cohort for a Country given by the current scope.  The cohort will be of the first defined type in the unit type db.  Optional properties:   name [string, defaults to generated name]   navy [bool, defaults to no]   mercenary [bool, defaults to no]   location [Province, defaults to capital of country scope]   commander [Character, defaults to none]   attachto [Unit, will not attach by default]
+
+###Creates a Unit with a single cohort for a Country given by the current scope.  The cohort will be of the first defined type in the unit type db.  Optional properties:   name [string, defaults to generated name]   navy [bool, defaults to no]   mercenary [bool, defaults to no]   location [Province, defaults to capital of country scope]   commander [Character, defaults to none]   attachto [Unit, will not attach by default]
 ## scopes = country
 alias[effect:create_unit] = replace_me
-###Sets primary culture for a country
+
+###Sets primary culture for a country
 ## scopes = country
 alias[effect:set_primary_culture] = replace_me
-###Adds ORATORY Power
+
+###Adds ORATORY Power
 ## scopes = none
 alias[effect:add_oratory_power] = replace_me
-###Iterate through all provinces in a state every_state_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all provinces in a state every_state_province = { limit = { <triggers> } <effects> }
 ## scopes = state
 alias[effect:every_state_province] = {
     ## cardinality = 0..1
@@ -1672,7 +1909,8 @@ alias[effect:every_state_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a province ordered_unit_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all units in a province ordered_unit_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = province
 alias[effect:ordered_unit_in_province] = {
     ## cardinality = 0..1
@@ -1685,7 +1923,8 @@ alias[effect:ordered_unit_in_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a area every_area_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all provinces in a area every_area_province = { limit = { <triggers> } <effects> }
 ## scopes = area
 alias[effect:every_area_province] = {
     ## cardinality = 0..1
@@ -1698,7 +1937,8 @@ alias[effect:every_area_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all friends every_friend = { limit = { <triggers> } <effects> }
+
+###Iterate through all friends every_friend = { limit = { <triggers> } <effects> }
 ## scopes = character
 alias[effect:every_friend] = {
     ## cardinality = 0..1
@@ -1711,10 +1951,12 @@ alias[effect:every_friend] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes all Offices from a character
+
+###Removes all Offices from a character
 ## scopes = character
 alias[effect:remove_all_offices] = replace_me
-###Iterate through all existing areas ordered_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all existing areas ordered_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_area] = {
     ## cardinality = 0..1
@@ -1727,7 +1969,8 @@ alias[effect:ordered_area] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all allied countries every_allied_country = { limit = { <triggers> } <effects> }
+
+###Iterate through all allied countries every_allied_country = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_allied_country] = {
     ## cardinality = 0..1
@@ -1740,10 +1983,12 @@ alias[effect:every_allied_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met if = { limit = { <triggers> } <effects> } else = { <effects> }
+
+###Executes enclosed effects if limit criteria of preceding 'if' or 'else_if' is not met if = { limit = { <triggers> } <effects> } else = { <effects> }
 ## scopes = none
 alias[effect:else] = replace_me
-###Iterate through all owned provinces in a country random_owned_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all owned provinces in a country random_owned_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_owned_province] = {
     ## cardinality = 0..1
@@ -1756,7 +2001,8 @@ alias[effect:random_owned_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing countries every_country = { limit = { <triggers> } <effects> }
+
+###Iterate through all existing countries every_country = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_country] = {
     ## cardinality = 0..1
@@ -1769,19 +2015,24 @@ alias[effect:every_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Adds a trait to a character
+
+###Adds a trait to a character
 ## scopes = character
 alias[effect:add_trait] = replace_me
-###Adds a subunit to a Unit
+
+###Adds a subunit to a Unit
 ## scopes = unit
 alias[effect:add_subunit] = replace_me
-###adds a modifier from a State
+
+###adds a modifier from a State
 ## scopes = state
 alias[effect:add_state_modifier] = replace_me
-###adds party support for a country
+
+###adds party support for a country
 ## scopes = country
 alias[effect:add_party_support] = replace_me
-###Iterate through all ownable provinces in the world ordered_ownable_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all ownable provinces in the world ordered_ownable_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = none
 alias[effect:ordered_ownable_province] = {
     ## cardinality = 0..1
@@ -1794,7 +2045,8 @@ alias[effect:ordered_ownable_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###a random list effect random_list = { X1 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y1 effect1 } X2 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y2 effect2 } ... } Selects one effect from the list and fires it. The effects are weighted by numbers X1, X2... (the higher the number, the higher the chance of the effect being picked). The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH)
+
+###a random list effect random_list = { X1 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y1 effect1 } X2 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y2 effect2 } ... } Selects one effect from the list and fires it. The effects are weighted by numbers X1, X2... (the higher the number, the higher the chance of the effect being picked). The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH)
 ## scopes = none
 alias[effect:random_list] = {
     ## cardinality = 0..1
@@ -1807,7 +2059,8 @@ alias[effect:random_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a area every_area_state = { limit = { <triggers> } <effects> }
+
+###Iterate through all states in a area every_area_state = { limit = { <triggers> } <effects> }
 ## scopes = area
 alias[effect:every_area_state] = {
     ## cardinality = 0..1
@@ -1820,37 +2073,48 @@ alias[effect:every_area_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) Prominence to a character
+
+###gives (or takes) Prominence to a character
 ## scopes = character
 alias[effect:add_prominence] = replace_me
-###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:add_to_variable_list] = replace_me
-###gives (or takes) Treasury to a country
+
+###gives (or takes) Treasury to a country
 ## scopes = country
 alias[effect:add_treasury] = replace_me
-###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
+
+###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
 ## scopes = none
 alias[effect:clamp_variable] = replace_me
-###adds a cancellable modifier to a Character
+
+###adds a cancellable modifier to a Character
 ## scopes = character
 alias[effect:add_triggered_character_modifier] = replace_me
-###Refunds a Price from a country
+
+###Refunds a Price from a country
 ## scopes = country
 alias[effect:refund_price] = replace_me
-###gives a nickname to a character
+
+###gives a nickname to a character
 ## scopes = character
 alias[effect:add_nickname] = replace_me
-###country in scope breaks any applicable alliance with the target
+
+###country in scope breaks any applicable alliance with the target
 ## scopes = none
 alias[effect:break_alliance] = replace_me
-###gives (or takes) Popularity to a character
+
+###gives (or takes) Popularity to a character
 ## scopes = character
 alias[effect:add_popularity] = replace_me
-###adds party conviction for a character
+
+###adds party conviction for a character
 ## scopes = character
 alias[effect:add_party_conviction] = replace_me
-###Executes on every living character
+
+###Executes on every living character
 ## scopes = none
 alias[effect:every_living_character] = {
     ## cardinality = 0..1
@@ -1863,10 +2127,12 @@ alias[effect:every_living_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Log the current scope to the game log when this effect executes yes = full scope info, no=only current scope
+
+###Log the current scope to the game log when this effect executes yes = full scope info, no=only current scope
 ## scopes = none
 alias[effect:debug_log_scopes] = replace_me
-###Iterate through all states in a governorship ordered_governorship_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all states in a governorship ordered_governorship_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = governorship
 alias[effect:ordered_governorship_state] = {
     ## cardinality = 0..1
@@ -1879,10 +2145,12 @@ alias[effect:ordered_governorship_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) Strength to a subunit
+
+###gives (or takes) Strength to a subunit
 ## scopes = subunit
 alias[effect:add_subunit_strength] = replace_me
-###Iterate through all existing regions every_region = { limit = { <triggers> } <effects> }
+
+###Iterate through all existing regions every_region = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_region] = {
     ## cardinality = 0..1
@@ -1895,10 +2163,12 @@ alias[effect:every_region] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives the targetcountry a claim on the province.
+
+###gives the targetcountry a claim on the province.
 ## scopes = province
 alias[effect:add_claim] = replace_me
-###Iterate through all families in a country random_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all families in a country random_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_family] = {
     ## cardinality = 0..1
@@ -1911,10 +2181,12 @@ alias[effect:random_family] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Set the Religion for this pop
+
+###Set the Religion for this pop
 ## scopes = pop
 alias[effect:set_pop_religion] = replace_me
-###Iterate through all owned provinces in a country ordered_owned_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all owned provinces in a country ordered_owned_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_owned_province] = {
     ## cardinality = 0..1
@@ -1927,10 +2199,12 @@ alias[effect:ordered_owned_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Changes the capital of a country
+
+###Changes the capital of a country
 ## scopes = country
 alias[effect:set_capital] = replace_me
-###Iterate through all units in a country random_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all units in a country random_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = country
 alias[effect:random_unit] = {
     ## cardinality = 0..1
@@ -1943,7 +2217,8 @@ alias[effect:random_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region every_region_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all provinces in a region every_region_province = { limit = { <triggers> } <effects> }
 ## scopes = region
 alias[effect:every_region_province] = {
     ## cardinality = 0..1
@@ -1956,7 +2231,8 @@ alias[effect:every_region_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states a governor is governor of random_governor_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all states a governor is governor of random_governor_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = character
 alias[effect:random_governor_state] = {
     ## cardinality = 0..1
@@ -1969,7 +2245,8 @@ alias[effect:random_governor_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country ordered_successor = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all successors in a country ordered_successor = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = country
 alias[effect:ordered_successor] = {
     ## cardinality = 0..1
@@ -1982,13 +2259,16 @@ alias[effect:ordered_successor] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Character stops being a Mercenary
+
+###Character stops being a Mercenary
 ## scopes = character
 alias[effect:remove_as_mercenary] = replace_me
-###Removes command from a character
+
+###Removes command from a character
 ## scopes = character
 alias[effect:remove_command] = replace_me
-###Iterate through all pops in a province every_pops_in_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all pops in a province every_pops_in_province = { limit = { <triggers> } <effects> }
 ## scopes = province
 alias[effect:every_pops_in_province] = {
     ## cardinality = 0..1
@@ -2001,16 +2281,20 @@ alias[effect:every_pops_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###makes the currrent province controlled by the target country, if province owner and target are at war
+
+###makes the currrent province controlled by the target country, if province owner and target are at war
 ## scopes = province
 alias[effect:set_controller] = replace_me
-###adds a modifier from a country
+
+###adds a modifier from a country
 ## scopes = country
 alias[effect:add_country_modifier] = replace_me
-###moves the pop to target province.
+
+###moves the pop to target province.
 ## scopes = pop
 alias[effect:move_pop] = replace_me
-###Iterate through all items in local list. list = name or variable = name every_in_local_list = { limit = { <triggers> } <effects> }
+
+###Iterate through all items in local list. list = name or variable = name every_in_local_list = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_in_local_list] = {
     ## cardinality = 0..1
@@ -2023,13 +2307,16 @@ alias[effect:every_in_local_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Removes a modifier from a Unit
+
+###Removes a modifier from a Unit
 ## scopes = unit
 alias[effect:remove_unit_modifier] = replace_me
-###adds research for a country { technology = table value = percent(0-100) }
+
+###adds research for a country { technology = table value = percent(0-100) }
 ## scopes = country
 alias[effect:add_research] = replace_me
-###Iterate through all families in a country every_family = { limit = { <triggers> } <effects> }
+
+###Iterate through all families in a country every_family = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_family] = {
     ## cardinality = 0..1
@@ -2042,13 +2329,16 @@ alias[effect:every_family] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) centralization to a country
+
+###gives (or takes) centralization to a country
 ## scopes = country
 alias[effect:add_centralization] = replace_me
-###gives (or takes) Legitimacy to a country
+
+###gives (or takes) Legitimacy to a country
 ## scopes = country
 alias[effect:add_legitimacy] = replace_me
-###Iterate through all subject countries every_subject = { limit = { <triggers> } <effects> }
+
+###Iterate through all subject countries every_subject = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_subject] = {
     ## cardinality = 0..1
@@ -2061,19 +2351,24 @@ alias[effect:every_subject] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###triggers an event or on_action trigger_event = { id = X days/months/years = Y } (for events) or trigger_event = { on_action = X days/months/years = Y } (for on_actions) Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
+
+###triggers an event or on_action trigger_event = { id = X days/months/years = Y } (for events) or trigger_event = { on_action = X days/months/years = Y } (for on_actions) Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
 ## scopes = none
 alias[effect:trigger_event] = replace_me
-###adds or subtracts health from a character
+
+###adds or subtracts health from a character
 ## scopes = character
 alias[effect:add_health] = replace_me
-###Log a string to the debug log when this effect executes, debug_log = message, the message can be a localization string with ROOT, SCOPE and PREV available
+
+###Log a string to the debug log when this effect executes, debug_log = message, the message can be a localization string with ROOT, SCOPE and PREV available
 ## scopes = none
 alias[effect:debug_log] = replace_me
-###Sets religion for a country
+
+###Sets religion for a country
 ## scopes = country
 alias[effect:set_country_religion] = replace_me
-###Iterate through all neighbour countries every_neighbour_country = { limit = { <triggers> } <effects> }
+
+###Iterate through all neighbour countries every_neighbour_country = { limit = { <triggers> } <effects> }
 ## scopes = country
 alias[effect:every_neighbour_country] = {
     ## cardinality = 0..1
@@ -2086,22 +2381,28 @@ alias[effect:every_neighbour_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###gives (or takes) war exhaustion to a country
+
+###gives (or takes) war exhaustion to a country
 ## scopes = country
 alias[effect:add_war_exhaustion] = replace_me
-###just a tooltip, the scope as subject (for grouping, localization)
+
+###just a tooltip, the scope as subject (for grouping, localization)
 ## scopes = none
 alias[effect:custom_tooltip] = replace_me
-###adds a road towards the target
+
+###adds a road towards the target
 ## scopes = province
 alias[effect:add_road_towards] = replace_me
-###Sets the Family of the character
+
+###Sets the Family of the character
 ## scopes = character
 alias[effect:set_family] = replace_me
-###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:remove_list_variable] = replace_me
-###Iterate through all pops in a province ordered_pops_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all pops in a province ordered_pops_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = province
 alias[effect:ordered_pops_in_province] = {
     ## cardinality = 0..1
@@ -2114,7 +2415,8 @@ alias[effect:ordered_pops_in_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region ordered_region_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+
+###Iterate through all provinces in a region ordered_region_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 ## scopes = region
 alias[effect:ordered_region_province] = {
     ## cardinality = 0..1
@@ -2127,7 +2429,8 @@ alias[effect:ordered_region_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a province random_unit_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+
+###Iterate through all units in a province random_unit_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 ## scopes = province
 alias[effect:random_unit_in_province] = {
     ## cardinality = 0..1
@@ -2140,25 +2443,32 @@ alias[effect:random_unit_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_event_target_as = <string>
+
+###Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_event_target_as = <string>
 ## scopes = none
 alias[effect:save_temporary_scope_as] = replace_me
-###Removes a modifier from a Character
+
+###Removes a modifier from a Character
 ## scopes = character
 alias[effect:remove_character_modifier] = replace_me
-###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
+
+###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
 ## scopes = none
 alias[effect:add_to_global_variable_list] = replace_me
-###adds a modifier from a Unit
+
+###adds a modifier from a Unit
 ## scopes = unit
 alias[effect:add_unit_modifier] = replace_me
-###sets up a pop culture/religion/type possible to set.
+
+###sets up a pop culture/religion/type possible to set.
 ## scopes = province
 alias[effect:define_pop] = replace_me
-###Adds zeal skill
+
+###Adds zeal skill
 ## scopes = none
 alias[effect:add_zeal] = replace_me
-###Iterate through all ownable provinces in the world every_ownable_province = { limit = { <triggers> } <effects> }
+
+###Iterate through all ownable provinces in the world every_ownable_province = { limit = { <triggers> } <effects> }
 ## scopes = none
 alias[effect:every_ownable_province] = {
     ## cardinality = 0..1
@@ -2171,7 +2481,8 @@ alias[effect:every_ownable_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###creates a family for the target character
+
+###creates a family for the target character
 ## scopes = country
 alias[effect:create_family] = replace_me
-
+

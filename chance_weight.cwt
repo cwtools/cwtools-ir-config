@@ -5,24 +5,24 @@ enums = {
     }
 }
 
-new_alias_def[chance_block] = {
+single_alias[chance_block] = {
     # TODO: Requires further testing, might necessiate splitting into chance_block and chance_block_with_base or something
     ## cardinality = 0..1
     base = float
 
     ## cardinality = 0..inf
-    new_alias_left[weight_chance_modifier] = new_alias_right[weight_chance_modifier]
+    modifier = single_alias_right[weight_chance_modifier]
 }
 
-new_alias_def[weight_block] = {
+single_alias[weight_block] = {
     ## cardinality = 0..1
     base = float
 
     ## cardinality = 0..inf
-    new_alias_left[weight_chance_modifier] = new_alias_right[weight_chance_modifier]
+    modifier = single_alias_right[weight_chance_modifier]
 }
 
-new_alias_def[weight_chance_modifier] = {
+single_alias[weight_chance_modifier] = {
     enum[weight_chance_modifier_operators] = value_field
 
     ## cardinality = 0..inf

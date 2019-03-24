@@ -315,7 +315,8 @@ links = {
     scope = {
         desc =  eventtarget_link_desc_scope
         from_data = yes
-        data_source = <scope>
+        data_source = value[event_target]
+        prefix = scope:
     }
     var = {
         desc =  eventtarget_link_desc_var
