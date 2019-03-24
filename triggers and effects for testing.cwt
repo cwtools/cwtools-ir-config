@@ -2,3 +2,46 @@
 ## scopes = none
 alias[effect:save_scope_as] = value_set[event_target]
 
+
+alias[trigger:trigger_if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+alias[trigger:trigger_else_if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+alias[trigger:trigger_else] = {
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+alias[effect:if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[effect:else_if] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[effect:else] = {
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[trigger:exists] = scope_field
+
+
+alias[trigger:custom_tooltip] = {
+        alias_name[trigger] = alias_match_left[trigger]
+}
