@@ -1,0 +1,27 @@
+enums = {
+    enum[tech_types] = {
+        civic_tech
+        military_tech
+        oratory_tech
+        religious_tech
+    }
+}
+
+types = {
+    type[invention] = {
+        path = "game/common/inventions"
+
+        localisation = {
+            name = "$"
+            description = "$_desc"
+        }
+    }
+}
+
+## replace_scope = { this = country root = country }
+invention = {
+    ## cardinality = 1..inf
+    alias_name[modifier] = alias_match_left[modifier]
+
+    enum[tech_types] = int[0..inf]
+}
