@@ -45,3 +45,26 @@ alias[trigger:exists] = scope_field
 alias[trigger:custom_tooltip] = {
         alias_name[trigger] = alias_match_left[trigger]
 }
+
+alias[effect:hidden_effect] = {
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[effect:random_list] = {
+    ## cardinality = 1..inf
+    int = {
+        trigger = {
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+        alias_name[effect] = alias_match_left[effect]
+
+    }
+}
+
+alias[effect:while] = {
+    limit = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    alias_name[effect] = alias_match_left[effect]
+
+}
