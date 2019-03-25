@@ -1,0 +1,112 @@
+types = {
+    type[culture_group] = {
+        path = "game/common/cultures"
+
+        localisation = {
+            name = "$"
+            male_name_format = "$_malename"
+            female_name_format = "$_femalename"
+            army_name = "ARMY_NAME_$"
+            navy_name = "NAVY_NAME_$"
+            cohort_name = "COHORT_NAME_$"
+        }
+    }
+    type[culture] = {
+        path = "game/common/cultures"
+        skip_root_key = { any culture }
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+culture_group = {
+    color = TODO
+
+    ## cardinality = 0..1
+    ### Defaults to no, probably.
+    use_latin_name_rules = bool
+
+    male_names = {
+        ## cardinality = 1..inf
+        scalar
+    }
+
+    female_names = {
+        ## cardinality = 1..inf
+        scalar
+    }
+
+    ### Immutable family names.
+    family = {
+        ## cardinality = 1..inf
+        scalar
+    }
+    ### Mutable family names. Format is "masculine.feminine.plural.adjective"
+    family = {
+        ## cardinality = 1..inf
+        family_name_field
+    }
+
+    ## cardinality = 0..1
+    female_order = {
+        ## cardinality = 1..inf
+        scalar
+    }
+
+    ## cardinality = 0..1
+    nickname = {
+        ## cardinality = 1..inf
+        localisation
+    }
+
+    culture = {
+        ## cardinality = 1..inf
+        <culture> = {
+            ## cardinality = 0..1
+            male_names = {
+                ## cardinality = 1..inf
+                scalar
+            }
+
+            ## cardinality = 0..1
+            female_names = {
+                ## cardinality = 1..inf
+                scalar
+            }
+
+            ## cardinality = 0..1
+            ### Immutable family names.
+            family = {
+                ## cardinality = 1..inf
+                scalar
+            }
+            ## cardinality = 0..1
+            ### Mutable family names. Format is "masculine.feminine.plural.adjective"
+            family = {
+                ## cardinality = 1..inf
+                family_name_field
+            }
+
+            ## cardinality = 0..1
+            nickname = {
+                ## cardinality = 1..inf
+                localisation
+            }
+        }
+    }
+
+    barbarian_names = {
+        # Need _ADJ too
+        ## cardinality = 1..inf
+        localisation
+    }
+
+    graphical_culture = <graphical_culture>
+
+    ethnicities = {
+        ## cardinality = 1..inf
+        int = <ethnicity>
+    }
+}
