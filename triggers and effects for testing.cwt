@@ -43,7 +43,17 @@ alias[trigger:exists] = scope_field
 
 
 alias[trigger:custom_tooltip] = {
-        alias_name[trigger] = alias_match_left[trigger]
+    text = localisation
+
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+alias[effect:custom_tooltip] = {
+    text = localisation
+
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
 }
 
 alias[effect:hidden_effect] = {
