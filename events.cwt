@@ -1,0 +1,7 @@
+types = {
+    type[event] = {
+        path = "game/events"
+    }
+}
+event = { # TODO: this is a stub to prevent errors from other files
+}

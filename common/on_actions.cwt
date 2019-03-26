@@ -21,12 +21,14 @@ on_action = {
 	## cardinality = 0..1
 	random_events = {
 		## cardinality = 1..inf
-		int = scalar # FIXME: should be <event>
+		int = <event>
+		## cardinality = 0..1
+		int = 0
 	}
 	## cardinality = 0..1
 	events = {
 		## cardinality = 1..inf
-		scalar # FIXME: should be <event>
+		<event>
 	}
 	## cardinality = 0..1
 	trigger = {
