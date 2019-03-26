@@ -5,7 +5,33 @@ types = {
 }
 
 on_action = {
+	## cardinality = 0..1
     effect = {
         alias_name[effect] = alias_match_left[effect]
     }
+	## cardinality = 0..1
+	on_actions = {
+		## cardinality = 0..inf
+		<on_action>
+		## cardinality = 0..inf
+		delay = int
+		## cardinality = 0..inf
+		delay = { int int }
+	}
+	## cardinality = 0..1
+	random_events = {
+		## cardinality = 1..inf
+		int = scalar # FIXME: should be <event>
+	}
+	## cardinality = 0..1
+	events = {
+		## cardinality = 1..inf
+		scalar # FIXME: should be <event>
+	}
+	## cardinality = 0..1
+	trigger = {
+		## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+	}
+
 }

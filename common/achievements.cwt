@@ -13,12 +13,12 @@ types = {
 ## replace_scope = { this = country root = country }
 achievement = {
 	possible = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	happened = {
-		## cardinality = 0..1
+		## cardinality = 1..inf
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
