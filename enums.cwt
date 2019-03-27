@@ -5,4 +5,15 @@ enums = {
         oratory
         religious
     }
+    enum[government_types] = {
+        republic
+        monarchy
+        tribal
+    }
+    enum[character_attributes] = {
+        charisma
+        finesse
+        martial
+        zeal
+    }
 }
