@@ -1,0 +1,8 @@
+enums = {
+    enum[power_types] = {
+        civic
+        military
+        oratory
+        religious
+    }
+}
