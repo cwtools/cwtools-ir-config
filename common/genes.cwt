@@ -60,7 +60,7 @@ types = {
         path = "game/common/genes"
         skip_root_key = morph_genes
     }
-    type[morph_gene_option] = {
+    type[morph_subgene] = {
         path = "game/common/genes"
         skip_root_key = { morph_genes any }
     }
@@ -68,7 +68,7 @@ types = {
         path = "game/common/genes"
         skip_root_key = accessory_genes
     }
-    type[accessory_gene_option] = {
+    type[accessory_subgene] = {
         path = "game/common/genes"
         skip_root_key = { accessory_genes any }
     }
@@ -102,7 +102,7 @@ morph_gene = {
 
     # Some things are extrapolated from others (such as usage of enum[gene_genders_ages] in boy)
     ## cardinality = 1..inf
-    <morph_gene_option> = {
+    <morph_subgene> = {
         index = int
 
         ## cardinality = 0..1
@@ -138,7 +138,7 @@ accessory_gene = {
     inheritable = bool
 
     ## cardinality = 1..inf
-    <accessory_gene_option> = {
+    <accessory_subgene> = {
         index = int
 
         ## cardinality = 0..1

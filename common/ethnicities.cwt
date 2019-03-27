@@ -1,13 +1,13 @@
-single_alias[ethnicity_morph_gene_variant_usage] = {
-    name = <morph_gene_option>
+single_alias[ethnicity_morph_subgene_usage] = {
+    name = <morph_subgene>
     range = {
         ## cardinality = 2..2
         float[0.0..1.0]
     }
 }
 
-single_alias[ethnicity_accessory_gene_variant_usage] = {
-    name = <accessory_gene_option>
+single_alias[ethnicity_accessory_subgene_usage] = {
+    name = <accessory_subgene>
     range = {
         ## cardinality = 2..2
         float[0.0..1.0]
@@ -38,13 +38,13 @@ ethnicity = {
     <morph_gene> = {
         # Weird, the whole bit is commented out in some parts, dunno how that'd work in the end
         ## cardinality = 0..inf
-        int = single_alias_right[ethnicity_morph_gene_variant_usage]
+        int = single_alias_right[ethnicity_morph_subgene_usage]
     }
 
     ## cardinality = 0..inf
     <accessory_gene> = {
         # Weird, the whole bit is commented out in some parts, dunno how that'd work in the end
         ## cardinality = 0..inf
-        int = single_alias_right[ethnicity_accessory_gene_variant_usage]
+        int = single_alias_right[ethnicity_accessory_subgene_usage]
     }
 }
