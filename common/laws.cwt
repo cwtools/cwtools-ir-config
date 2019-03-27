@@ -33,6 +33,12 @@ law_category = {
             ## cardinality = 0..inf
             alias_name[trigger] = alias_match_left[trigger]
         }
+
         alias_name[modifier] = alias_match_left[modifier]
+
+        ## cardinality = 0..1
+        on_enact = {
+            alias_name[effect] = alias_match_left[effect]
+        }
     }
 }
