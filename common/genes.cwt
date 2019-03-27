@@ -1,0 +1,42 @@
+types = {
+    type[color_gene] = {
+        path = "game/common/genes"
+        skip_root_key = color_genes
+    }
+    type[morph_gene] = {
+        path = "game/common/genes"
+        skip_root_key = morph_genes
+    }
+    type[morph_gene_option] = {
+        path = "game/common/genes"
+        skip_root_key = { morph_genes any }
+    }
+    type[accessory_gene] = {
+        path = "game/common/genes"
+        skip_root_key = accessory_genes
+    }
+    type[accessory_gene_option] = {
+        path = "game/common/genes"
+        skip_root_key = { accessory_genes any }
+    }
+}
+
+color_gene = {
+
+}
+
+morph_gene = {
+
+    ## cardinality = 1..inf
+    <morph_gene_option> = {
+
+    }
+}
+
+accessory_gene = {
+
+    ## cardinality = 1..inf
+    <accessory_gene_option> = {
+
+    }
+}
