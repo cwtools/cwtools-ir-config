@@ -1,4 +1,57 @@
+enums = {
+    enum[gene_colors] = {
+        hair
+        skin
+        eye
+    }
+    enum[gene_decal_types] = {
+        skin
+        paint
+    }
+    # Will update for all genes if the "at most one of" rule is introduced
+    enum[gene_genders_ages] = {
+        male
+        female
+        boy
+        girl
+        # infant
+    }
+}
+
+single_alias[morph_gene_settings] = {
+    ## cardinality = 0..inf
+    setting = {
+        # TODO: Match up with actual attributes in assets, somehow?
+        attribute = scalar
+
+        value = {
+            min = float[-1.0..1.0]
+            max = float[-1.0..1.0]
+        }
+    }
+
+    ## cardinality = 0..1
+    decal = {
+        type = enum[gene_decal_types]
+        atlas_pos = {
+            ## cardinality = 2..2
+            int
+        }
+    }
+
+    ## cardinality = 0..1
+    texture_override = {
+        weight = int
+
+        # TODO/WISHLIST: Necessiate texture filepath? something like filepath:dds or filepath[dds]?
+        diffuse = filepath
+        normal = filepath
+        specular = filepath
+    }
+}
+
 types = {
+    # TODO: special genes; not touching that part yet, it's a bit confusing
     type[color_gene] = {
         path = "game/common/genes"
         skip_root_key = color_genes
@@ -22,21 +75,110 @@ types = {
 }
 
 color_gene = {
+    ## cardinality = 0..1
+    sync_inheritance_with = <color_gene>
 
+    # WISHLIST: Rule to ensure uniqueness? Also could help with the default = yes in other types
+    index = int
+
+    color = enum[gene_colors]
+
+    # [0.0..1.0]?
+    ## cardinality = 0..1
+    max_blend = float
+
+    # # [0.0..1.0]?
+    # ## cardinality = 0..1
+    # max_recessive_drift = float
 }
 
 morph_gene = {
+    index = int
 
+    # I'm gonna put this here; accessory genes have this and morph genes probably have it too, but TODO: Confirm
+    # ## cardinality = 0..1
+    # ### Defaults to yes, probably.
+    # inheritable = bool
+
+    # Some things are extrapolated from others (such as usage of enum[gene_genders_ages] in boy)
     ## cardinality = 1..inf
     <morph_gene_option> = {
+        index = int
 
+        ## cardinality = 0..1
+        ### Format is "tag1,tag2,tag3"
+        set_tags = scalar
+
+        ## cardinality = 0..1
+        male = single_alias_right[morph_gene_settings]
+
+        ## cardinality = 0..1
+        female = single_alias_right[morph_gene_settings]
+
+        ## cardinality = 0..1
+        boy = single_alias_right[morph_gene_settings]
+        ## cardinality = 0..1
+        boy = enum[gene_genders_ages]
+
+        ## cardinality = 0..1
+        girl = single_alias_right[morph_gene_settings]
+        ## cardinality = 0..1
+        girl = enum[gene_genders_ages]
+
+        ## cardinality = 0..1
+        infant = single_alias_right[morph_gene_settings]
     }
 }
 
 accessory_gene = {
+    index = int
+
+    ## cardinality = 0..1
+    ### Defaults to yes, probably.
+    inheritable = bool
 
     ## cardinality = 1..inf
     <accessory_gene_option> = {
+        index = int
 
+        ## cardinality = 0..1
+        ### Format is "tag1,tag2,tag3"
+        set_tags = scalar
+
+        ## cardinality = 0..1
+        male = {
+            # TODO: object in gfx/portrait/accessories/
+            ## cardinality = 1..inf
+            int = scalar
+        }
+        ## cardinality = 0..1
+        male = enum[gene_genders_ages]
+
+        ## cardinality = 0..1
+        female = {
+            # TODO: object in gfx/portrait/accessories/
+            ## cardinality = 1..inf
+            int = scalar
+        }
+        ## cardinality = 0..1
+        female = enum[gene_genders_ages]
+
+        ## cardinality = 0..1
+        boy = {
+            # TODO: object in gfx/portrait/accessories/
+            ## cardinality = 1..inf
+            int = scalar
+        }
+        ## cardinality = 0..1
+        boy = enum[gene_genders_ages]
+
+        ## cardinality = 0..1
+        girl = {
+            # TODO: object in gfx/portrait/accessories/
+            ## cardinality = 1..inf
+            int = scalar
+        }
+        ## cardinality = 0..1
+        girl = enum[gene_genders_ages]
     }
 }
