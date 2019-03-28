@@ -44,4 +44,8 @@ enums = {
         support_rebels
         abandon_civil_war
     }
+    enum[minmax] = {
+        min
+        max
+    }
 }
