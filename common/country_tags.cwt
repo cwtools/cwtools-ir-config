@@ -1,0 +1,8 @@
+complex_enum[country_tags] = {
+    path_strict = yes
+    path = "game/common/countries.txt"
+
+    name = {
+        enum_name = filepath
+    }
+}

@@ -1,11 +1,3 @@
-enums = {
-    enum[government_types] = {
-        republic
-        monarchy
-        tribal
-    }
-}
-
 types = {
     type[government] = {
         path = "game/common/governments"
