@@ -12,7 +12,7 @@ types = {
 
 office = {
     type = enum[government_types]
-    skill = enum[character_attributes]
+    skill = enum[character_skills]
 
     ## replace_scope = { this = character root = character }
     personal_modifier = {

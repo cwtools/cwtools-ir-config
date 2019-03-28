@@ -1,12 +1,3 @@
-enums = {
-    enum[tech_types] = {
-        civic_tech
-        military_tech
-        oratory_tech
-        religious_tech
-    }
-}
-
 types = {
     type[invention] = {
         path = "game/common/inventions"
@@ -23,5 +14,5 @@ invention = {
     ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]
 
-    enum[tech_types] = int[0..inf]
+    <technology_table> = int[0..inf]
 }

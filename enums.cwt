@@ -10,7 +10,7 @@ enums = {
         monarchy
         tribal
     }
-    enum[character_attributes] = {
+    enum[character_skills] = {
         charisma
         finesse
         martial
