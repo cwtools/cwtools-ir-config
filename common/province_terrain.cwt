@@ -1,16 +1,3 @@
-enums = {
-    enum[terrain] = {
-        plains
-        hills
-        farmland
-        marsh
-        forest
-        mountain
-        desert
-        jungle
-    }
-}
-
 types = {
     type[province_terrain_validation] = {
         path = "game/common/province_terrain"
@@ -20,8 +7,8 @@ types = {
 
 province_terrain_validation = {
     ## cardinality = 0..1
-    default = enum[terrain]
+    default = <terrain>
 
     ## cardinality = 0..inf
-    <province> = enum[terrain]
+    <province> = <terrain>
 }
