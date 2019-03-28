@@ -12,7 +12,7 @@ types = {
 
 province_names_validation = {
     ## cardinality = 0..inf
-    <country_tag> = single_alias_right[province_names_rhs]
+    enum[country_tags] = single_alias_right[province_names_rhs]
 
     ## cardinality = 0..inf
     <culture> = single_alias_right[province_names_rhs]
