@@ -5,6 +5,8 @@ enums = {
     }
 }
 
+# TODO: Figure out if the chance-weight difference is really needed
+
 single_alias[chance_block] = {
     # TODO: Requires further testing, might necessiate splitting into chance_block and chance_block_with_base or something
     ## cardinality = 0..1
@@ -17,6 +19,9 @@ single_alias[chance_block] = {
     ## cardinality = 0..inf
     ### Always appears in the tooltip, if any.
     always_modifier = single_alias_right[weight_chance_modifier]
+
+    ## cardinality = 0..inf
+    <scripted_modifier> = yes
 }
 
 single_alias[weight_block] = {
@@ -30,6 +35,9 @@ single_alias[weight_block] = {
     ## cardinality = 0..inf
     ### Always appears in the tooltip, if any.
     always_modifier = single_alias_right[weight_chance_modifier]
+
+    ## cardinality = 0..inf
+    <scripted_modifier> = yes
 }
 
 single_alias[weight_chance_modifier] = {
