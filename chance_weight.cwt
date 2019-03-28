@@ -11,7 +11,12 @@ single_alias[chance_block] = {
     base = float
 
     ## cardinality = 0..inf
+    ### Appears in the tooltip only if the conditions are fulfilled.
     modifier = single_alias_right[weight_chance_modifier]
+
+    ## cardinality = 0..inf
+    ### Always appears in the tooltip, if any.
+    always_modifier = single_alias_right[weight_chance_modifier]
 }
 
 single_alias[weight_block] = {
@@ -19,7 +24,12 @@ single_alias[weight_block] = {
     base = float
 
     ## cardinality = 0..inf
+    ### Appears in the tooltip only if the conditions are fulfilled.
     modifier = single_alias_right[weight_chance_modifier]
+
+    ## cardinality = 0..inf
+    ### Always appears in the tooltip, if any.
+    always_modifier = single_alias_right[weight_chance_modifier]
 }
 
 single_alias[weight_chance_modifier] = {
