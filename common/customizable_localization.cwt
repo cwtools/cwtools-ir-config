@@ -1,0 +1,47 @@
+enums = {
+    enum[custom_loc_scopes] = {
+        character
+        country
+    }
+}
+
+single_alias[custom_loc_text_block] = {
+    localization_key = localisation
+    trigger = {
+        ## cardinality = 1..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}
+
+types = {
+    # These zs are going to drive me mad
+    type[customizable_localization] = {
+        path = "game/common/customizable_localization"
+
+        subtype[character] = {
+            type = character
+        }
+        subtype[country] = {
+            type = country
+        }
+    }
+}
+
+customizable_localization = {
+    type = enum[custom_loc_scopes]
+
+    ## cardinality = 0..1
+    ### Defaults to no, probably.
+    random_valid = bool
+
+    subtype[character] = {
+        ## cardinality = 2..inf
+        ## replace_scope = { this = character }
+        text = single_alias_right[custom_loc_text_block]
+    }
+    subtype[country] = {
+        ## cardinality = 2..inf
+        ## replace_scope = { this = country }
+        text = single_alias_right[custom_loc_text_block]
+    }
+}
