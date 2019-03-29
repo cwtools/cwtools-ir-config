@@ -2,14 +2,13 @@ enums = {
     enum[custom_loc_scopes] = {
         character
         country
-    }
-}
-
-single_alias[custom_loc_text_block] = {
-    localization_key = localisation
-    trigger = {
-        ## cardinality = 1..inf
-        alias_name[trigger] = alias_match_left[trigger]
+        province
+        area
+        state
+        region
+        pop
+        unit
+        subunit
     }
 }
 
@@ -18,11 +17,41 @@ types = {
     type[customizable_localization] = {
         path = "game/common/customizable_localization"
 
+        ## push_scope = character
         subtype[character] = {
             type = character
         }
+        ## push_scope = country
         subtype[country] = {
             type = country
+        }
+        ## push_scope = province
+        subtype[province] = {
+            type = province
+        }
+        ## push_scope = area
+        subtype[area] = {
+            type = area
+        }
+        ## push_scope = region
+        subtype[region] = {
+            type = region
+        }
+        ## push_scope = state
+        subtype[state] = {
+            type = state
+        }
+        ## push_scope = pop
+        subtype[pop] = {
+            type = pop
+        }
+        ## push_scope = unit
+        subtype[unit] = {
+            type = unit
+        }
+        ## push_scope = subunit
+        subtype[subunit] = {
+            type = subunit
         }
     }
 }
@@ -34,14 +63,15 @@ customizable_localization = {
     ### Defaults to no, probably.
     random_valid = bool
 
-    subtype[character] = {
-        ## cardinality = 2..inf
-        ## replace_scope = { this = character }
-        text = single_alias_right[custom_loc_text_block]
-    }
-    subtype[country] = {
-        ## cardinality = 2..inf
-        ## replace_scope = { this = country }
-        text = single_alias_right[custom_loc_text_block]
+    ## cardinality = 2..inf
+    text = {
+        localization_key = localisation
+
+        ## cardinality = 0..1
+        ### Defaults to always = yes.
+        trigger = {
+            ## cardinality = 1..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
     }
 }
