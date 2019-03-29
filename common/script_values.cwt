@@ -1,3 +1,4 @@
+# This is a hardcoded reference for value_field
 types = {
     type[script_value] = {
         path = "game/common/script_values"
@@ -5,6 +6,7 @@ types = {
     }
 }
 
+# This is a hardcoded reference for value_field
 enums = {
     complex_enum[static_values] = {
         path = "game/common/script_values"
