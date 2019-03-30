@@ -438,7 +438,7 @@ links = {
         from_data = yes
         type = scope
         prefix = c:
-        data_source = <country>
+        data_source = enum[country_tags]
         output_scope = country
     }
     job_holder = {
