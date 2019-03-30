@@ -314,294 +314,6 @@ modifiers = {
 
     local_output_modifier = character
 
-    appoint_dictator_cost_modifier = country
-
-    hold_triumph_cost_modifier = country
-
-    hold_games_price_cost_modifier = country
-
-    smear_character_cost_modifier = country
-
-    bribe_character_cost_modifier = country
-
-    assassinate_attempt_cost_modifier = country
-
-    inspire_disloyalty_cost_modifier = country
-
-    build_roads_cost_modifier = country
-
-    build_expensive_roads_cost_modifier = country
-
-    recover_cost_modifier = country
-
-    raid_cost_modifier = country
-
-    naval_raid_cost_modifier = country
-
-    use_ramming_speed_cost_modifier = country
-
-    use_boarding_tactics_cost_modifier = country
-
-    freemen_promotion_cost_modifier = country
-
-    citizen_promotion_cost_modifier = country
-
-    citizen_move_cost_modifier = country
-
-    freemen_move_cost_modifier = country
-
-    tribesmen_move_cost_modifier = country
-
-    slaves_move_cost_modifier = country
-
-    desecrate_cost_modifier = country
-
-    build_border_fort_cost_modifier = country
-
-    create_military_colony_cost_modifier = country
-
-    use_cavalry_skirmish_cost_modifier = country
-
-    use_padma_vyuha_cost_modifier = country
-
-    use_greek_phalanx_cost_modifier = country
-
-    use_triplex_acies_cost_modifier = country
-
-    raise_levies_cost_modifier = country
-
-    recruit_character_cost_modifier = country
-
-    recruit_general_cost_modifier = country
-
-    secude_governor_cost_modifier = country
-
-    price_imprison_cost_modifier = country
-
-    price_execute_cost_modifier = country
-
-    price_sacrifice_cost_modifier = country
-
-    subject_pays_tributary_cost_modifier = country
-
-    subject_pays_feudatory_cost_modifier = country
-
-    subject_pays_vassal_cost_modifier = country
-
-    subject_pays_satrapy_cost_modifier = country
-
-    subject_client_state_pays_cost_modifier = country
-
-    price_convert_religion_cost_modifier = country
-
-    price_propose_marriage_cost_modifier = country
-
-    price_add_rival_cost_modifier = country
-
-    price_remove_rival_cost_modifier = country
-
-    price_befriend_cost_modifier = country
-
-    price_support_primary_heir_cost_modifier = country
-
-    price_grant_laurels_cost_modifier = country
-
-    price_tutor_heir_cost_modifier = country
-
-    price_stipends_cost_modifier = country
-
-    price_arena_match_cost_modifier = country
-
-    price_reward_veterans_cost_modifier = country
-
-    stability_cost_modifier = country
-
-    enact_law_cost_modifier = country
-
-    government_bonus_cost_modifier = country
-
-    assault_cost_modifier = country
-
-    buy_invention_cost_modifier = country
-
-    buy_idea_cost_modifier = country
-
-    buy_military_tradition_cost_modifier = country
-
-    assimilate_pop_cost_modifier = country
-
-    convert_pop_cost_modifier = country
-
-    call_omen_cost_modifier = country
-
-    fabricate_claim_cost_modifier = country
-
-    support_rebels_cost_modifier = country
-
-    endorse_party_cost_modifier = country
-
-    create_trade_route_cost_modifier = country
-
-    send_gift_cost_modifier = country
-
-    improve_relation_cost_modifier = country
-
-    insult_cost_modifier = country
-
-    inspire_devotio_cost_modifier = country
-
-    recruit_mercenary_cost_modifier = country
-
-    start_migration_cost_modifier = country
-
-    change_governor_policy_cost_modifier = country
-
-    order_shattered_retreat_cost_modifier = country
-
-    increase_legitimacy_cost_modifier = country
-
-    change_diplomatic_stance_cost_modifier = country
-
-    archers_discipline = country
-
-    archers_morale = country
-
-    archers_offensive = country
-
-    archers_defensive = country
-
-    archers_cost = country
-
-    archers_maintenance_cost = country
-
-    archers_movement_speed = country
-
-    camels_discipline = country
-
-    camels_morale = country
-
-    camels_offensive = country
-
-    camels_defensive = country
-
-    camels_cost = country
-
-    camels_maintenance_cost = country
-
-    camels_movement_speed = country
-
-    chariots_discipline = country
-
-    chariots_morale = country
-
-    chariots_offensive = country
-
-    chariots_defensive = country
-
-    chariots_cost = country
-
-    chariots_maintenance_cost = country
-
-    chariots_movement_speed = country
-
-    heavy_cavalry_discipline = country
-
-    heavy_cavalry_morale = country
-
-    heavy_cavalry_offensive = country
-
-    heavy_cavalry_defensive = country
-
-    heavy_cavalry_cost = country
-
-    heavy_cavalry_maintenance_cost = country
-
-    heavy_cavalry_movement_speed = country
-
-    heavy_infantry_discipline = country
-
-    heavy_infantry_morale = country
-
-    heavy_infantry_offensive = country
-
-    heavy_infantry_defensive = country
-
-    heavy_infantry_cost = country
-
-    heavy_infantry_maintenance_cost = country
-
-    heavy_infantry_movement_speed = country
-
-    horse_archers_discipline = country
-
-    horse_archers_morale = country
-
-    horse_archers_offensive = country
-
-    horse_archers_defensive = country
-
-    horse_archers_cost = country
-
-    horse_archers_maintenance_cost = country
-
-    horse_archers_movement_speed = country
-
-    light_cavalry_discipline = country
-
-    light_cavalry_morale = country
-
-    light_cavalry_offensive = country
-
-    light_cavalry_defensive = country
-
-    light_cavalry_cost = country
-
-    light_cavalry_maintenance_cost = country
-
-    light_cavalry_movement_speed = country
-
-    light_infantry_discipline = country
-
-    light_infantry_morale = country
-
-    light_infantry_offensive = country
-
-    light_infantry_defensive = country
-
-    light_infantry_cost = country
-
-    light_infantry_maintenance_cost = country
-
-    light_infantry_movement_speed = country
-
-    warelephant_discipline = country
-
-    warelephant_morale = country
-
-    warelephant_offensive = country
-
-    warelephant_defensive = country
-
-    warelephant_cost = country
-
-    warelephant_maintenance_cost = country
-
-    warelephant_movement_speed = country
-
-    trireme_discipline = country
-
-    trireme_morale = country
-
-    trireme_offensive = country
-
-    trireme_defensive = country
-
-    trireme_cost = country
-
-    trireme_maintenance_cost = country
-
-    trireme_movement_speed = country
-
     archers_plains_combat_bonus = country
 
     camels_plains_combat_bonus = country
@@ -781,51 +493,6 @@ modifiers = {
     warelephant_ocean_combat_bonus = country
 
     trireme_ocean_combat_bonus = country
-
-    monthly_civic_party_conviction = character
-
-    civic_party_influence = country
-
-    monthly_military_party_conviction = character
-
-    military_party_influence = country
-
-    monthly_mercantile_party_conviction = character
-
-    mercantile_party_influence = country
-
-    monthly_religious_party_conviction = character
-
-    religious_party_influence = country
-
-    monthly_populist_party_conviction = character
-
-    populist_party_influence = country
-
-    military_tech_investment = country
-
-    monthly_military_tech_loyalty = country
-
-    civic_tech_investment = country
-
-    monthly_civic_tech_loyalty = country
-
-    oratory_tech_investment = country
-
-    monthly_oratory_tech_loyalty = country
-
-    religious_tech_investment = country
-
-    monthly_religious_tech_loyalty = country
-
-    military_building_cost = country
-
-    fortress_building_cost = country
-
-    commerce_building_cost = country
-
-    population_building_cost = country
-
 }
 
 ## scopes = { province country }
@@ -839,3 +506,34 @@ alias[modifier:global_<pop_type>_happyness] = float
 
 ## scopes = country
 alias[modifier:monthly_office_<office>_loyalty] = float
+
+## scopes = country
+alias[modifier:<building>_cost] = float
+
+## scopes = country
+alias[modifier:<technology>_investment] = float
+## scopes = country
+alias[modifier:monthly_<technology>_loyalty] = float
+
+## scopes = character
+alias[modifier:monthly_<party_type>_conviction] = float
+## scopes = country
+alias[modifier:<party_type>_influence] = float
+
+## scopes = country
+alias[modifier:<unit>_discipline] = float
+## scopes = country
+alias[modifier:<unit>_morale] = float
+## scopes = country
+alias[modifier:<unit>_offensive] = float
+## scopes = country
+alias[modifier:<unit>_defensive] = float
+## scopes = country
+alias[modifier:<unit>_cost] = float
+## scopes = country
+alias[modifier:<unit>_maintenance_cost] = float
+## scopes = country
+alias[modifier:<unit>_movement_speed] = float
+
+## scopes = country
+alias[modifier:<price>_cost_modifier] = float
