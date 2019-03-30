@@ -314,38 +314,6 @@ modifiers = {
 
     local_output_modifier = character
 
-    local_citizen_output = province
-
-    global_citizen_output = country
-
-    local_citizen_happyness = province
-
-    global_citizen_happyness = country
-
-    local_freemen_output = province
-
-    global_freemen_output = country
-
-    local_freemen_happyness = province
-
-    global_freemen_happyness = country
-
-    local_slaves_output = province
-
-    global_slaves_output = country
-
-    local_slaves_happyness = province
-
-    global_slaves_happyness = country
-
-    local_tribesmen_output = province
-
-    global_tribesmen_output = country
-
-    local_tribesmen_happyness = province
-
-    global_tribesmen_happyness = country
-
     appoint_dictator_cost_modifier = country
 
     hold_triumph_cost_modifier = country
@@ -858,52 +826,16 @@ modifiers = {
 
     population_building_cost = country
 
-    monthly_office_foreign_minister_loyalty = country
-
-    monthly_office_royal_tutor_loyalty = country
-
-    monthly_office_marshal_loyalty = country
-
-    monthly_office_master_of_the_guard_loyalty = country
-
-    monthly_office_high_priest_monarchy_loyalty = country
-
-    monthly_office_philosopher_loyalty = country
-
-    monthly_office_steward_loyalty = country
-
-    monthly_office_physician_loyalty = country
-
-    monthly_office_censor_loyalty = country
-
-    monthly_office_praetor_loyalty = country
-
-    monthly_office_tribune_of_the_soldiers_loyalty = country
-
-    monthly_office_tribune_of_the_treasury_loyalty = country
-
-    monthly_office_augur_loyalty = country
-
-    monthly_office_pontifex_loyalty = country
-
-    monthly_office_plebeian_aedile_loyalty = country
-
-    monthly_office_republic_physician_loyalty = country
-
-    monthly_office_arbitrator_loyalty = country
-
-    monthly_office_elder_loyalty = country
-
-    monthly_office_warchief_loyalty = country
-
-    monthly_office_bodyguard_loyalty = country
-
-    monthly_office_high_priest_loyalty = country
-
-    monthly_office_wise_person_loyalty = country
-
-    monthly_office_magistrate_loyalty = country
-
-    monthly_office_apothecary_loyalty = country
-
 }
+
+## scopes = { province country }
+alias[modifier:local_<pop_type>_output] = float
+## scopes = country
+alias[modifier:global_<pop_type>_output] = float
+## scopes = { province country }
+alias[modifier:local_<pop_type>_happyness] = float
+## scopes = country
+alias[modifier:global_<pop_type>_happyness] = float
+
+## scopes = country
+alias[modifier:monthly_office_<office>_loyalty] = float
