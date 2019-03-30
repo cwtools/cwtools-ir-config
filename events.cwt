@@ -3,5 +3,26 @@ types = {
         path = "game/events"
     }
 }
-event = { # TODO: this is a stub to prevent errors from other files
+
+event = {
+    ## cardinality = 0..1
+    trigger = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    ## cardinality = 0..1
+    immediate = {
+        ## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## cardinality = 0..inf
+    option = {
+        ## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+    }
+    ## cardinality = 0..inf
+    after = {
+        ## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+    }
 }

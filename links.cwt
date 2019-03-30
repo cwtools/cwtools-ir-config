@@ -193,31 +193,37 @@ links = {
     }
     red = {
         desc =  eventtarget_link_desc_red
+        type = value
         input_scopes = color
         output_scope = value
     }
     green = {
         desc =  eventtarget_link_desc_green
+        type = value
         input_scopes = color
         output_scope = value
     }
     blue = {
         desc =  eventtarget_link_desc_blue
+        type = value
         input_scopes = color
         output_scope = value
     }
     hue = {
         desc =  eventtarget_link_desc_hue
+        type = value
         input_scopes = color
         output_scope = value
     }
     saturation = {
         desc =  eventtarget_link_desc_saturation
+        type = value
         input_scopes = color
         output_scope = value
     }
     brightness = {
         desc =  eventtarget_link_desc_brightness
+        type = value
         input_scopes = color
         output_scope = value
     }
@@ -304,14 +310,16 @@ links = {
     flag = {
         desc =  eventtarget_link_desc_flag
         from_data = yes
-		type = scope
+        type = scope
+        prefix = flag:
         data_source = <flag>
         output_scope = flag
     }
     custom = {
         desc =  eventtarget_link_desc_custom
         from_data = yes
-		type = scope
+        type = scope
+        prefix = custom:
         data_source = <custom>
     }
     scope = {
@@ -345,35 +353,40 @@ links = {
     culture = {
         desc =  eventtarget_link_desc_culture
         from_data = yes
-		type = scope
+        type = scope
+        prefix = culture:
         data_source = <culture>
         output_scope = culture
     }
     religion = {
         desc =  eventtarget_link_desc_religion
         from_data = yes
-		type = scope
+        type = scope
+        prefix = religion:
         data_source = <religion>
         output_scope = religion
     }
     culture_group = {
         desc =  eventtarget_link_desc_culture_group
         from_data = yes
-		type = scope
+        type = scope
+        prefix = culture_group:
         data_source = <culture_group>
         output_scope = culture group
     }
     char = {
         desc =  eventtarget_link_desc_char
         from_data = yes
-		type = scope
+        type = scope
+        prefix = char:
         data_source = <char>
         output_scope = character
     }
     job = {
         desc =  eventtarget_link_desc_job
         from_data = yes
-		type = scope
+        type = scope
+        prefix = job:
         data_source = <job>
         input_scopes = { country province state governorship }
         output_scope = job
@@ -381,7 +394,8 @@ links = {
     party = {
         desc =  eventtarget_link_desc_party
         from_data = yes
-		type = scope
+        type = scope
+        prefix = party:
         data_source = <party>
         input_scopes = country
         output_scope = party
@@ -389,7 +403,8 @@ links = {
     fam = {
         desc =  eventtarget_link_desc_fam
         from_data = yes
-		type = scope
+        type = scope
+        prefix = fam:
         data_source = <fam>
         input_scopes = country
         output_scope = family
@@ -397,35 +412,40 @@ links = {
     area = {
         desc =  eventtarget_link_desc_area
         from_data = yes
-		type = scope
+        type = scope
+        prefix = area:
         data_source = <area>
         output_scope = area
     }
     region = {
         desc =  eventtarget_link_desc_region
         from_data = yes
-		type = scope
+        type = scope
+        prefix = region:
         data_source = <region>
         output_scope = region
     }
     p = {
         desc =  eventtarget_link_desc_p
         from_data = yes
-		type = scope
-        data_source = <p>
+        type = scope
+        prefix = p:
+        data_source = enum[provinces]
         output_scope = province
     }
     c = {
         desc =  eventtarget_link_desc_c
         from_data = yes
-		type = scope
-        data_source = <c>
+        type = scope
+        prefix = c:
+        data_source = <country>
         output_scope = country
     }
     job_holder = {
         desc =  eventtarget_link_desc_job_holder
         from_data = yes
-		type = scope
+        type = scope
+        prefix = job_holder:
         data_source = <job_holder>
         input_scopes = { country province state governorship }
         output_scope = character

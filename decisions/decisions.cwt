@@ -1,0 +1,21 @@
+types = {
+    type[decision] = {
+        path = "game/decisions"
+        skip_root_key = any
+    }
+}
+
+decision = {
+    potential = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    allow = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+    effect = {
+        ## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+    }
+}
