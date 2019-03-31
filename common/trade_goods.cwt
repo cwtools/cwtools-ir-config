@@ -1,5 +1,5 @@
 types = {
-    type[trade_good] = {
+    type[trade_goods] = {
         path = "game/common/trade_goods"
 
         localisation = {
@@ -9,7 +9,7 @@ types = {
     }
 }
 
-trade_good = {
+trade_goods = {
     # enum?
     category = int
 
