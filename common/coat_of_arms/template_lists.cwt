@@ -65,11 +65,10 @@ color_list = {
     }
 }
 
-## filepath_prefix = "gfx/coat_of_arms/colored_emblems/"
 ## replace_scope = { this = country root = country }
 colored_emblem_texture_list = {
     ## cardinality = 1..inf
-    int = filepath
+    int = filepath[gfx/coat_of_arms/colored_emblems/]
 
     ## cardinality = 0..inf
     special_selection = {
@@ -79,15 +78,14 @@ colored_emblem_texture_list = {
         }
 
         ## cardinality = 1..inf
-        int = filepath
+        int = filepath[gfx/coat_of_arms/colored_emblems/]
     }
 }
 
-## filepath_prefix = "gfx/coat_of_arms/patterns/"
 ## replace_scope = { this = country root = country }
 pattern_texture_list = {
     ## cardinality = 1..inf
-    int = filepath
+    int = filepath[gfx/coat_of_arms/patterns/]
 
     ## cardinality = 0..inf
     special_selection = {
@@ -97,6 +95,6 @@ pattern_texture_list = {
         }
 
         ## cardinality = 1..inf
-        int = filepath
+        int = filepath[gfx/coat_of_arms/patterns/]
     }
 }
