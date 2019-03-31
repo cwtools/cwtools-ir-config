@@ -8,7 +8,7 @@ types = {
 country = {
     # TODO: Make sure it coincides with the definitions when I come around to them
     ## cardinality = 0..1
-    graphical_culture = <graphical_culture>
+    graphical_culture = enum[graphical_cultures]
 
     color = TODO
     ## cardinality = 0..1
