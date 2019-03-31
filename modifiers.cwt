@@ -284,12 +284,6 @@ modifiers = {
 
     global_goods_from_slaves = country
 
-    disallow_job = character
-
-    disallow_office = character
-
-    disallow_command = character
-
     show_3d_fort = character
 
     control_range_modifier = character
@@ -521,19 +515,35 @@ alias[modifier:monthly_<party_type>_conviction] = float
 alias[modifier:<party_type>_influence] = float
 
 ## scopes = country
-alias[modifier:<unit>_discipline] = float
+alias[modifier:<unit_type>_discipline] = float
 ## scopes = country
-alias[modifier:<unit>_morale] = float
+alias[modifier:<unit_type>_morale] = float
 ## scopes = country
-alias[modifier:<unit>_offensive] = float
+alias[modifier:<unit_type>_offensive] = float
 ## scopes = country
-alias[modifier:<unit>_defensive] = float
+alias[modifier:<unit_type>_defensive] = float
 ## scopes = country
-alias[modifier:<unit>_cost] = float
+alias[modifier:<unit_type>_cost] = float
 ## scopes = country
-alias[modifier:<unit>_maintenance_cost] = float
+alias[modifier:<unit_type>_maintenance_cost] = float
 ## scopes = country
-alias[modifier:<unit>_movement_speed] = float
+alias[modifier:<unit_type>_movement_speed] = float
 
 ## scopes = country
 alias[modifier:<price>_cost_modifier] = float
+
+# TODO: Scope is maybe unit, confirm
+## scopes = country
+alias[modifier:enable_tactic] = <combat_tactic.default_disabled>
+
+## scopes = country
+alias[modifier:enable_ability] = <unit_ability.default_disabled>
+
+## scopes = character
+alias[modifier:disallow_job] = yes
+
+## scopes = character
+alias[modifier:disallow_office] = yes
+
+## scopes = character
+alias[modifier:disallow_command] = yes

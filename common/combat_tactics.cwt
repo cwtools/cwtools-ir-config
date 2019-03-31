@@ -2,6 +2,10 @@ types = {
     type[combat_tactic] = {
         path = "game/common/combat_tactics"
 
+        subtype[default_disabled] = {
+            enable = no
+        }
+
         localisation = {
             name = "$"
             # Optional, apparently - not used in some languages

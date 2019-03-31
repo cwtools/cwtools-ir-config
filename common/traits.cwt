@@ -61,16 +61,4 @@ trait = {
         # And don't forget the special genes!
         TODO = TODO
     }
-
-    ## cardinality = 0..1
-    ### Defaults to no.
-    disallow_job = bool
-
-    ## cardinality = 0..1
-    ### Defaults to no.
-    disallow_office = bool
-
-    ## cardinality = 0..1
-    ### Defaults to no.
-    disallow_command = bool
 }
