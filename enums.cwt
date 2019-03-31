@@ -48,4 +48,10 @@ enums = {
         min
         max
     }
+    enum[succession_types] = {
+        agnatic
+        cognatic
+        agnatic_seniority
+        old_egyptian_succession
+    }
 }

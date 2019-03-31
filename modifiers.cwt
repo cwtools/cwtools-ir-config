@@ -547,3 +547,6 @@ alias[modifier:disallow_office] = yes
 
 ## scopes = character
 alias[modifier:disallow_command] = yes
+
+## scopes = country
+alias[modifier:succession] = enum[succession_types]
