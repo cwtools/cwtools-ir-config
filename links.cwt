@@ -396,7 +396,7 @@ links = {
         from_data = yes
         type = scope
         prefix = party:
-        data_source = <party>
+        data_source = <party_type>
         input_scopes = country
         output_scope = party
     }

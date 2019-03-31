@@ -9,7 +9,7 @@ types = {
 
 party_changes_validation = {
     ## cardinality = 1..inf
-    <party> = {
+    <party_type> = {
         base = int
         # Probably uses same structure as the modifier in chance/weight, but desc is throwing me off; TODO: figure out
         ## cardinality = 0..inf

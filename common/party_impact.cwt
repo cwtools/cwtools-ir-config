@@ -3,15 +3,15 @@
 single_alias[party_impact_rhs] = {
     approval = {
         ## cardinality = 1..inf
-        <party> = single_alias_right[weight_block]
+        <party_type> = single_alias_right[weight_block]
     }
     loyalty = {
         ## cardinality = 0..inf
-        <party> = float
+        <party_type> = float
     }
     support = {
         ## cardinality = 0..inf
-        <party> = int
+        <party_type> = int
     }
 }
 

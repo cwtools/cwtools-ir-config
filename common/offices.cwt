@@ -28,5 +28,5 @@ office = {
     }
 
     ## cardinality = 0..1
-    ai_disallow_party = <party>
+    ai_disallow_party = <party_type>
 }

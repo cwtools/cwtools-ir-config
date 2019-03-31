@@ -1,5 +1,5 @@
 types = {
-    type[party] = {
+    type[party_type] = {
         path = "game/common/party_types"
 
         localisation = {
@@ -11,7 +11,7 @@ types = {
 }
 
 ## replace_scope = { this = country root = country }
-party = {
+party_type = {
     ## cardinality = 0..1
     ### Defaults to no.
     populist_party = bool
