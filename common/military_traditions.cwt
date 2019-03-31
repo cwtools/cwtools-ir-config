@@ -44,7 +44,7 @@ military_tradition = {
 
     start = {
         ## cardinality = 1..inf
-        alias_name[effect] = alias_match_left[effect]
+        alias_name[modifier] = alias_match_left[modifier]
     }
 
     # UI-based. Mods can change.
@@ -54,7 +54,7 @@ military_tradition = {
         ## cardinality = 7..7
         <military_tradition_path_step> = {
             ## cardinality = 1..inf
-            alias_name[effect] = alias_match_left[effect]
+            alias_name[modifier] = alias_match_left[modifier]
 
             ## cardinality = 0..1
             ai_plan = {
@@ -65,7 +65,7 @@ military_tradition = {
 
         bonus = {
             ## cardinality = 1..inf
-            alias_name[effect] = alias_match_left[effect]
+            alias_name[modifier] = alias_match_left[modifier]
         }
     }
 }
