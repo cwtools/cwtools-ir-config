@@ -1,5 +1,5 @@
 types = {
-    type[modifier] = {
+    type[modifier_container] = {
         path = "game/common/modifiers"
 
         subtype[triggered] = {
@@ -18,7 +18,7 @@ types = {
 # TODO: Ensure all hardcoded modifiers exist
 # TODO: Maybe make it at least *show* what scope it's in based on used modifiers?
 ## replace_scope = { this = any }
-modifier = {
+modifier_container = {
     ## cardinality = 1..inf
     alias_name[modifier] = alias_match_left[modifier]
 
