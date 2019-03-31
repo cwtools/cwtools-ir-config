@@ -10,5 +10,5 @@ province_terrain_validation = {
     default = <terrain>
 
     ## cardinality = 0..inf
-    enum[province] = <terrain>
+    enum[provinces] = <terrain>
 }

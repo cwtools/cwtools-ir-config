@@ -1,6 +1,6 @@
 single_alias[province_names_rhs] = {
     ## cardinality = 1..inf
-    enum[province] = localisation
+    enum[provinces] = localisation
 }
 
 types = {
