@@ -7,24 +7,47 @@ enums = {
     }
 }
 
+single_alias[complex_event_desc] = {
+    ## cardinality = 0..inf
+    desc = localisation
+
+    ## cardinality = 0..inf
+    random_valid = {
+        ## cardinality = 2..inf
+        desc = localisation
+    }
+
+    ## cardinality = 0..inf
+    first_valid = {
+        ## cardinality = 1..inf
+        triggered_desc = {
+            desc = localisation
+            trigger = {
+                ## cardinality = 1..inf
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+        }
+    }
+}
+
 types = {
     type[event] = {
         path = "game/events"
 
-        ## replace_scope = { this = country root = country }
+        ## push_scope = country
         subtype[country] = {
             type = country_event
         }
-        ## replace_scope = { this = country root = country }
+        ## push_scope = country
         subtype[major_country] = {
             type = major_country_event
         }
-        ## replace_scope = { this = province root = province }
+        ## push_scope = province
         subtype[province] = {
             type = province_event
         }
-        ## replace_scope = { this = character root = character }
-        subtype[country] = {
+        ## push_scope = character
+        subtype[character] = {
             type = character_event
         }
         subtype[visible] = {
@@ -60,36 +83,21 @@ event = {
 
     subtype[visible] = {
         title = localisation
-    }
-    subtype[complex_desc_and_visible] = {
-        desc = {
-            ## cardinality = 0..inf
-            desc = localisation
-
-            ## cardinality = 0..inf
-            random_valid = {
-                ## cardinality = 2..inf
-                desc = localisation
-            }
-
-            ## cardinality = 0..inf
-            first_valid = {
-                ## cardinality = 1..inf
-                triggered_desc = {
-                    desc = localisation
-                    trigger = {
-                        ## cardinality = 1..inf
-                        alias_name[trigger] = alias_match_left[trigger]
-                    }
-                }
-            }
-        }
-    }
-    subtype[non_complex_desc_and_visible] = {
+        picture = <event_picture>
         desc = localisation
+        desc = single_alias_right[complex_event_desc]
     }
-
-    picture = <event_picture>
+    subtype[!visible] = {
+        # So that things don't yell at you if you make an event hidden for a lil while
+        ## cardinality = 0..1
+        title = localisation
+        ## cardinality = 0..1
+        picture = <event_picture>
+        ## cardinality = 0..1
+        desc = localisation
+        ## cardinality = 0..1
+        desc = single_alias_right[complex_event_desc]
+    }
 
     ## cardinality = 0..1
     ### Defaults to no.
