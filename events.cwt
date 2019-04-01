@@ -135,6 +135,15 @@ event = {
 
         ## cardinality = 0..inf
         alias_name[effect] = alias_match_left[effect]
+
+        ## cardinality = 0..1
+        trigger = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+    	ai_chance = single_alias_right[chance_block]
     }
     ## cardinality = 0..inf
     after = {

@@ -379,7 +379,7 @@ links = {
         from_data = yes
         type = scope
         prefix = char:
-        data_source = <char>
+        data_source = enum[character_ids]
         output_scope = character
     }
     job = {
