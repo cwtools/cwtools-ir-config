@@ -41,6 +41,7 @@ alias[effect:banish] = scope[country]
 ###Changes the value or a numeric variable change_variable = { name = X operation = Y } Where X is the name of the numeric variable to modify Where the valid operations are add, subtract, multiply, divide and modulo Where Y is a fixed point value, script value or event target of a value type
 alias[effect:change_variable] = {
     name = value[variable]
+    alias_name[arithmetic_operation] = alias_match_left[arithmetic_operation]
 }
 
 ###Destroys the unit from the current scope
@@ -145,6 +146,8 @@ alias[effect:switch] = {
 
 ###changes the historical tag of a country
 alias[effect:change_country_tag] = enum[country_tags]
+###changes the historical tag of a country
+alias[effect:change_country_tag] = value_set[dynamic_country_tag]
 
 ###gives (or takes) morale to a unit
 alias[effect:add_morale] = value_field
@@ -158,6 +161,10 @@ alias[effect:remove_as_researcher] = bool
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 alias[effect:set_variable] = {
     name = value_set[variable]
+    ## cardinality = 0..1
+    days = int
+    ## cardinality = 0..1
+    value = value_field
 }
 
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
@@ -225,6 +232,9 @@ alias[effect:change_country_color] = colour_field
 
 ###changes the color of a country
 alias[effect:change_country_color] = scope[color]
+###changes the color of a country
+alias[effect:change_country_color] = enum[named_colors]
+
 
 ###Removes a variable remove_variable = variable_name
 alias[effect:remove_variable] = value[variable]

@@ -10,7 +10,7 @@ enums = {
 single_alias[chance_block] = {
     # TODO: Requires further testing, might necessiate splitting into chance_block and chance_block_with_base or something
     ## cardinality = 0..1
-    base = float
+    factor = float
 
     ## cardinality = 0..inf
     ### Appears in the tooltip only if the conditions are fulfilled.
