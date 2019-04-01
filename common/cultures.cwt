@@ -3,13 +3,13 @@ enums = {
         path = "game/common/cultures"
 
         name = {
-            <culture_group> = {
+            scalar = {
                 nickname = {
                     enum_name
                 }
 
                 culture = {
-                    <culture> = {
+                    scalar = {
                         nickname = {
                             enum_name
                         }
