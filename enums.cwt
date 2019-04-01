@@ -54,4 +54,8 @@ enums = {
         agnatic_seniority
         old_egyptian_succession
     }
+    enum[dlcs] = {
+        "Epirus Flavor Pack"
+        "Hellenistic World Flavor Pack"
+    }
 }

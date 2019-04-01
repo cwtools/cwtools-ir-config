@@ -124,7 +124,7 @@ links = {
     culture_group = {
         desc =  eventtarget_link_desc_culture_group
         input_scopes = { country character province pop culture }
-        output_scope = culture group
+        output_scope = culture_group
     }
     capital_scope = {
         desc =  eventtarget_link_desc_capital_scope
@@ -250,7 +250,7 @@ links = {
     dominant_province_culture_group = {
         desc =  eventtarget_link_desc_dominant_province_culture_group
         input_scopes = province
-        output_scope = culture group
+        output_scope = culture_group
     }
     dominant_province_religion = {
         desc =  eventtarget_link_desc_dominant_province_religion
@@ -372,7 +372,7 @@ links = {
         type = scope
         prefix = culture_group:
         data_source = <culture_group>
-        output_scope = culture group
+        output_scope = culture_group
     }
     char = {
         desc =  eventtarget_link_desc_char
