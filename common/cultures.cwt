@@ -1,3 +1,25 @@
+enums = {
+    complex_enum[nicknames] = {
+        path = "game/common/cultures"
+
+        name = {
+            <culture_group> = {
+                nickname = {
+                    enum_name
+                }
+
+                culture = {
+                    <culture> = {
+                        nickname = {
+                            enum_name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 types = {
     type[culture_group] = {
         path = "game/common/cultures"
@@ -30,21 +52,19 @@ culture_group = {
 
     male_names = {
         ## cardinality = 1..inf
-        scalar
+        localisation
     }
 
     female_names = {
         ## cardinality = 1..inf
-        scalar
+        localisation
     }
 
-    ### Immutable family names.
+    ## cardinality = 0..1
+    ### Family names. Format is just localisation or "masculine.feminine.plural.adjective"
     family = {
         ## cardinality = 1..inf
-        scalar
-    }
-    ### Mutable family names. Format is "masculine.feminine.plural.adjective"
-    family = {
+        localisation
         ## cardinality = 1..inf
         family_name_field
     }
@@ -52,7 +72,7 @@ culture_group = {
     ## cardinality = 0..1
     female_order = {
         ## cardinality = 1..inf
-        scalar
+        localisation
     }
 
     ## cardinality = 0..1
@@ -67,24 +87,20 @@ culture_group = {
             ## cardinality = 0..1
             male_names = {
                 ## cardinality = 1..inf
-                scalar
+                localisation
             }
 
             ## cardinality = 0..1
             female_names = {
                 ## cardinality = 1..inf
-                scalar
+                localisation
             }
 
             ## cardinality = 0..1
-            ### Immutable family names.
+            ### Family names. Format is just localisation or "masculine.feminine.plural.adjective"
             family = {
                 ## cardinality = 1..inf
-                scalar
-            }
-            ## cardinality = 0..1
-            ### Mutable family names. Format is "masculine.feminine.plural.adjective"
-            family = {
+                localisation
                 ## cardinality = 1..inf
                 family_name_field
             }
