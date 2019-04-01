@@ -1,25 +1,3 @@
-enums = {
-    complex_enum[nicknames] = {
-        path = "game/common/cultures"
-
-        name = {
-            scalar = {
-                nickname = {
-                    enum_name
-                }
-
-                culture = {
-                    scalar = {
-                        nickname = {
-                            enum_name
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 types = {
     type[culture_group] = {
         path = "game/common/cultures"
