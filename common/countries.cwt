@@ -10,9 +10,9 @@ country = {
     ## cardinality = 0..1
     graphical_culture = enum[graphical_cultures]
 
-    color = TODO
+    color = colour_field
     ## cardinality = 0..1
-    color2 = TODO
+    color2 = colour_field
 
     ## cardinality = 0..1
     ### Defaults to no, probably.
