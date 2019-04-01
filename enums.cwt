@@ -58,4 +58,9 @@ enums = {
         "Epirus Flavor Pack"
         "Hellenistic World Flavor Pack"
     }
+    enum[duration] = {
+        days
+        months
+        years
+    }
 }
