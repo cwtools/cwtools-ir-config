@@ -1,10 +1,116 @@
+enums = {
+    enum[event_types] = {
+        country_event
+        major_country_event
+        province_event
+        character_event
+    }
+}
+
 types = {
     type[event] = {
         path = "game/events"
+
+        ## replace_scope = { this = country root = country }
+        subtype[country] = {
+            type = country_event
+        }
+        ## replace_scope = { this = country root = country }
+        subtype[major_country] = {
+            type = major_country_event
+        }
+        ## replace_scope = { this = province root = province }
+        subtype[province] = {
+            type = province_event
+        }
+        ## replace_scope = { this = character root = character }
+        subtype[country] = {
+            type = character_event
+        }
+        subtype[visible] = {
+            ## cardinality = 0..1
+            hidden = no
+        }
+        subtype[complex_desc_and_visible] = {
+            ## cardinality = 0..1
+            hidden = no
+            desc = {
+
+            }
+        }
+        subtype[non_complex_desc_and_visible] = {
+            ## cardinality = 0..1
+            hidden = no
+            desc = localisation
+        }
+
+        localisation = {
+            subtype[visible] = {
+                title = title
+            }
+            subtype[non_complex_desc_and_visible] = {
+                description = desc
+            }
+        }
     }
 }
 
 event = {
+    type = enum[event_types]
+
+    subtype[visible] = {
+        title = localisation
+    }
+    subtype[complex_desc_and_visible] = {
+        desc = {
+            ## cardinality = 0..inf
+            desc = localisation
+
+            ## cardinality = 0..inf
+            random_valid = {
+                ## cardinality = 2..inf
+                desc = localisation
+            }
+
+            ## cardinality = 0..inf
+            first_valid = {
+                ## cardinality = 1..inf
+                triggered_desc = {
+                    desc = localisation
+                    trigger = {
+                        ## cardinality = 1..inf
+                        alias_name[trigger] = alias_match_left[trigger]
+                    }
+                }
+            }
+        }
+    }
+    subtype[non_complex_desc_and_visible] = {
+        desc = localisation
+    }
+
+    picture = <event_picture>
+
+    ## cardinality = 0..1
+    ### Defaults to no.
+    hidden = bool
+
+    ## cardinality = 0..1
+    ### Defaults to no.
+    fire_only_once = bool
+
+    ## cardinality = 0..1
+    left_portrait = scope[character]
+
+    ## cardinality = 0..1
+    right_portrait = scope[character]
+
+    ## cardinality = 0..1
+    goto_location = scope[province]
+
+    ## cardinality = 0..1
+    weight_multiplier = single_alias_right[weight_block]
+
     ## cardinality = 0..1
     trigger = {
         ## cardinality = 0..inf
