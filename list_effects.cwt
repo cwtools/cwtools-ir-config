@@ -1,4 +1,4 @@
-###Iterate through all friends ordered_friend = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all friends ordered_friend = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_friend] = {
     ## cardinality = 0..1
     limit = {
@@ -17,7 +17,7 @@ alias[effect:ordered_friend] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all members of a family random_family_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all members of a family random_family_member = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_family_member] = {
     ## cardinality = 0..1
     limit = {
@@ -27,9 +27,11 @@ alias[effect:random_family_member] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all Rivals ordered_rival = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all Rivals ordered_rival = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_rival] = {
     ## cardinality = 0..1
     limit = {
@@ -48,7 +50,7 @@ alias[effect:ordered_rival] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all allied countries random_allied_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all allied countries random_allied_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_allied_country] = {
     ## cardinality = 0..1
     limit = {
@@ -58,9 +60,11 @@ alias[effect:random_allied_country] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subject countries random_subject = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all subject countries random_subject = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_subject] = {
     ## cardinality = 0..1
     limit = {
@@ -70,9 +74,11 @@ alias[effect:random_subject] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country random_successor = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all successors in a country random_successor = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_successor] = {
     ## cardinality = 0..1
     limit = {
@@ -82,9 +88,11 @@ alias[effect:random_successor] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbors of a province every_neighbor_province = { limit = { <triggers> } <effects> }
+### Iterate through all neighbors of a province every_neighbor_province = { limit = { <triggers> } <effects> }
 alias[effect:every_neighbor_province] = {
     ## cardinality = 0..1
     limit = {
@@ -96,7 +104,7 @@ alias[effect:every_neighbor_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing regions random_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all existing regions random_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_region] = {
     ## cardinality = 0..1
     limit = {
@@ -106,9 +114,11 @@ alias[effect:random_region] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all children every_child = { limit = { <triggers> } <effects> }
+### Iterate through all children every_child = { limit = { <triggers> } <effects> }
 alias[effect:every_child] = {
     ## cardinality = 0..1
     limit = {
@@ -120,7 +130,7 @@ alias[effect:every_child] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all characters in a country random_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all characters in a country random_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_character] = {
     ## cardinality = 0..1
     limit = {
@@ -130,9 +140,11 @@ alias[effect:random_character] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all characters in a country ordered_character = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all characters in a country ordered_character = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_character] = {
     ## cardinality = 0..1
     limit = {
@@ -151,7 +163,7 @@ alias[effect:ordered_character] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing countries ordered_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all existing countries ordered_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_country] = {
     ## cardinality = 0..1
     limit = {
@@ -170,7 +182,7 @@ alias[effect:ordered_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in list. list = name or variable = name ordered_in_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all items in list. list = name or variable = name ordered_in_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_in_list] = {
     ## cardinality = 0..1
     limit = {
@@ -189,7 +201,7 @@ alias[effect:ordered_in_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states a governor is governor of every_governor_state = { limit = { <triggers> } <effects> }
+### Iterate through all states a governor is governor of every_governor_state = { limit = { <triggers> } <effects> }
 alias[effect:every_governor_state] = {
     ## cardinality = 0..1
     limit = {
@@ -201,7 +213,7 @@ alias[effect:every_governor_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all children random_child = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all children random_child = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_child] = {
     ## cardinality = 0..1
     limit = {
@@ -211,9 +223,11 @@ alias[effect:random_child] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbour countries random_neighbour_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all neighbour countries random_neighbour_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_neighbour_country] = {
     ## cardinality = 0..1
     limit = {
@@ -223,9 +237,11 @@ alias[effect:random_neighbour_country] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country ordered_country_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all states in a country ordered_country_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_country_state] = {
     ## cardinality = 0..1
     limit = {
@@ -244,7 +260,7 @@ alias[effect:ordered_country_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing regions ordered_region = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all existing regions ordered_region = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_region] = {
     ## cardinality = 0..1
     limit = {
@@ -263,7 +279,7 @@ alias[effect:ordered_region] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all navies in a country random_navy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all navies in a country random_navy = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_navy] = {
     ## cardinality = 0..1
     limit = {
@@ -273,9 +289,11 @@ alias[effect:random_navy] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing areas every_area = { limit = { <triggers> } <effects> }
+### Iterate through all existing areas every_area = { limit = { <triggers> } <effects> }
 alias[effect:every_area] = {
     ## cardinality = 0..1
     limit = {
@@ -287,7 +305,7 @@ alias[effect:every_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbors of a province random_neighbor_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all neighbors of a province random_neighbor_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_neighbor_province] = {
     ## cardinality = 0..1
     limit = {
@@ -297,9 +315,11 @@ alias[effect:random_neighbor_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all families in a country ordered_family = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all families in a country ordered_family = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_family] = {
     ## cardinality = 0..1
     limit = {
@@ -318,7 +338,7 @@ alias[effect:ordered_family] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all armies in a country every_army = { limit = { <triggers> } <effects> }
+### Iterate through all armies in a country every_army = { limit = { <triggers> } <effects> }
 alias[effect:every_army] = {
     ## cardinality = 0..1
     limit = {
@@ -330,7 +350,7 @@ alias[effect:every_army] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all supportasHeir every_support_as_heir = { limit = { <triggers> } <effects> }
+### Iterate through all supportasHeir every_support_as_heir = { limit = { <triggers> } <effects> }
 alias[effect:every_support_as_heir] = {
     ## cardinality = 0..1
     limit = {
@@ -342,7 +362,7 @@ alias[effect:every_support_as_heir] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all ownable provinces in the world random_ownable_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all ownable provinces in the world random_ownable_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_ownable_province] = {
     ## cardinality = 0..1
     limit = {
@@ -352,9 +372,11 @@ alias[effect:random_ownable_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all owned provinces in a country every_owned_province = { limit = { <triggers> } <effects> }
+### Iterate through all owned provinces in a country every_owned_province = { limit = { <triggers> } <effects> }
 alias[effect:every_owned_province] = {
     ## cardinality = 0..1
     limit = {
@@ -366,7 +388,7 @@ alias[effect:every_owned_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country random_country_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all states in a country random_country_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_country_state] = {
     ## cardinality = 0..1
     limit = {
@@ -376,9 +398,11 @@ alias[effect:random_country_state] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a region random_region_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all states in a region random_region_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_region_state] = {
     ## cardinality = 0..1
     limit = {
@@ -388,9 +412,11 @@ alias[effect:random_region_state] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all countries at war with every_countries_at_war_with = { limit = { <triggers> } <effects> }
+### Iterate through all countries at war with every_countries_at_war_with = { limit = { <triggers> } <effects> }
 alias[effect:every_countries_at_war_with] = {
     ## cardinality = 0..1
     limit = {
@@ -402,7 +428,7 @@ alias[effect:every_countries_at_war_with] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in a unit ordered_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all subunits in a unit ordered_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -421,7 +447,7 @@ alias[effect:ordered_sub_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all Rivals random_rival = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all Rivals random_rival = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_rival] = {
     ## cardinality = 0..1
     limit = {
@@ -431,9 +457,11 @@ alias[effect:random_rival] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all children ordered_child = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all children ordered_child = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_child] = {
     ## cardinality = 0..1
     limit = {
@@ -452,7 +480,7 @@ alias[effect:ordered_child] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbors of a province ordered_neighbor_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all neighbors of a province ordered_neighbor_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_neighbor_province] = {
     ## cardinality = 0..1
     limit = {
@@ -471,7 +499,7 @@ alias[effect:ordered_neighbor_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all areas in a region ordered_region_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all areas in a region ordered_region_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_region_area] = {
     ## cardinality = 0..1
     limit = {
@@ -490,7 +518,7 @@ alias[effect:ordered_region_area] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states a governor is governor of ordered_governor_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all states a governor is governor of ordered_governor_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_governor_state] = {
     ## cardinality = 0..1
     limit = {
@@ -509,7 +537,7 @@ alias[effect:ordered_governor_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all commanders in a country random_commander = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all commanders in a country random_commander = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_commander] = {
     ## cardinality = 0..1
     limit = {
@@ -519,9 +547,11 @@ alias[effect:random_commander] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing areas random_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all existing areas random_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_area] = {
     ## cardinality = 0..1
     limit = {
@@ -531,9 +561,11 @@ alias[effect:random_area] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all areas in a region random_region_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all areas in a region random_region_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_region_area] = {
     ## cardinality = 0..1
     limit = {
@@ -543,9 +575,11 @@ alias[effect:random_region_area] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all members of a family every_family_member = { limit = { <triggers> } <effects> }
+### Iterate through all members of a family every_family_member = { limit = { <triggers> } <effects> }
 alias[effect:every_family_member] = {
     ## cardinality = 0..1
     limit = {
@@ -557,7 +591,7 @@ alias[effect:every_family_member] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in list. list = name or variable = name every_in_list = { limit = { <triggers> } <effects> }
+### Iterate through all items in list. list = name or variable = name every_in_list = { limit = { <triggers> } <effects> }
 alias[effect:every_in_list] = {
     ## cardinality = 0..1
     limit = {
@@ -569,7 +603,7 @@ alias[effect:every_in_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all friends random_friend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all friends random_friend = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_friend] = {
     ## cardinality = 0..1
     limit = {
@@ -579,9 +613,11 @@ alias[effect:random_friend] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all pops in a province random_pops_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all pops in a province random_pops_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_pops_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -591,9 +627,11 @@ alias[effect:random_pops_in_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all armies in a country random_army = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all armies in a country random_army = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_army] = {
     ## cardinality = 0..1
     limit = {
@@ -603,9 +641,11 @@ alias[effect:random_army] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a area ordered_area_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all provinces in a area ordered_area_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_area_province] = {
     ## cardinality = 0..1
     limit = {
@@ -624,7 +664,7 @@ alias[effect:ordered_area_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing countries random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all existing countries random_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_country] = {
     ## cardinality = 0..1
     limit = {
@@ -634,9 +674,11 @@ alias[effect:random_country] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all areas in a region every_region_area = { limit = { <triggers> } <effects> }
+### Iterate through all areas in a region every_region_area = { limit = { <triggers> } <effects> }
 alias[effect:every_region_area] = {
     ## cardinality = 0..1
     limit = {
@@ -648,7 +690,7 @@ alias[effect:every_region_area] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in a unit random_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all subunits in a unit random_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -658,9 +700,11 @@ alias[effect:random_sub_unit] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country ordered_country_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all subunits in all units in a country ordered_country_sub_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_country_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -679,7 +723,7 @@ alias[effect:ordered_country_sub_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a area random_area_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all provinces in a area random_area_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_area_province] = {
     ## cardinality = 0..1
     limit = {
@@ -689,9 +733,11 @@ alias[effect:random_area_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all allied countries ordered_allied_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all allied countries ordered_allied_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_allied_country] = {
     ## cardinality = 0..1
     limit = {
@@ -710,7 +756,7 @@ alias[effect:ordered_allied_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region random_region_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all provinces in a region random_region_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_region_province] = {
     ## cardinality = 0..1
     limit = {
@@ -720,9 +766,11 @@ alias[effect:random_region_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all siblings random_sibling = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all siblings random_sibling = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_sibling] = {
     ## cardinality = 0..1
     limit = {
@@ -732,9 +780,11 @@ alias[effect:random_sibling] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a area ordered_area_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all states in a area ordered_area_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_area_state] = {
     ## cardinality = 0..1
     limit = {
@@ -753,7 +803,7 @@ alias[effect:ordered_area_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all characters in a country every_character = { limit = { <triggers> } <effects> }
+### Iterate through all characters in a country every_character = { limit = { <triggers> } <effects> }
 alias[effect:every_character] = {
     ## cardinality = 0..1
     limit = {
@@ -765,7 +815,7 @@ alias[effect:every_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on a random parent
+### Executes on a random parent
 alias[effect:random_parent] = {
     ## cardinality = 0..1
     limit = {
@@ -775,9 +825,11 @@ alias[effect:random_parent] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all members of a family ordered_family_member = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all members of a family ordered_family_member = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_family_member] = {
     ## cardinality = 0..1
     limit = {
@@ -796,7 +848,7 @@ alias[effect:ordered_family_member] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on every province
+### Executes on every province
 alias[effect:every_province] = {
     ## cardinality = 0..1
     limit = {
@@ -808,7 +860,7 @@ alias[effect:every_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subject countries ordered_subject = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all subject countries ordered_subject = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_subject] = {
     ## cardinality = 0..1
     limit = {
@@ -827,7 +879,7 @@ alias[effect:ordered_subject] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all navies in a country ordered_navy = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all navies in a country ordered_navy = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_navy] = {
     ## cardinality = 0..1
     limit = {
@@ -846,7 +898,7 @@ alias[effect:ordered_navy] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all siblings ordered_sibling = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all siblings ordered_sibling = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_sibling] = {
     ## cardinality = 0..1
     limit = {
@@ -865,7 +917,7 @@ alias[effect:ordered_sibling] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in local list. list = name or variable = name ordered_in_local_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all items in local list. list = name or variable = name ordered_in_local_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_in_local_list] = {
     ## cardinality = 0..1
     limit = {
@@ -884,7 +936,7 @@ alias[effect:ordered_in_local_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all supportasHeir random_support_as_heir = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all supportasHeir random_support_as_heir = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_support_as_heir] = {
     ## cardinality = 0..1
     limit = {
@@ -894,9 +946,11 @@ alias[effect:random_support_as_heir] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all navies in a country every_navy = { limit = { <triggers> } <effects> }
+### Iterate through all navies in a country every_navy = { limit = { <triggers> } <effects> }
 alias[effect:every_navy] = {
     ## cardinality = 0..1
     limit = {
@@ -908,7 +962,7 @@ alias[effect:every_navy] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country every_successor = { limit = { <triggers> } <effects> }
+### Iterate through all successors in a country every_successor = { limit = { <triggers> } <effects> }
 alias[effect:every_successor] = {
     ## cardinality = 0..1
     limit = {
@@ -920,7 +974,7 @@ alias[effect:every_successor] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country random_country_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all subunits in all units in a country random_country_sub_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_country_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -930,9 +984,11 @@ alias[effect:random_country_sub_unit] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in a unit every_sub_unit = { limit = { <triggers> } <effects> }
+### Iterate through all subunits in a unit every_sub_unit = { limit = { <triggers> } <effects> }
 alias[effect:every_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -944,7 +1000,7 @@ alias[effect:every_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on a random province
+### Executes on a random province
 alias[effect:random_province] = {
     ## cardinality = 0..1
     limit = {
@@ -954,9 +1010,11 @@ alias[effect:random_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbour countries ordered_neighbour_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all neighbour countries ordered_neighbour_country = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_neighbour_country] = {
     ## cardinality = 0..1
     limit = {
@@ -975,7 +1033,7 @@ alias[effect:ordered_neighbour_country] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a province every_unit_in_province = { limit = { <triggers> } <effects> }
+### Iterate through all units in a province every_unit_in_province = { limit = { <triggers> } <effects> }
 alias[effect:every_unit_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -987,7 +1045,7 @@ alias[effect:every_unit_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all countries at war with ordered_countries_at_war_with = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all countries at war with ordered_countries_at_war_with = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_countries_at_war_with] = {
     ## cardinality = 0..1
     limit = {
@@ -1006,7 +1064,7 @@ alias[effect:ordered_countries_at_war_with] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a country every_unit = { limit = { <triggers> } <effects> }
+### Iterate through all units in a country every_unit = { limit = { <triggers> } <effects> }
 alias[effect:every_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -1018,7 +1076,7 @@ alias[effect:every_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on every parent
+### Executes on every parent
 alias[effect:every_parent] = {
     ## cardinality = 0..1
     limit = {
@@ -1030,7 +1088,7 @@ alias[effect:every_parent] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all countries at war with random_countries_at_war_with = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all countries at war with random_countries_at_war_with = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_countries_at_war_with] = {
     ## cardinality = 0..1
     limit = {
@@ -1040,9 +1098,11 @@ alias[effect:random_countries_at_war_with] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a country ordered_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all units in a country ordered_unit = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -1061,7 +1121,7 @@ alias[effect:ordered_unit] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all commanders in a country ordered_commander = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all commanders in a country ordered_commander = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_commander] = {
     ## cardinality = 0..1
     limit = {
@@ -1080,7 +1140,7 @@ alias[effect:ordered_commander] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a country every_country_state = { limit = { <triggers> } <effects> }
+### Iterate through all states in a country every_country_state = { limit = { <triggers> } <effects> }
 alias[effect:every_country_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1092,7 +1152,7 @@ alias[effect:every_country_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all commanders in a country every_commander = { limit = { <triggers> } <effects> }
+### Iterate through all commanders in a country every_commander = { limit = { <triggers> } <effects> }
 alias[effect:every_commander] = {
     ## cardinality = 0..1
     limit = {
@@ -1104,7 +1164,7 @@ alias[effect:every_commander] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on a random living character
+### Executes on a random living character
 alias[effect:random_living_character] = {
     ## cardinality = 0..1
     limit = {
@@ -1114,9 +1174,11 @@ alias[effect:random_living_character] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in global list. list = name or variable = name ordered_in_global_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all items in global list. list = name or variable = name ordered_in_global_list = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_in_global_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1135,7 +1197,7 @@ alias[effect:ordered_in_global_list] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all supportasHeir ordered_support_as_heir = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all supportasHeir ordered_support_as_heir = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_support_as_heir] = {
     ## cardinality = 0..1
     limit = {
@@ -1154,7 +1216,7 @@ alias[effect:ordered_support_as_heir] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in global list. list = name or variable = name random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all items in global list. list = name or variable = name random_in_global_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_in_global_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1164,9 +1226,11 @@ alias[effect:random_in_global_list] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a governorship every_governorship_state = { limit = { <triggers> } <effects> }
+### Iterate through all states in a governorship every_governorship_state = { limit = { <triggers> } <effects> }
 alias[effect:every_governorship_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1178,7 +1242,7 @@ alias[effect:every_governorship_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a governorship random_governorship_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all states in a governorship random_governorship_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_governorship_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1188,9 +1252,11 @@ alias[effect:random_governorship_state] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a state random_state_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all provinces in a state random_state_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_state_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1200,9 +1266,11 @@ alias[effect:random_state_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a state ordered_state_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all provinces in a state ordered_state_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_state_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1221,7 +1289,7 @@ alias[effect:ordered_state_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a region ordered_region_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all states in a region ordered_region_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_region_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1240,7 +1308,7 @@ alias[effect:ordered_region_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all siblings every_sibling = { limit = { <triggers> } <effects> }
+### Iterate through all siblings every_sibling = { limit = { <triggers> } <effects> }
 alias[effect:every_sibling] = {
     ## cardinality = 0..1
     limit = {
@@ -1252,7 +1320,7 @@ alias[effect:every_sibling] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in list. list = name or variable = name random_in_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all items in list. list = name or variable = name random_in_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_in_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1262,9 +1330,11 @@ alias[effect:random_in_list] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subunits in all units in a country every_country_sub_unit = { limit = { <triggers> } <effects> }
+### Iterate through all subunits in all units in a country every_country_sub_unit = { limit = { <triggers> } <effects> }
 alias[effect:every_country_sub_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -1276,7 +1346,7 @@ alias[effect:every_country_sub_unit] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in local list. list = name or variable = name random_in_local_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all items in local list. list = name or variable = name random_in_local_list = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_in_local_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1286,9 +1356,11 @@ alias[effect:random_in_local_list] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all armies in a country ordered_army = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all armies in a country ordered_army = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_army] = {
     ## cardinality = 0..1
     limit = {
@@ -1307,7 +1379,7 @@ alias[effect:ordered_army] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in global list. list = name or variable = name every_in_global_list = { limit = { <triggers> } <effects> }
+### Iterate through all items in global list. list = name or variable = name every_in_global_list = { limit = { <triggers> } <effects> }
 alias[effect:every_in_global_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1319,7 +1391,7 @@ alias[effect:every_in_global_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all Rivals every_rival = { limit = { <triggers> } <effects> }
+### Iterate through all Rivals every_rival = { limit = { <triggers> } <effects> }
 alias[effect:every_rival] = {
     ## cardinality = 0..1
     limit = {
@@ -1331,7 +1403,7 @@ alias[effect:every_rival] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a region every_region_state = { limit = { <triggers> } <effects> }
+### Iterate through all states in a region every_region_state = { limit = { <triggers> } <effects> }
 alias[effect:every_region_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1343,7 +1415,7 @@ alias[effect:every_region_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a area random_area_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all states in a area random_area_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_area_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1353,9 +1425,11 @@ alias[effect:random_area_state] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a state every_state_province = { limit = { <triggers> } <effects> }
+### Iterate through all provinces in a state every_state_province = { limit = { <triggers> } <effects> }
 alias[effect:every_state_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1367,7 +1441,7 @@ alias[effect:every_state_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a province ordered_unit_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all units in a province ordered_unit_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_unit_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1386,7 +1460,7 @@ alias[effect:ordered_unit_in_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a area every_area_province = { limit = { <triggers> } <effects> }
+### Iterate through all provinces in a area every_area_province = { limit = { <triggers> } <effects> }
 alias[effect:every_area_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1398,7 +1472,7 @@ alias[effect:every_area_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all friends every_friend = { limit = { <triggers> } <effects> }
+### Iterate through all friends every_friend = { limit = { <triggers> } <effects> }
 alias[effect:every_friend] = {
     ## cardinality = 0..1
     limit = {
@@ -1410,7 +1484,7 @@ alias[effect:every_friend] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing areas ordered_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all existing areas ordered_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_area] = {
     ## cardinality = 0..1
     limit = {
@@ -1429,7 +1503,7 @@ alias[effect:ordered_area] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all allied countries every_allied_country = { limit = { <triggers> } <effects> }
+### Iterate through all allied countries every_allied_country = { limit = { <triggers> } <effects> }
 alias[effect:every_allied_country] = {
     ## cardinality = 0..1
     limit = {
@@ -1441,7 +1515,7 @@ alias[effect:every_allied_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all owned provinces in a country random_owned_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all owned provinces in a country random_owned_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_owned_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1451,9 +1525,11 @@ alias[effect:random_owned_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing countries every_country = { limit = { <triggers> } <effects> }
+### Iterate through all existing countries every_country = { limit = { <triggers> } <effects> }
 alias[effect:every_country] = {
     ## cardinality = 0..1
     limit = {
@@ -1465,7 +1541,7 @@ alias[effect:every_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all ownable provinces in the world ordered_ownable_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all ownable provinces in the world ordered_ownable_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_ownable_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1484,7 +1560,7 @@ alias[effect:ordered_ownable_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###a random list effect random_list = { X1 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y1 effect1 } X2 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y2 effect2 } ... } Selects one effect from the list and fires it. The effects are weighted by numbers X1, X2... (the higher the number, the higher the chance of the effect being picked). The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH)
+### a random list effect random_list = { X1 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y1 effect1 } X2 = { trigger = { enables/disable this effect} modifier/compare_modifier/opinion_modifier = Y2 effect2 } ... } Selects one effect from the list and fires it. The effects are weighted by numbers X1, X2... (the higher the number, the higher the chance of the effect being picked). The chances can be modified by optional value modifier lists Y1, Y2... (AKA MTTH)
 alias[effect:random_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1494,9 +1570,11 @@ alias[effect:random_list] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a area every_area_state = { limit = { <triggers> } <effects> }
+### Iterate through all states in a area every_area_state = { limit = { <triggers> } <effects> }
 alias[effect:every_area_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1508,7 +1586,7 @@ alias[effect:every_area_state] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Executes on every living character
+### Executes on every living character
 alias[effect:every_living_character] = {
     ## cardinality = 0..1
     limit = {
@@ -1520,7 +1598,7 @@ alias[effect:every_living_character] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states in a governorship ordered_governorship_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all states in a governorship ordered_governorship_state = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_governorship_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1539,7 +1617,7 @@ alias[effect:ordered_governorship_state] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all existing regions every_region = { limit = { <triggers> } <effects> }
+### Iterate through all existing regions every_region = { limit = { <triggers> } <effects> }
 alias[effect:every_region] = {
     ## cardinality = 0..1
     limit = {
@@ -1551,7 +1629,7 @@ alias[effect:every_region] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all families in a country random_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all families in a country random_family = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_family] = {
     ## cardinality = 0..1
     limit = {
@@ -1561,9 +1639,11 @@ alias[effect:random_family] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all owned provinces in a country ordered_owned_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all owned provinces in a country ordered_owned_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_owned_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1582,7 +1662,7 @@ alias[effect:ordered_owned_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a country random_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all units in a country random_unit = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_unit] = {
     ## cardinality = 0..1
     limit = {
@@ -1592,9 +1672,11 @@ alias[effect:random_unit] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region every_region_province = { limit = { <triggers> } <effects> }
+### Iterate through all provinces in a region every_region_province = { limit = { <triggers> } <effects> }
 alias[effect:every_region_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1606,7 +1688,7 @@ alias[effect:every_region_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all states a governor is governor of random_governor_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all states a governor is governor of random_governor_state = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_governor_state] = {
     ## cardinality = 0..1
     limit = {
@@ -1616,9 +1698,11 @@ alias[effect:random_governor_state] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all successors in a country ordered_successor = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all successors in a country ordered_successor = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_successor] = {
     ## cardinality = 0..1
     limit = {
@@ -1637,7 +1721,7 @@ alias[effect:ordered_successor] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all pops in a province every_pops_in_province = { limit = { <triggers> } <effects> }
+### Iterate through all pops in a province every_pops_in_province = { limit = { <triggers> } <effects> }
 alias[effect:every_pops_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1649,7 +1733,7 @@ alias[effect:every_pops_in_province] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all items in local list. list = name or variable = name every_in_local_list = { limit = { <triggers> } <effects> }
+### Iterate through all items in local list. list = name or variable = name every_in_local_list = { limit = { <triggers> } <effects> }
 alias[effect:every_in_local_list] = {
     ## cardinality = 0..1
     limit = {
@@ -1661,7 +1745,7 @@ alias[effect:every_in_local_list] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all families in a country every_family = { limit = { <triggers> } <effects> }
+### Iterate through all families in a country every_family = { limit = { <triggers> } <effects> }
 alias[effect:every_family] = {
     ## cardinality = 0..1
     limit = {
@@ -1673,7 +1757,7 @@ alias[effect:every_family] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all subject countries every_subject = { limit = { <triggers> } <effects> }
+### Iterate through all subject countries every_subject = { limit = { <triggers> } <effects> }
 alias[effect:every_subject] = {
     ## cardinality = 0..1
     limit = {
@@ -1685,7 +1769,7 @@ alias[effect:every_subject] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all neighbour countries every_neighbour_country = { limit = { <triggers> } <effects> }
+### Iterate through all neighbour countries every_neighbour_country = { limit = { <triggers> } <effects> }
 alias[effect:every_neighbour_country] = {
     ## cardinality = 0..1
     limit = {
@@ -1697,7 +1781,7 @@ alias[effect:every_neighbour_country] = {
     }
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all pops in a province ordered_pops_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all pops in a province ordered_pops_in_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_pops_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1716,7 +1800,7 @@ alias[effect:ordered_pops_in_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all provinces in a region ordered_region_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+### Iterate through all provinces in a region ordered_region_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
 alias[effect:ordered_region_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1735,7 +1819,7 @@ alias[effect:ordered_region_province] = {
     check_range_bounds = no
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all units in a province random_unit_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+### Iterate through all units in a province random_unit_in_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 alias[effect:random_unit_in_province] = {
     ## cardinality = 0..1
     limit = {
@@ -1745,9 +1829,11 @@ alias[effect:random_unit_in_province] = {
     alternative_limit = {
         alias_name[trigger] = alias_match_left[trigger]
     }
+    ## cardinality = 0..1
+    weight = single_alias_right[weight_block]
     alias_name[effect] = alias_match_left[effect]
 }
-###Iterate through all ownable provinces in the world every_ownable_province = { limit = { <triggers> } <effects> }
+### Iterate through all ownable provinces in the world every_ownable_province = { limit = { <triggers> } <effects> }
 alias[effect:every_ownable_province] = {
     ## cardinality = 0..1
     limit = {
