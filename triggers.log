@@ -391,6 +391,7 @@ Supported Scopes: none
 any_province - Checks if any province meets the specified criteria
 any_province = { triggers }
 Supported Scopes: none
+Supported Targets: province
 
 --------------------
 
