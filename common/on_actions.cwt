@@ -7,6 +7,7 @@ types = {
 on_action = {
 	## cardinality = 0..1
     effect = {
+        ## cardinality = 0..inf
         alias_name[effect] = alias_match_left[effect]
     }
 	## cardinality = 0..1
@@ -20,14 +21,14 @@ on_action = {
 	}
 	## cardinality = 0..1
 	random_events = {
-		## cardinality = 1..inf
+		## cardinality = 0..inf
 		int = <event>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		int = 0
 	}
 	## cardinality = 0..1
 	events = {
-		## cardinality = 1..inf
+		## cardinality = 0..inf
 		<event>
 	}
 	## cardinality = 0..1
@@ -36,4 +37,6 @@ on_action = {
         alias_name[trigger] = alias_match_left[trigger]
 	}
 
+    ## cardinality = 0..1
+    fallback = <on_action>
 }
