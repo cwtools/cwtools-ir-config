@@ -65,6 +65,7 @@ alias[effect:add_new_family] = scalar
 
 ###kills a character, death = { killer = X death_reason = Y }, where X is a character and Y is one of the death reason keys
 alias[effect:death] = {
+    ## cardinality = 0..1
     killer = scope[character]
     death_reason = <death_reason>
 }

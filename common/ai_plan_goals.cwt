@@ -30,6 +30,10 @@ types = {
 ## replace_scope = { this = country root = country }
 ai_plan_goal = {
     trigger = {
+        # TODO: keep an eye on it, it's hardcoded at the moment, apparently
+        ## cardinality = 0..1
+        has_coasts = bool
+
         ## cardinality = 1..inf
         alias_name[trigger] = alias_match_left[trigger]
     }
