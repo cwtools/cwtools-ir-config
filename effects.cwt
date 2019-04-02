@@ -1,6 +1,14 @@
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 alias[effect:set_local_variable] = {
     name = value_set[local_variable]
+
+    ## cardinality = 0..1
+    enum[duration] = int
+
+    ## cardinality = 0..1
+    value = value_field
+    ## cardinality = 0..1
+    value = scope_field
 }
 
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
@@ -162,10 +170,14 @@ alias[effect:remove_as_researcher] = bool
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 alias[effect:set_variable] = {
     name = value_set[variable]
+
     ## cardinality = 0..1
-    days = int
+    enum[duration] = int
+
     ## cardinality = 0..1
     value = value_field
+    ## cardinality = 0..1
+    value = scope_field
 }
 
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
@@ -430,6 +442,14 @@ alias[effect:if] = {
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
 alias[effect:set_global_variable] = {
     name = value_set[global_variable]
+
+    ## cardinality = 0..1
+    enum[duration] = int
+
+    ## cardinality = 0..1
+    value = value_field
+    ## cardinality = 0..1
+    value = scope_field
 }
 
 ###Sets a variable set_variable = { name = X value = Y days = Z } Where X is the name of the variable used to then access it Where Y is any event target, bool, value, script value or flag (flag:W) An optional days where Z is the number of days or script value This variable will be accessible with <type_>var:X. With type being in a scope object or in a top scope
