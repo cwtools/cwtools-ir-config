@@ -769,6 +769,14 @@ alias[effect:add_popularity] = int_value_field
 ###adds party conviction for a character
 alias[effect:add_party_conviction] = int_value_field
 
+# TODO: value_field?
+###adds party conviction for a character
+alias[effect:add_party_conviction] = {
+    party = <party_type>
+
+    value = int_value_field
+}
+
 ###Log the current scope to the game log when this effect executes yes = full scope info, no=only current scope
 alias[effect:debug_log_scopes] = bool
 
@@ -916,4 +924,7 @@ alias[effect:random_list] = {
         ## cardinality = 1..inf
         alias_name[effect] = alias_match_left[effect]
     }
+
+    ## cardinality = 0..inf
+    alias_name[effect] = alias_match_left[effect]
 }

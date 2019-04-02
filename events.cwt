@@ -131,6 +131,7 @@ event = {
     }
     ## cardinality = 0..inf
     option = {
+        ## cardinality = 0..1
         name = localisation
 
         ## cardinality = 0..1

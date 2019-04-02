@@ -1013,3 +1013,11 @@ alias[trigger:num_of_unit_type] = {
 ###Checks if a target in in a list
 alias[trigger:is_in_list] = replace_me
 
+## scopes = country
+alias[trigger:num_of_civic_ideas] == int_value_field
+## scopes = country
+alias[trigger:num_of_oratory_ideas] == int_value_field
+## scopes = country
+alias[trigger:num_of_military_ideas] == int_value_field
+## scopes = country
+alias[trigger:num_of_religious_ideas] == int_value_field
