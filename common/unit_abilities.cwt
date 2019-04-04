@@ -56,8 +56,9 @@ unit_ability = {
     ## cardinality = 0..1
     shortcut = scalar
 
+    # TODO: Sound
     ## cardinality = 0..1
-    soundeffect = <sound>
+    soundeffect = scalar
 
     ## cardinality = 0..1
     hidden = {

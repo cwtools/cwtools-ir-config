@@ -22,7 +22,8 @@ combat_tactic = {
 
     enable = bool
 
-    sound = <sound>
+    # TODO: Sound
+    sound = scalar
 
     # TODO: Probably 0..inf, actually, but needs checking and probably is built into the UI by default.
     ## cardinality = 4..4

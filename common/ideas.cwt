@@ -30,7 +30,8 @@ idea = {
 
     group = enum[idea_groups]
 
-    soundeffect = scalar # TODO: <sound>? filepath? weird format
+    # TODO: <sound>? filepath? weird format
+    soundeffect = scalar
 
     ## cardinality = 0..1
     ai_plan = {

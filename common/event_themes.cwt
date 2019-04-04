@@ -8,5 +8,6 @@ event_theme = {
     # Uh.
     icon = ""
 
-    soundeffect = <sound>
+    # TODO: Sound
+    soundeffect = scalar
 }

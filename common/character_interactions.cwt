@@ -23,8 +23,9 @@ character_interaction = {
     on_own_nation = bool
     on_other_nation = bool
 
+    # TODO: Sound
     ## cardinality = 0..1
-    sound = <sound>
+    sound = scalar
 
     ## cardinality = 0..1
     ### Defaults to yes, probably.
