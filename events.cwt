@@ -107,10 +107,10 @@ event = {
     ### Defaults to no.
     fire_only_once = bool
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     left_portrait = scope[character]
 
-    ## cardinality = 0..1
+    ## cardinality = 0..inf
     right_portrait = scope[character]
 
     ## cardinality = 0..1
