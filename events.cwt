@@ -135,6 +135,9 @@ event = {
         name = localisation
 
         ## cardinality = 0..1
+        highlight = bool
+
+        ## cardinality = 0..1
         ### Defaults to no.
         exclusive = bool
 

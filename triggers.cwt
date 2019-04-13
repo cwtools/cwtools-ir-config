@@ -913,9 +913,7 @@ alias[trigger:trade_good_surplus] = {
 }
 
 ###if a country is a specific tag
-alias[trigger:tag] = enum[country_tags]
-###if a country is a specific tag
-alias[trigger:tag] = value[dynamic_country_tag]
+alias[trigger:tag] = ir_country_tag_field
 
 # TODO: check if it's not value_field[0.0..1.0] :P
 ###Checks hapiness for this pop

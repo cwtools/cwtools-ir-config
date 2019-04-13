@@ -745,7 +745,7 @@ alias[effect:clamp_variable] = {
 ###adds a cancellable modifier to a Character
 alias[effect:add_triggered_character_modifier] = {
     name = <modifier_container.triggered>
-
+    ## cardinality = 0..1
     duration = int_value_field
 }
 

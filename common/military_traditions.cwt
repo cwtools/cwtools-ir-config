@@ -59,7 +59,7 @@ military_tradition = {
             ## cardinality = 0..1
             ai_plan = {
                 ## cardinality = 1..inf
-                after = ai_plan
+                after = "military_tradition <military_tradition_path_step>"
             }
         }
 

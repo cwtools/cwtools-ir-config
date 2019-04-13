@@ -22,7 +22,7 @@ types = {
 }
 
 culture_group = {
-    color = TODO
+    color = colour_field
 
     ## cardinality = 0..1
     ### Defaults to no, probably.

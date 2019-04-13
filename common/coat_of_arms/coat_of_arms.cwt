@@ -1,16 +1,16 @@
 single_alias[coat_of_arms_rhs] = {
     # I think we need a "list format" for a bunch of stuff here, not just colours
     pattern = filepath[gfx/coat_of_arms/patterns/]
-    pattern = list <pattern_texture_list>
+    # pattern = list <pattern_texture_list>
 
     # Using colour field assuming it supports adding the list thing
-    color1 = colour_field
+    color1 = enum[named_colors]
 
     ## cardinality = 0..1
-    color2 = colour_field
+    color2 = enum[named_colors]
 
     ## cardinality = 0..1
-    color3 = colour_field
+    color3 = enum[named_colors]
 
     # TODO: Based on usage in vanilla; might want to dig a bit deeper
     ## cardinality = 0..1
@@ -21,12 +21,14 @@ single_alias[coat_of_arms_rhs] = {
     # TODO: cardinality based on usage in vanilla, might be actually different but I doubt it; still, confirm; quite possibly based on pattern
     ## cardinality = 0..2
     colored_emblem = {
-        pattern = filepath[gfx/coat_of_arms/colored_emblems/]
-        pattern = list <colored_emblem_texture_list>
-
-        color1 = colour_field
         ## cardinality = 0..1
-        color2 = colour_field
+        pattern = filepath[gfx/coat_of_arms/colored_emblems/]
+        # ## cardinality = 0..1
+        # pattern = list <colored_emblem_texture_list>
+
+        color1 = enum[named_colors]
+        ## cardinality = 0..1
+        color2 = enum[named_colors]
 
         # TODO: Figure out
         ## cardinality = 0..1
@@ -60,6 +62,7 @@ single_alias[coat_of_arms_rhs] = {
 types = {
     type[coat_of_arms_validation] = {
         path = "game/common/coat_of_arms/coat_of_arms"
+        type_per_file = yes
     }
     type[coat_of_arms_template] = {
         path = "game/common/coat_of_arms/coat_of_arms"
@@ -69,7 +72,7 @@ types = {
 
 coat_of_arms_validation = {
     ## cardinality = 0..inf
-    enum[country_tags] = single_alias_right[coat_of_arms_rhs]
+    ir_country_tag_field = single_alias_right[coat_of_arms_rhs]
 
     ## cardinality = 0..inf
     value[country_flag] = single_alias_right[coat_of_arms_rhs]

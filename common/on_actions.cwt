@@ -15,9 +15,15 @@ on_action = {
 		## cardinality = 0..inf
 		<on_action>
 		## cardinality = 0..inf
-		delay = int
-		## cardinality = 0..inf
-		delay = { int int }
+		delay = {
+            ## cardinality = 0..1
+            enum[duration] = int
+            ## cardinality = 0..1
+            enum[duration] = {
+                ## cardinality = 2..2
+                int
+            }
+        }
 	}
 	## cardinality = 0..1
 	random_events = {

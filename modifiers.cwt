@@ -156,6 +156,8 @@ modifiers = {
 
     monthly_local_governor_wage = country
 
+    monthly_character_loyalty = country
+
     monthly_character_loyalty = character
 
     monthly_character_popularity = character
@@ -304,7 +306,7 @@ modifiers = {
 
     clan_retinue_size = character
 
-    enslavement_efficiency = country
+    enslavement_efficiency = unit
 
     local_output_modifier = character
 
@@ -499,7 +501,7 @@ alias[modifier:local_<pop_type>_happyness] = float
 alias[modifier:global_<pop_type>_happyness] = float
 
 ## scopes = country
-alias[modifier:monthly_office_<office>_loyalty] = float
+alias[modifier:monthly_<office>_loyalty] = float
 
 ## scopes = country
 alias[modifier:<building>_cost] = float
