@@ -38,10 +38,17 @@ alias[arithmetic_operation:modulo] = value_field
 alias[arithmetic_operation:value] = value_field
 alias[arithmetic_operation:max] = value_field
 alias[arithmetic_operation:min] = value_field
-alias[arithmetic_operation:round] = bool
-alias[arithmetic_operation:ceiling] = bool
-alias[arithmetic_operation:floor] = bool
+
+alias[arithmetic_operation:round] = yes
+alias[arithmetic_operation:ceiling] = yes
+alias[arithmetic_operation:floor] = yes
+
+alias[arithmetic_operation:fixed_range] = {
+    min = value_field
+    max = value_field
+}
+
 alias[arithmetic_operation:integer_range] = {
-    min = int
-    max = int
+    min = int_value_field
+    max = int_value_field
 }
