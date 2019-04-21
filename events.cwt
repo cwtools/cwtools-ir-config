@@ -4,6 +4,7 @@ enums = {
         major_country_event
         province_event
         character_event
+        state_event
     }
 }
 
@@ -49,6 +50,10 @@ types = {
         ## push_scope = character
         subtype[character] = {
             type = character_event
+        }
+        ## push_scope = state
+        subtype[state] = {
+            type = state_event
         }
         subtype[visible] = {
             ## cardinality = 0..1
