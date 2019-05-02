@@ -1019,3 +1019,6 @@ alias[trigger:num_of_oratory_ideas] == int_value_field
 alias[trigger:num_of_military_ideas] == int_value_field
 ## scopes = country
 alias[trigger:num_of_religious_ideas] == int_value_field
+
+## scopes = any
+alias[trigger:<script_value>] == value_field
