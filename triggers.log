@@ -2,19 +2,19 @@ Trigger Documentation:
 
 --------------------
 
-debug_log = yes - Outputs to the game log when this trigger is hit
+debug_log - yes - Outputs to the game log when this trigger is hit
 debug_log_details = yes - Outputs full trigger content when this trigger is hit
 
 --------------------
 
 is_general - Is the scope character a General?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 is_port - is the province a Port or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -43,7 +43,7 @@ Supported Scopes: character
 --------------------
 
 prisoner - is the character imprisoned?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -61,7 +61,7 @@ Supported Scopes: none
 --------------------
 
 is_ship - subunit is Ship
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: subunit
 
 --------------------
@@ -91,7 +91,7 @@ Supported Scopes: country
 --------------------
 
 is_clan_chief - Is the scope character a ClanChief?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -115,7 +115,7 @@ Supported Scopes: province
 --------------------
 
 is_ai - is the country an ai or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -160,7 +160,7 @@ Supported Targets: character
 --------------------
 
 is_mercenary - Is the scope character Mercenary?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -173,7 +173,7 @@ Supported Targets: state
 --------------------
 
 in_command - Is the scope character a InCommand?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -184,7 +184,7 @@ Supported Scopes: state
 --------------------
 
 has_breach - siege has breach
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: siege
 
 --------------------
@@ -207,7 +207,7 @@ Supported Scopes: province
 --------------------
 
 has_civil_war - countryis in civil war ?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -225,7 +225,7 @@ Supported Scopes: province
 --------------------
 
 is_uninhabitable - is the province uninhabitable?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -243,7 +243,7 @@ Supported Scopes: character
 --------------------
 
 is_scorned - is the character Scorned or dead?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: family
 
 --------------------
@@ -255,7 +255,7 @@ Supported Scopes: province
 --------------------
 
 is_coastal - is the province coastal or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -267,7 +267,7 @@ Supported Scopes: country
 --------------------
 
 is_isolated - state is Isolated
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: state
 
 --------------------
@@ -279,7 +279,7 @@ Supported Scopes: none
 --------------------
 
 is_clan_retinue - subunit is clan retinue
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: subunit
 
 --------------------
@@ -292,7 +292,7 @@ Supported Targets: province
 --------------------
 
 in_combat - unit is in combat
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -342,7 +342,7 @@ Supported Targets: character
 --------------------
 
 has_commander - unit has a commander
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -379,7 +379,7 @@ Supported Scopes: none
 --------------------
 
 is_admiral - Is the scope character a Admiral?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -404,7 +404,7 @@ Supported Scopes: character
 --------------------
 
 has_primary_heir - does the country have a primary heir or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -441,19 +441,19 @@ Supported Targets: character
 --------------------
 
 is_overlord - Is the country an overlord to any other country?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
 
 is_movement_locked - unit is movement locked
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
 
 has_nickname - Does the scope character have a nickname?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -472,13 +472,13 @@ Supported Scopes: none
 --------------------
 
 is_capital - is the province a capital or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
 
 can_get_friends - Can the scope character get Friends?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -495,7 +495,7 @@ Supported Scopes: province
 --------------------
 
 has_job - does the character have a valid Job?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -554,7 +554,7 @@ Supported Targets: country
 --------------------
 
 in_siege - unit is in Siege
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -571,7 +571,7 @@ Supported Scopes: country
 --------------------
 
 has_tech_office - Is the scope character in a tech office?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -693,7 +693,7 @@ Supported Targets: character
 --------------------
 
 is_sea - is the province a sea province?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -763,7 +763,7 @@ Supported Scopes: character
 --------------------
 
 is_moving - unit is moving
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -810,7 +810,7 @@ Supported Targets: character
 --------------------
 
 has_construction - has construction
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -828,7 +828,7 @@ Supported Scopes: province
 --------------------
 
 has_winter - Checks if a province has any level of winter
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -863,13 +863,13 @@ Supported Scopes: country
 --------------------
 
 is_republic - is the country at republic or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
 
 has_any_office - does the characer have an office or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -891,7 +891,7 @@ Supported Scopes: country
 --------------------
 
 has_owner - does the province have an owner or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -915,7 +915,7 @@ Supported Scopes: country
 --------------------
 
 has_land - Does the scoped country own any provinces
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -956,13 +956,13 @@ Supported Scopes: province
 --------------------
 
 is_co_ruler - Is the scope character a co-ruler?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 is_migration - unit is Migration
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: subunit
 
 --------------------
@@ -1011,7 +1011,7 @@ Supported Scopes: country
 --------------------
 
 is_primary_heir - Is the scope character a PrimaryHeir?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1040,7 +1040,7 @@ Supported Scopes: province
 --------------------
 
 has_minor_river - does the province have a minor river or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -1059,7 +1059,7 @@ Supported Scopes: unit
 --------------------
 
 has_mother - does the character have a valid living mother?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1095,7 +1095,7 @@ Supported Scopes: unit
 --------------------
 
 gender_rules - Checks if the game has gender-equality rules
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: none
 
 --------------------
@@ -1123,7 +1123,7 @@ Supported Scopes: none
 --------------------
 
 has_siege - is the province sieged or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -1134,7 +1134,7 @@ Supported Targets: party
 
 --------------------
 
-dominant_province_culture - Checks if a culture is dominant in a province 
+dominant_province_culture - Checks if a culture is dominant in a province
 Traits: culture db key/culture scope
 Supported Scopes: province
 Supported Targets: culture
@@ -1149,7 +1149,7 @@ Supported Targets: character
 --------------------
 
 is_antagonist - is the country an antagonist or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1161,7 +1161,7 @@ Supported Scopes: state
 --------------------
 
 debug_only - Checks if the game is in debug mode or not.
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: none
 
 --------------------
@@ -1172,7 +1172,7 @@ Supported Scopes: none
 --------------------
 
 has_co_ruler_government - Does the current government have co-rulers?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1233,7 +1233,7 @@ Supported Scopes: character
 --------------------
 
 is_alive - is the character alive or dead?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1287,7 +1287,7 @@ Supported Scopes: character
 --------------------
 
 always - Always the same value
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: none
 
 --------------------
@@ -1317,7 +1317,7 @@ Supported Scopes: none
 --------------------
 
 is_navy - unit is Navy
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -1336,7 +1336,7 @@ Supported Targets: character
 --------------------
 
 war - is the country at war or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1393,7 +1393,7 @@ Supported Scopes: subunit
 --------------------
 
 is_ruler - Is the scope character a ruler?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1417,7 +1417,7 @@ Supported Scopes: none
 --------------------
 
 is_capital_state - is the state a capital or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: state
 
 --------------------
@@ -1447,7 +1447,7 @@ Supported Scopes: province
 --------------------
 
 is_cohort - unit is cohort
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: subunit
 
 --------------------
@@ -1502,7 +1502,7 @@ Supported Scopes: country
 --------------------
 
 is_subject - Is the country a subject to any other country?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1543,7 +1543,7 @@ Supported Scopes: country
 --------------------
 
 gender_equality - country has gender equality or not ?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1572,7 +1572,7 @@ Supported Scopes: country
 --------------------
 
 is_dynamic_tag - if a country is dynamically created
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: none
 
 --------------------
@@ -1618,7 +1618,7 @@ Supported Scopes: country
 --------------------
 
 is_tribal - is the country at tribal or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1630,7 +1630,7 @@ Supported Scopes: country
 --------------------
 
 is_army - unit is Army
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -1648,19 +1648,19 @@ Supported Scopes: country
 --------------------
 
 is_exiled - unit is Exiled
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
 
 is_governor - Is the scope character a Governor?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 is_successor - is the character a successor?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1681,7 +1681,7 @@ Supported Scopes: none
 --------------------
 
 is_iron_man - Checks if the game is in iron man mode.
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: none
 
 --------------------
@@ -1699,7 +1699,7 @@ Supported Scopes: none
 --------------------
 
 is_inhabitable - is the province inhabitable or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -1734,7 +1734,7 @@ Supported Scopes: none
 --------------------
 
 pop_can_move - Can this pop be moved without breaking pop movement rules?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: pop
 
 --------------------
@@ -1825,7 +1825,7 @@ Supported Scopes: country
 --------------------
 
 is_party_leader - Is the scope character a PartyLeader?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1850,7 +1850,7 @@ Supported Scopes: country
 --------------------
 
 is_bastard - Is the scope character a bastard?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1922,19 +1922,19 @@ Supported Scopes: character
 --------------------
 
 is_adult - Is the scope character adult?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 is_adjacent_to_major_river - does the province have a minor river or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
 
 has_coasts - If the country has any coastal cities
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -1969,8 +1969,8 @@ Supported Targets: country
 
 --------------------
 
-is_banished - is the character banished 
-Traits: yes/no 
+is_banished - is the character banished
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -1989,19 +1989,19 @@ Supported Scopes: country
 --------------------
 
 is_tutorial_active - is the tutorial active?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
 
 is_male - Is the scope character male?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 is_courtier - Is the scope character  Courtier (without title / job)?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2030,7 +2030,7 @@ Supported Scopes: character
 --------------------
 
 is_previous_ruler - Is the scope character a previous ruler?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2092,7 +2092,7 @@ Supported Scopes: province
 --------------------
 
 is_state_capital - is the province a StateCapital or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -2104,7 +2104,7 @@ Supported Targets: party
 --------------------
 
 is_monarchy - is the country at monarchy or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
@@ -2130,7 +2130,7 @@ Supported Scopes: party
 --------------------
 
 from_ruler_family - Is the scope character same family as ruler ?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2180,7 +2180,7 @@ Supported Scopes: character
 --------------------
 
 is_female - Is the scope character female?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2191,7 +2191,7 @@ Supported Scopes: country
 
 --------------------
 
-dominant_province_religion - Checks if a religion is dominant in a province 
+dominant_province_religion - Checks if a religion is dominant in a province
 Traits: class CReligionDatabase key/religion scope
 Supported Scopes: province
 Supported Targets: religion
@@ -2211,7 +2211,7 @@ Supported Scopes: character
 --------------------
 
 has_city_status - is the province a City or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: province
 
 --------------------
@@ -2251,7 +2251,7 @@ Supported Scopes: none
 --------------------
 
 is_married - Is the scope character married?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2262,13 +2262,13 @@ Supported Scopes: province
 --------------------
 
 has_any_omen - does the country have an active omen or not?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: country
 
 --------------------
 
 is_pregnant - is the character pregnant?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2298,7 +2298,7 @@ Supported Scopes: province
 --------------------
 
 is_unit_locked - Check if a Unit is locked
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: unit
 
 --------------------
@@ -2340,13 +2340,13 @@ Supported Scopes: none
 --------------------
 
 is_pretender - is the character Pretender or dead?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
 
 can_get_rivals - Can the scope character get rivals?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2386,7 +2386,7 @@ Supported Targets: pop
 --------------------
 
 has_personal_loyalty - subunit is clan retinue
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: subunit
 
 --------------------
@@ -2443,7 +2443,7 @@ Supported Scopes: unit
 --------------------
 
 is_head_of_family - Is the scope character a head of a family?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------
@@ -2455,7 +2455,7 @@ Supported Scopes: character
 --------------------
 
 has_father - does the character have a valid living father?
-Traits: yes/no 
+Traits: yes/no
 Supported Scopes: character
 
 --------------------

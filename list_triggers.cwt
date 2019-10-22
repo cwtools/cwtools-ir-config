@@ -8,7 +8,8 @@ alias[trigger:any_sub_unit] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all provinces in a area any_area_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all provinces in a area any_area_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_area_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -18,7 +19,8 @@ alias[trigger:any_area_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all existing countries any_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all existing countries any_country = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_country] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -28,7 +30,8 @@ alias[trigger:any_country] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all friends any_friend = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all friends any_friend = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_friend] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -38,7 +41,8 @@ alias[trigger:any_friend] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all states in a region any_region_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all states in a region any_region_state = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_region_state] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -48,7 +52,8 @@ alias[trigger:any_region_state] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all states in a area any_area_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all states in a area any_area_state = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_area_state] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -58,7 +63,8 @@ alias[trigger:any_area_state] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all supportasHeir any_support_as_heir = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all supportasHeir any_support_as_heir = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_support_as_heir] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -68,7 +74,8 @@ alias[trigger:any_support_as_heir] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all items in local list. list = name or variable = name any_in_local_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all items in local list. list = name or variable = name any_in_local_list = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_in_local_list] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -78,7 +85,8 @@ alias[trigger:any_in_local_list] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Checks if any province meets the specified criteria any_province = { triggers }
+
+### Checks if any province meets the specified criteria any_province = { triggers }
 alias[trigger:any_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -88,7 +96,8 @@ alias[trigger:any_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all allied countries any_allied_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all allied countries any_allied_country = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_allied_country] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -98,7 +107,8 @@ alias[trigger:any_allied_country] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all characters in a country any_character = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all characters in a country any_character = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_character] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -108,7 +118,8 @@ alias[trigger:any_character] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all subunits in all units in a country any_country_sub_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all subunits in all units in a country any_country_sub_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_country_sub_unit] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -118,7 +129,8 @@ alias[trigger:any_country_sub_unit] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all provinces in a state any_state_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all provinces in a state any_state_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_state_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -128,7 +140,8 @@ alias[trigger:any_state_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all commanders in a country any_commander = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all commanders in a country any_commander = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_commander] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -138,7 +151,8 @@ alias[trigger:any_commander] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all armies in a country any_army = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all armies in a country any_army = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_army] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -148,7 +162,8 @@ alias[trigger:any_army] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all areas in a region any_region_area = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all areas in a region any_region_area = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_region_area] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -158,7 +173,8 @@ alias[trigger:any_region_area] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all provinces in a region any_region_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all provinces in a region any_region_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_region_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -168,7 +184,8 @@ alias[trigger:any_region_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all states in a governorship any_governorship_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all states in a governorship any_governorship_state = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_governorship_state] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -178,7 +195,8 @@ alias[trigger:any_governorship_state] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all ownable provinces in the world any_ownable_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all ownable provinces in the world any_ownable_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_ownable_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -188,7 +206,8 @@ alias[trigger:any_ownable_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all existing areas any_area = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all existing areas any_area = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_area] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -198,7 +217,8 @@ alias[trigger:any_area] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all countries at war with any_countries_at_war_with = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all countries at war with any_countries_at_war_with = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_countries_at_war_with] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -208,7 +228,8 @@ alias[trigger:any_countries_at_war_with] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all subject countries any_subject = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all subject countries any_subject = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_subject] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -218,7 +239,8 @@ alias[trigger:any_subject] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all items in global list. list = name or variable = name any_in_global_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all items in global list. list = name or variable = name any_in_global_list = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_in_global_list] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -228,7 +250,8 @@ alias[trigger:any_in_global_list] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### true if any child is false (equivalent to NAND)
+
+### true if any child is false (equivalent to NAND)
 alias[trigger:any_false] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -238,7 +261,8 @@ alias[trigger:any_false] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all states in a country any_country_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all states in a country any_country_state = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_country_state] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -248,7 +272,8 @@ alias[trigger:any_country_state] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all items in list. list = name or variable = name any_in_list = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all items in list. list = name or variable = name any_in_list = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_in_list] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -258,7 +283,8 @@ alias[trigger:any_in_list] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all units in a province any_unit_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all units in a province any_unit_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_unit_in_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -268,7 +294,8 @@ alias[trigger:any_unit_in_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all siblings any_sibling = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all siblings any_sibling = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_sibling] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -278,7 +305,8 @@ alias[trigger:any_sibling] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all navies in a country any_navy = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all navies in a country any_navy = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_navy] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -288,7 +316,8 @@ alias[trigger:any_navy] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all pops in a province any_pops_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all pops in a province any_pops_in_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_pops_in_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -298,7 +327,8 @@ alias[trigger:any_pops_in_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all owned provinces in a country any_owned_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all owned provinces in a country any_owned_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_owned_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -308,7 +338,8 @@ alias[trigger:any_owned_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all neighbour countries any_neighbour_country = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all neighbour countries any_neighbour_country = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_neighbour_country] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -318,7 +349,8 @@ alias[trigger:any_neighbour_country] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Checks if any living character meets the specified criteria any_living_character = { triggers }
+
+### Checks if any living character meets the specified criteria any_living_character = { triggers }
 alias[trigger:any_living_character] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -328,7 +360,8 @@ alias[trigger:any_living_character] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Checks if any parent meets the specified criteria any_parent = { triggers }
+
+### Checks if any parent meets the specified criteria any_parent = { triggers }
 alias[trigger:any_parent] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -338,7 +371,8 @@ alias[trigger:any_parent] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all families in a country any_family = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all families in a country any_family = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_family] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -348,7 +382,8 @@ alias[trigger:any_family] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all states a governor is governor of any_governor_state = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all states a governor is governor of any_governor_state = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_governor_state] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -358,7 +393,8 @@ alias[trigger:any_governor_state] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all existing regions any_region = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all existing regions any_region = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_region] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -368,7 +404,8 @@ alias[trigger:any_region] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all successors in a country any_successor = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all successors in a country any_successor = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_successor] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -378,7 +415,8 @@ alias[trigger:any_successor] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all Rivals any_rival = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all Rivals any_rival = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_rival] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -388,7 +426,8 @@ alias[trigger:any_rival] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all members of a family any_family_member = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all members of a family any_family_member = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_family_member] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -398,7 +437,8 @@ alias[trigger:any_family_member] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all children any_child = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all children any_child = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_child] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -408,7 +448,8 @@ alias[trigger:any_child] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all neighbors of a province any_neighbor_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all neighbors of a province any_neighbor_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_neighbor_province] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -418,7 +459,8 @@ alias[trigger:any_neighbor_province] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-### Iterate through all units in a country any_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
+
+### Iterate through all units in a country any_unit = { <count=num/all> / <percent=fixed_point> <triggers> }
 alias[trigger:any_unit] = {
     ## cardinality = 0..1
     percent = value_float[0.0..1.0]
@@ -428,4 +470,81 @@ alias[trigger:any_unit] = {
     count = all
     alias_name[trigger] = alias_match_left[trigger]
 }
-
+
+### Iterate through all sea and river zones in the world any_sea_and_river_zone = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_sea_and_river_zone] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all provinces in an area any_area_including_unownable_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_area_including_unownable_province] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all holdings of a character any_holdings = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_holdings] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all neighbouring areas of a Area any_neighbor_area = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_neighbor_area] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all holding owners of a province any_holding_owners = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_holding_owners] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all provinces in a region any_region_province_including_unownable = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_region_province_including_unownable] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+### Iterate through all neighbouring regions of a region any_neighbor_region = { <count=num/all> / <percent=fixed_point> <triggers> }
+alias[trigger:any_neighbor_region] = {
+            ## cardinality = 0..1
+            percent = value_float[0.0..1.0]
+            ## cardinality = 0..1
+            count = int_value_field
+            ## cardinality = 0..1
+            count = all
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
