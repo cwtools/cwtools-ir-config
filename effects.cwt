@@ -928,3 +928,55 @@ alias[effect:random_list] = {
     ## cardinality = 0..inf
     alias_name[effect] = alias_match_left[effect]
 }
+
+### adds food to a State
+alias[effect:add_state_food] = replace_me
+
+### Changes the capital of a state
+alias[effect:set_state_capital] = replace_me
+
+### gives (or takes) military experience to a country
+alias[effect:add_military_experience] = replace_me
+
+### starts a civil-war in a country, setting a specified character as its leader
+alias[effect:start_civil_war] = replace_me
+
+### removes one level of the specified Building
+alias[effect:remove_building_level] = replace_me
+
+### Divorces two characters
+alias[effect:divorce_character] = replace_me
+
+### hides dynamic object on map
+alias[effect:hide_model] = replace_me
+
+### Adds the province as a holding to a character
+alias[effect:add_holding] = replace_me
+
+### Removes the province as a holding to a character
+alias[effect:remove_holding] = replace_me
+
+### adds/removed a breach to the current siege
+alias[effect:add_breach] = replace_me
+
+### adds one level of the specified Building
+alias[effect:show_model] = replace_me
+
+### Adds VFX effects on the map
+alias[effect:add_vfx] = replace_me
+
+### Adds Loyal Veterans to a character
+alias[effect:add_loyal_veterans] = replace_me
+
+### Removes VFX effects on the map
+alias[effect:remove_vfx] = replace_me
+
+### shows a custom text on the map
+alias[effect:show_animated_text] = replace_me
+
+### Sets the rank of a city
+alias[effect:set_city_status] = replace_me
+
+### gives (or takes) political influence to a country
+alias[effect:add_political_influence] = replace_me
+

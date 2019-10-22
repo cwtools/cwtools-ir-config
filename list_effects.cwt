@@ -1970,3 +1970,339 @@ alias[effect:every_ownable_province] = {
     alias_name[effect] = alias_match_left[effect]
 }
 
+### Iterate through all holdings of a character random_holdings = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_holdings] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in a region every_region_province_including_unownable = { limit = { <triggers> } <effects> }
+alias[effect:every_region_province_including_unownable] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in an area random_area_including_unownable_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_area_including_unownable_province] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in a region ordered_region_province_including_unownable = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_region_province_including_unownable] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring regions of a region every_neighbor_region = { limit = { <triggers> } <effects> }
+alias[effect:every_neighbor_region] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in a region random_region_province_including_unownable = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_region_province_including_unownable] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all holdings of a character every_holdings = { limit = { <triggers> } <effects> }
+alias[effect:every_holdings] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all sea and river zones in the world ordered_sea_and_river_zone = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_sea_and_river_zone] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in an area every_area_including_unownable_province = { limit = { <triggers> } <effects> }
+alias[effect:every_area_including_unownable_province] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring regions of a region ordered_neighbor_region = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_neighbor_region] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all holding owners of a province ordered_holding_owners = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_holding_owners] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all holdings of a character ordered_holdings = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_holdings] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all holding owners of a province every_holding_owners = { limit = { <triggers> } <effects> }
+alias[effect:every_holding_owners] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all sea and river zones in the world every_sea_and_river_zone = { limit = { <triggers> } <effects> }
+alias[effect:every_sea_and_river_zone] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all provinces in an area ordered_area_including_unownable_province = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_area_including_unownable_province] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring areas of a Area every_neighbor_area = { limit = { <triggers> } <effects> }
+alias[effect:every_neighbor_area] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring areas of a Area random_neighbor_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_neighbor_area] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring areas of a Area ordered_neighbor_area = { limit = { <triggers> } order_by = script_value position = int/min = int max = script_value <effects> }
+alias[effect:ordered_neighbor_area] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            # TODO: Work out what exactly this is restricted to
+            order_by = value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            max = int_value_field
+            ## cardinality = 0..1
+            position = int
+            ## cardinality = 0..1
+            check_range_bounds = no
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all sea and river zones in the world random_sea_and_river_zone = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_sea_and_river_zone] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all neighbouring regions of a region random_neighbor_region = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_neighbor_region] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+### Iterate through all holding owners of a province random_holding_owners = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+alias[effect:random_holding_owners] = {
+            ## cardinality = 0..1
+            limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..inf
+            alternative_limit = {
+                alias_name[trigger] = alias_match_left[trigger]
+            }
+            ## cardinality = 0..1
+            weight = single_alias_right[weight_block]
+            alias_name[effect] = alias_match_left[effect]
+        }
+
