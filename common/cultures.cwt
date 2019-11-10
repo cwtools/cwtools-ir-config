@@ -44,7 +44,7 @@ culture_group = {
         ## cardinality = 1..inf
         localisation
         ## cardinality = 1..inf
-        family_name_field
+        ir_family_name_field
     }
 
     ## cardinality = 0..1
@@ -80,7 +80,7 @@ culture_group = {
                 ## cardinality = 1..inf
                 localisation
                 ## cardinality = 1..inf
-                family_name_field
+                ir_family_name_field
             }
 
             ## cardinality = 0..1

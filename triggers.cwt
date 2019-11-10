@@ -1275,3 +1275,5 @@ alias[trigger:has_state_food_capacity] == replace_me_comparison
 ### does the character have the required number of loyal Veterans?
 alias[trigger:num_loyal_veterans] == replace_me_comparison
 
+## scopes = any
+alias[trigger:<script_value>] == value_field
