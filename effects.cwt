@@ -18,7 +18,7 @@ alias[effect:set_local_variable] = value_set[local_variable]
 alias[effect:create_pop] = <pop_type>
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_variable_list] = replace_me
+alias[effect:clear_variable_list] = value[variable_list]
 
 ###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
 alias[effect:clamp_local_variable] = {
@@ -227,7 +227,10 @@ alias[effect:set_pop_type] = <pop_type>
 alias[effect:set_as_ruler] = scope[character]
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_local_variable_list] = replace_me
+alias[effect:add_to_local_variable_list] = {
+    name = value_set[local_variable_list]
+    target = scope_field
+}
 
 ###break execution of effects, break = yes/no/boolean event target
 alias[effect:break] = bool
@@ -253,7 +256,7 @@ alias[effect:change_country_color] = enum[named_colors]
 alias[effect:remove_variable] = value[variable]
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_local_variable_list] = replace_me
+alias[effect:clear_local_variable_list] = value[local_variable_list]
 
 ###gives (or takes) Corruption to a character
 alias[effect:add_corruption] = int_value_field
@@ -604,7 +607,7 @@ alias[effect:add_civilization_value] = value_field
 alias[effect:set_gender_equality] = bool
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_global_variable_list] = replace_me
+alias[effect:clear_global_variable_list] = value[global_variable_list]
 
 # TODO: Value_field? 0-1 or 0-100?
 ###gives (or takes) morale to a subunit
@@ -731,7 +734,10 @@ alias[effect:add_party_support] = {
 alias[effect:add_prominence] = int_value_field
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_variable_list] = replace_me
+alias[effect:add_to_variable_list] = {
+    name = value_set[variable_list]
+    target = scope_field
+}
 
 # TODO: value_field?
 ###gives (or takes) Treasury to a country
@@ -886,7 +892,11 @@ alias[effect:save_temporary_scope_as] = value_set[temporary_scope]
 alias[effect:remove_character_modifier] = <modifier_container>
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_global_variable_list] = replace_me
+alias[effect:add_to_global_variable_list] = {
+    name = value_set[global_variable_list]
+    target = scope_field
+}
+
 
 ###adds a modifier from a Unit
 alias[effect:add_unit_modifier] = {
