@@ -1045,31 +1045,31 @@ alias[trigger:debug_log] = bool
 alias[trigger:nand] = replace_me
 
 ### Checks
-alias[trigger:religious_tech] == replace_me_comparison
+alias[trigger:religious_tech] == int_value_field
 
 ### Does the country have a certain military Tradition
 alias[trigger:has_military_Tradition] = replace_me
 
 ### does the province have the amount of holdings?
-alias[trigger:current_amount_of_holdings] == replace_me_comparison
+alias[trigger:current_amount_of_holdings] == int_value_field
 
 ### siege has breach
 alias[trigger:has_breach] = bool
 
 ### Checks
-alias[trigger:mercantile_party_conviction] == replace_me_comparison
+alias[trigger:mercantile_party_conviction] == int_value_field
 
 ### Checks population of a specified type
-alias[trigger:num_of_freemen] == replace_me_comparison
+alias[trigger:num_of_freemen] == int_value_field
 
 ### The non loyal power base of the country
-alias[trigger:non_loyal_power_base] == replace_me_comparison
+alias[trigger:non_loyal_power_base] == int_value_field
 
 ### state is Isolated
 alias[trigger:is_isolated] = bool
 
 ### The amount of political influence of a country
-alias[trigger:political_influence] == replace_me_comparison
+alias[trigger:political_influence] == int_value_field
 
 ### does a country have the low economic policy for x?
 alias[trigger:has_low_economic_policy] = replace_me
@@ -1078,25 +1078,25 @@ alias[trigger:has_low_economic_policy] = replace_me
 alias[trigger:has_province_rank] = replace_me
 
 ### Checks
-alias[trigger:oratory_tech] == replace_me_comparison
+alias[trigger:oratory_tech] == int_value_field
 
 ### Checks
-alias[trigger:religious_party_conviction] == replace_me_comparison
+alias[trigger:religious_party_conviction] == int_value_field
 
 ### Do the province has the model shown. Written as is_model_shown=name_of_model
 alias[trigger:is_model_shown] = replace_me
 
 ### does the state have the required loyalty (from state level)?
-alias[trigger:state_level_loyalty] == replace_me_comparison
+alias[trigger:state_level_loyalty] == int_value_field
 
 ### negates content of trigger
 alias[trigger:not] = replace_me
 
 ### Checks population of a specified type
-alias[trigger:num_of_citizen] == replace_me_comparison
+alias[trigger:num_of_citizen] == int_value_field
 
 ### Checks
-alias[trigger:civic_party_support] == replace_me_comparison
+alias[trigger:civic_party_support] == int_value_field
 
 ### has construction
 alias[trigger:has_construction] = bool
@@ -1105,100 +1105,100 @@ alias[trigger:has_construction] = bool
 alias[trigger:has_winter] = bool
 
 ### Checks
-alias[trigger:religious_party_support] == replace_me_comparison
+alias[trigger:religious_party_support] == int_value_field
 
 ### does a country have the mid economic policy for x?
 alias[trigger:has_mid_economic_policy] = replace_me
 
 ### AI safety level in percent
-alias[trigger:safety] == replace_me_comparison
+alias[trigger:safety] == int_value_field
 
 ### does the state have the required commerce income?
-alias[trigger:state_commerce_income] == replace_me_comparison
+alias[trigger:state_commerce_income] == int_value_field
 
 ### does the country have the required number of cities controlled?
-alias[trigger:num_of_controlled_cities] == replace_me_comparison
+alias[trigger:num_of_controlled_cities] == int_value_field
 
 ### does the province have the required Manpower Income?
-alias[trigger:province_manpower_income] == replace_me_comparison
+alias[trigger:province_manpower_income] == int_value_field
 
 ### Checks
-alias[trigger:civic_tech] == replace_me_comparison
+alias[trigger:civic_tech] == int_value_field
 
 ### Is the scope character a co-ruler?
 alias[trigger:is_co_ruler] = bool
 
 ### for AI: cultural unity
-alias[trigger:cultural_unity] == replace_me_comparison
+alias[trigger:cultural_unity] == int_value_field
 
 ### does the province have a minor river or not?
 alias[trigger:has_minor_river] = bool
 
 ### does the province have the required Population Capacity?
-alias[trigger:population_cap] == replace_me_comparison
+alias[trigger:population_cap] == int_value_field
 
 ### is the country an antagonist or not?
 alias[trigger:is_antagonist] = bool
 
 ### does the state have the required food?
-alias[trigger:has_state_food] == replace_me_comparison
+alias[trigger:has_state_food] == int_value_field
 
 ### Does the current government have co-rulers?
 alias[trigger:has_co_ruler_government] = bool
 
 ### Checks
-alias[trigger:military_tech] == replace_me_comparison
+alias[trigger:military_tech] == int_value_field
 
 ### Checks hapiness for population of a specified type
-alias[trigger:citizen_happiness] == replace_me_comparison
+alias[trigger:citizen_happiness] == int_value_field
 
 ### a negated OR trigger
 alias[trigger:nor] = replace_me
 
 ### AI regression test: % of countries at peace with healthy economy
-alias[trigger:healthy_economy_percentage] == replace_me_comparison
+alias[trigger:healthy_economy_percentage] == int_value_field
 
 ### The amount of military experience of a country
-alias[trigger:military_experience] == replace_me_comparison
+alias[trigger:military_experience] == int_value_field
 
 ### gets country rank as integer, prefer using script values when comparing e.g. major_power etc.
-alias[trigger:rank] == replace_me_comparison
+alias[trigger:rank] == int_value_field
 
 ### how many holdings canthe character have?
-alias[trigger:max_holdings_owned] == replace_me_comparison
+alias[trigger:max_holdings_owned] == int_value_field
 
 ### Checks
-alias[trigger:populist_party_support] == replace_me_comparison
+alias[trigger:populist_party_support] == int_value_field
 
 ### does the character have the required powerbase?
-alias[trigger:power_base] == replace_me_comparison
+alias[trigger:power_base] == int_value_field
 
 ### how many holdings does the character have?
-alias[trigger:num_holdings_owned] == replace_me_comparison
+alias[trigger:num_holdings_owned] == int_value_field
 
 ### How many percent strength does this subunit have???
-alias[trigger:subunit_strength_percentage] == replace_me_comparison
+alias[trigger:subunit_strength_percentage] == int_value_field
 
 ### How many percent experience does this unit have???
-alias[trigger:experience_percentage] == replace_me_comparison
+alias[trigger:experience_percentage] == int_value_field
 
 ### is the state a capital or not?
 alias[trigger:is_capital_state] = bool
 
 ### percentage of characters below max loyalty
-alias[trigger:percentage_characters_below_max_loyalty] == replace_me_comparison
+alias[trigger:percentage_characters_below_max_loyalty] == int_value_field
 
 ### Checks hapiness for population of a specified type
-alias[trigger:tribesmen_happiness] == replace_me_comparison
+alias[trigger:tribesmen_happiness] == int_value_field
 
 ### Does this country have this heritage?
 alias[trigger:heritage] = replace_me_heritage
 
 ### does the province have the max amount of holdings?
-alias[trigger:max_amount_of_holdings] == replace_me_comparison
+alias[trigger:max_amount_of_holdings] == int_value_field
 
 ### Checks
-alias[trigger:populist_party_conviction] == replace_me_comparison
+alias[trigger:populist_party_conviction] == int_value_field
 
 ### if a country is dynamically created
 alias[trigger:is_dynamic_tag] = bool
@@ -1207,7 +1207,7 @@ alias[trigger:is_dynamic_tag] = bool
 alias[trigger:sub_unit_type] = replace_me
 
 ### The total power base of the country
-alias[trigger:total_power_base] == replace_me_comparison
+alias[trigger:total_power_base] == int_value_field
 
 ### does a country have the high economic policy for x?
 alias[trigger:has_high_economic_policy] = replace_me
@@ -1219,19 +1219,19 @@ alias[trigger:pop_can_move] = bool
 alias[trigger:and] = replace_me
 
 ### How many percent morale does this subunit have???
-alias[trigger:subunit_morale_percentage] == replace_me_comparison
+alias[trigger:subunit_morale_percentage] == int_value_field
 
 ### does AI dominate the almost seven seas? (discrete)
-alias[trigger:naval_dominance] == replace_me_comparison
+alias[trigger:naval_dominance] == int_value_field
 
 ### does the country have the required number of holdings?
-alias[trigger:total_holdings] == replace_me_comparison
+alias[trigger:total_holdings] == int_value_field
 
 ### Checks if a sub_unit is of a specific ship-category (light/medium/heavy)
 alias[trigger:ship_category] = replace_me
 
 ### Checks
-alias[trigger:civic_party_conviction] == replace_me_comparison
+alias[trigger:civic_party_conviction] == int_value_field
 
 ### does the province have a minor river or not?
 alias[trigger:is_adjacent_to_major_river] = bool
@@ -1240,31 +1240,31 @@ alias[trigger:is_adjacent_to_major_river] = bool
 alias[trigger:has_coasts] = bool
 
 ### Checks population of a specified type
-alias[trigger:num_of_tribesmen] == replace_me_comparison
+alias[trigger:num_of_tribesmen] == int_value_field
 
 ### The number of max diplomatic relations for a country
-alias[trigger:max_diplomatic_relations] == replace_me_comparison
+alias[trigger:max_diplomatic_relations] == int_value_field
 
 ### Checks
-alias[trigger:mercantile_party_support] == replace_me_comparison
+alias[trigger:mercantile_party_support] == int_value_field
 
 ### Checks hapiness for population of a specified type
-alias[trigger:slaves_happiness] == replace_me_comparison
+alias[trigger:slaves_happiness] == int_value_field
 
 ### Checks
-alias[trigger:military_party_conviction] == replace_me_comparison
+alias[trigger:military_party_conviction] == int_value_field
 
 ### is the province a StateCapital or not?
 alias[trigger:is_state_capital] = bool
 
 ### Checks
-alias[trigger:military_party_support] == replace_me_comparison
+alias[trigger:military_party_support] == int_value_field
 
 ### does the country have the required number of possible holdings?
-alias[trigger:possible_holdings] == replace_me_comparison
+alias[trigger:possible_holdings] == int_value_field
 
 ### Checks hapiness for population of a specified type
-alias[trigger:freemen_happiness] == replace_me_comparison
+alias[trigger:freemen_happiness] == int_value_field
 
 ### is the province a City or not?
 alias[trigger:has_city_status] = bool
@@ -1276,22 +1276,22 @@ alias[trigger:has_holding_in] = replace_me_province_id
 alias[trigger:has_holding_in] = replace_me_province_scope
 
 ### Checks population of a specified type
-alias[trigger:num_of_slaves] == replace_me_comparison
+alias[trigger:num_of_slaves] == int_value_field
 
 ### The number of active relations for a country
-alias[trigger:num_active_relations] == replace_me_comparison
+alias[trigger:num_active_relations] == int_value_field
 
 ### at least one entry inside trigger must be true
 alias[trigger:or] = replace_me
 
 ### AI distress level (discrete)
-alias[trigger:distress_level] == replace_me_comparison
+alias[trigger:distress_level] == int_value_field
 
 ### does the state have the required food capacity?
-alias[trigger:has_state_food_capacity] == replace_me_comparison
+alias[trigger:has_state_food_capacity] == int_value_field
 
 ### does the character have the required number of loyal Veterans?
-alias[trigger:num_loyal_veterans] == replace_me_comparison
+alias[trigger:num_loyal_veterans] == int_value_field
 
 ## scopes = any
 alias[trigger:<script_value>] == value_field

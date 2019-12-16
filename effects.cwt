@@ -961,10 +961,10 @@ alias[effect:divorce_character] = replace_me
 alias[effect:hide_model] = replace_me
 
 ### Adds the province as a holding to a character
-alias[effect:add_holding] = replace_me
+alias[effect:add_holding] = <province>
 
 ### Removes the province as a holding to a character
-alias[effect:remove_holding] = replace_me
+alias[effect:remove_holding] = <province>
 
 ### adds/removed a breach to the current siege
 alias[effect:add_breach] = replace_me
