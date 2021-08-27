@@ -588,7 +588,8 @@ alias[trigger:has_primary_heir] = bool
 ###Is the character a close relative (Child, Parent, Sibling/Half-sibling, Nephew/Niece, Aunt/Uncle, Grandparent or Grandchild) of the target character?
 alias[trigger:is_close_relative] = scope[character]
 
-###check if a State has a specific modifier
+### check if a State has a specific modifier
+scopes = state
 alias[trigger:has_state_modifier] = <modifier_container>
 
 ###Is the scope character a head of a family?
@@ -684,8 +685,13 @@ alias[trigger:gender_equality] = bool
 ###Does the country have a certain military bonus
 alias[trigger:has_military_bonus] = <military_tradition_path>
 
-###The total number of trade routes in this state
+### The total number of trade routes in this state
+## scopes = state
 alias[trigger:trade_routes] == int_value_field
+
+### The total number of unused trade routes in this state
+## scopes = state
+alias[trigger:unused_trade_routes] == int_value_field
 
 ###subunit is Ship
 alias[trigger:is_ship] = bool
@@ -925,6 +931,7 @@ alias[trigger:is_overlord] = bool
 
 # TODO: Confirm target type
 ###is the state's trade good surplus greater or equal than the value? trade_good_surplus = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
+## scopes = state
 alias[trigger:trade_good_surplus] = {
     target = <trade_goods>
     value == int_value_field
@@ -1087,6 +1094,7 @@ alias[trigger:religious_party_conviction] == int_value_field
 alias[trigger:is_model_shown] = replace_me
 
 ### does the state have the required loyalty (from state level)?
+## scopes = state
 alias[trigger:state_level_loyalty] == int_value_field
 
 ### negates content of trigger
@@ -1114,6 +1122,7 @@ alias[trigger:has_mid_economic_policy] = replace_me
 alias[trigger:safety] == int_value_field
 
 ### does the state have the required commerce income?
+## scopes = state
 alias[trigger:state_commerce_income] == int_value_field
 
 ### does the country have the required number of cities controlled?
@@ -1183,6 +1192,7 @@ alias[trigger:subunit_strength_percentage] == int_value_field
 alias[trigger:experience_percentage] == int_value_field
 
 ### is the state a capital or not?
+## scopes = state
 alias[trigger:is_capital_state] = bool
 
 ### percentage of characters below max loyalty
@@ -1288,6 +1298,7 @@ alias[trigger:or] = replace_me
 alias[trigger:distress_level] == int_value_field
 
 ### does the state have the required food capacity?
+## scopes = state
 alias[trigger:has_state_food_capacity] == int_value_field
 
 ### does the character have the required number of loyal Veterans?
@@ -1295,3 +1306,48 @@ alias[trigger:num_loyal_veterans] == int_value_field
 
 ## scopes = any
 alias[trigger:<script_value>] == value_field
+
+
+### Checks if a state can change to a specific governor_policy
+## scopes = state
+alias[trigger:can_change_governor_policy] = <governor_policy>
+
+### Checks if a state can import a certain trade good.
+## scopes = state
+alias[trigger:can_import_trade_good] = <trade_goods>
+
+### does the state contain a province with a great work?
+## scopes = state
+alias[trigger:has_any_great_work_state] = bool
+
+### Checks if a state has a governor
+## scopes = state
+alias[trigger:has_governor] = bool
+
+### does the state have the required food capacity?
+## scopes = state
+alias[trigger:has_state_food_capacity] == replace_me_comparison
+
+### The number of incoming trade routes in this state
+## scopes = state
+alias[trigger:incoming_trade_routes] == int_value_field
+
+### is the state a capital or not?
+## scopes = state
+alias[trigger:is_capital_state] = bool
+
+### The number of outgoing trade routes in this state
+## scopes = state
+alias[trigger:outgoing_trade_routes] == int_value_field
+
+### does the state have the monthly food income?
+## scopes = state
+alias[trigger:state_monthly_food_income] == replace_me_comparison
+
+### is the state's trade good exports greater or equal than the value?
+## scopes = state
+alias[trigger:trade_good_exports] = replace_me
+
+### is the state's trade good imports greater or equal than the value?
+## scopes = state
+alias[trigger:trade_good_imports] = replace_me
