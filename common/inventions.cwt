@@ -1,4 +1,11 @@
 types = {
+    type[invention_category] = {
+        path = "game/common/inventions"
+
+        localisation = {
+            name = "$"
+        }
+    }
     type[invention] = {
         path = "game/common/inventions"
 
@@ -10,9 +17,44 @@ types = {
 }
 
 ## replace_scope = { this = country root = country }
-invention = {
-    ## cardinality = 1..inf
-    alias_name[modifier] = alias_match_left[modifier]
+invention_category = {
+    technology = <technology_table>
+    ## cardinality = 0..1
+    color = colour_field
 
-    <technology_table> = int[0..inf]
+    ## cardinality = 0..inf
+    <invention> = {
+        ## cardinality = 1..1
+        modifier = {
+            ## cardinality = 1..inf
+            alias_name[modifier] = alias_match_left[modifier]
+        }
+
+        ## cardinality = 0..1
+        on_activate = {
+            ## cardinality = 0..inf
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+        ## cardinality = 0..1
+        requires = {
+            ## cardinality = 0..inf
+            invention
+        }
+
+        ## cardinality = 0..1
+        potential = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+        allow = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+        keystone = bool
+    }
 }

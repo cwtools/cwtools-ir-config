@@ -18,5 +18,31 @@ building = {
     cost = int # float?
     time = int
 
-    order = int
+    ## cardinality = 0..1
+    max_amount = int
+
+    ## cardinality = 0..1
+    potential = {
+        ## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+    ## cardinality = 0..1
+    allow = {
+        ## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+    ## cardinality = 0..1
+    ai_will_do = single_alias_right[chance_block]
+
+
+    ## cardinality = 0..1
+    chance = single_alias_right[chance_block]
+
+    ## cardinality = 0..1
+    modification_display = {
+        ## cardinality = 0..inf
+        scalar = scalar
+    }
 }
