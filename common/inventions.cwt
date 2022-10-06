@@ -6,9 +6,10 @@ types = {
             name = "$"
         }
     }
+    ## type_key_filter <> { technology color }
     type[invention] = {
         path = "game/common/inventions"
-
+        skip_root_key = any
         localisation = {
             name = "$"
             description = "$_desc"
@@ -39,7 +40,7 @@ invention_category = {
         ## cardinality = 0..1
         requires = {
             ## cardinality = 0..inf
-            invention
+            <invention>
         }
 
         ## cardinality = 0..1
