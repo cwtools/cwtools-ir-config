@@ -1,4 +1,4 @@
-enum = {
+enums = {
     enum[provinces] = {
         path = "game/setup/provinces"
         terrain="<terrain>"
