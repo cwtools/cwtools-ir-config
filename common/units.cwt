@@ -36,12 +36,27 @@ unit_type = {
 
     ## cardinality = 0..1
     ### Defaults to no, probably.
+    support = bool
+
+    ## cardinality = 0..1
+    ### Defaults to no, probably.
+    reduces_road_building_cost = bool
+
+    ## cardinality = 0..1
+    ### Defaults to no, probably.
     is_flank = bool
 
 	maneuver = int
 	movement_speed = int
-	build_cost = int # float?
+	build_cost = = {
+        gold = int
+		manpower = float
+    }
     build_time = int
+    ## cardinality = 0..1
+    watercrossing_negation = float
+    ## cardinality = 0..1
+	siege_impact = float
 
     subtype[army] = {
         # TODO: still wanting that "one of each" rule :)
@@ -54,19 +69,27 @@ unit_type = {
         <unit_type.navy> = float[0.0..inf]
     }
 
-    subtype[army] = {
-        attrition_weight = float
+    ## cardinality = 0..1
+    attrition_weight = float
+    ## cardinality = 0..1
+    attrition_loss = float
+    ## cardinality = 0..1
+	food_consumption = float
+    ## cardinality = 0..1
+	food_storage = float
 
-        ## cardinality = 0..1
-        setup_fraction = float
+    ## cardinality = 0..1
+    setup_fraction = float
 
-        ## cardinality = 0..1
-        morale_damage_taken = float
+    ## cardinality = 0..1
+    morale_damage_taken = float
 
-        ## cardinality = 0..1
-        strength_damage_taken = float
+    ## cardinality = 0..1
+    strength_damage_taken = float
 
-        ## cardinality = 0..1
-        ai_max_percentage = int[0..100]
-    }
+    ## cardinality = 0..1
+    merc_cohorts_required = float
+
+    ## cardinality = 0..1
+    ai_max_percentage = int[0..100]
 }

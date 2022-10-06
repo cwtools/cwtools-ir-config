@@ -1,0 +1,25 @@
+enum = {
+    enum[provinces] = {
+        path = "game/setup/provinces"
+        terrain="<terrain>"
+        culture="<culture>"
+        religion="<religion>"
+        trade_goods="<trade_goods>"
+        civilization_value=value_field
+        barbarian_power=value_field
+        province_rank="<province_rank>"
+        ## cardinality = 0..inf
+        <pop_type> = {
+            ## cardinality = 0..1
+            culture = <culture>
+            ## cardinality = 0..1
+            religion = <religion>
+            amount = value_field
+        }
+        ## cardinality = 0..1
+        holy_site = scalar
+        ## cardinality = 0..1
+        port_building = value_field
+    }
+}
+

@@ -1,0 +1,31 @@
+types = {
+    type[province_rank] = {
+        path = "game/common/province_ranks"
+
+        localisation = {
+            name = "$"
+            # header = "$_header"
+            # lots of modifier stuff
+        }
+    }
+}
+
+## replace_scope = { this = province root = province }
+province_rank = {
+    rank_modifer = {
+        ## cardinality = 0..inf
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+
+    ## cardinality = 0..1
+    default = bool
+
+    ## cardinality = 0..1
+    is_established_city = bool
+
+    ## cardinality = 0..1
+    color = colour_field
+
+    ## cardinality = 0..1
+    holy_site_treasure_slots = value_field
+}

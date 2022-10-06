@@ -16,11 +16,12 @@ types = {
 }
 
 area = {
-    test = test
     provinces = {
         ## cardinality = 1..inf
         enum[provinces]
     }
+    ## cardinality = 0..1
+    color = colour_field
 }
 
 region = {
@@ -28,6 +29,8 @@ region = {
         ## cardinality = 1..inf
         <area>
     }
+    ## cardinality = 0..1
+    color = colour_field
 }
 
 season = {
