@@ -1,7 +1,7 @@
 enums = {
     complex_enum[country_tags] = {
         path_strict = yes
-        path = "game/common"
+        path = "game/setup/countries"
         path_file = "countries.txt"
         start_from_root = yes
         name = {
