@@ -48,7 +48,7 @@ unit_type = {
 
 	maneuver = int
 	movement_speed = int
-	build_cost = = {
+	build_cost = {
         gold = int
 		manpower = float
     }

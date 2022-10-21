@@ -26,6 +26,9 @@ ambition = {
 	skip_initial_abort = bool
 
 	## cardinality = 0..1
+	duration = int
+
+	## cardinality = 0..1
 	abort = {
 		## cardinality = 1..inf
 		alias_name[trigger] = alias_match_left[trigger]
@@ -46,6 +49,9 @@ ambition = {
 
 	## cardinality = 0..1
 	on_finish = <on_action>
+
+	## cardinality = 0..1
+	on_abort = <on_action>
 
 	## cardinality = 0..1
 	modifier = {
