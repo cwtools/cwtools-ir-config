@@ -816,6 +816,7 @@ alias[effect:set_controller] = scope[country]
 alias[effect:add_country_modifier] = {
     name = <modifier_container>
 
+    ## cardinality = 0..1
     duration = int_value_field
 }
 
@@ -852,12 +853,7 @@ alias[effect:trigger_event] = {
 }
 
 ###triggers an event or on_action trigger_event = { id = X days/months/years = Y } (for events) or trigger_event = { on_action = X days/months/years = Y } (for on_actions) Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
-alias[effect:trigger_event] = {
-    on_action = <on_action>
-
-    ## cardinality = 0..1
-    enum[duration] = int_value_field
-}
+alias[effect:trigger_event] = <event>
 
 # TODO: value_field?
 ###adds or subtracts health from a character
@@ -875,6 +871,9 @@ alias[effect:add_war_exhaustion] = int_value_field
 
 ###just a tooltip, the scope as subject (for grouping, localization)
 alias[effect:custom_tooltip] = localisation
+
+###adds a road towards the target
+alias[effect:add_road_towards] = enum[provinces]
 
 ###adds a road towards the target
 alias[effect:add_road_towards] = scope[province]
@@ -961,10 +960,16 @@ alias[effect:divorce_character] = replace_me
 alias[effect:hide_model] = replace_me
 
 ### Adds the province as a holding to a character
-alias[effect:add_holding] = <province>
+alias[effect:add_holding] = enum[provinces]
+
+### Adds the province as a holding to a character
+alias[effect:add_holding] = scope[province]
 
 ### Removes the province as a holding to a character
-alias[effect:remove_holding] = <province>
+alias[effect:remove_holding] = enum[provinces]
+
+### Removes the province as a holding to a character
+alias[effect:remove_holding] = scope[province]
 
 ### adds/removed a breach to the current siege
 alias[effect:add_breach] = replace_me
@@ -988,7 +993,7 @@ alias[effect:show_animated_text] = replace_me
 alias[effect:set_city_status] = replace_me
 
 ### gives (or takes) political influence to a country
-alias[effect:add_political_influence] = replace_me
+alias[effect:add_political_influence] = int_value_field
 
 ### changes scoped characters surname to reflect on their current family
 alias[effect:adapt_family_name] = replace_me
@@ -1051,7 +1056,7 @@ alias[effect:add_alliance] = replace_me
 alias[effect:add_guarantee] = replace_me
 
 ### adds N innovations
-alias[effect:add_innovation] = replace_me
+alias[effect:add_innovation] = int_value_field
 
 ### Country in scope gets military access through the target
 alias[effect:add_military_access] = replace_me

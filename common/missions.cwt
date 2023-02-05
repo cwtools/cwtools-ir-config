@@ -1,0 +1,133 @@
+types = {
+    type[missions] = {
+        path = "game/common/missions"
+
+        localisation = {
+            name = "$"
+        }
+    }
+
+    ## type_key_filter <> { chance ai_chance potential abort on_abort on_start on_completion }
+    type[mission_task] = {
+        path = "game/common/missions"
+        skip_root_key = any
+
+        localisation = {
+            name = "$"
+            description = "$_desc"
+        }
+    }
+}
+
+missions = {
+    ## cardinality = 0..1
+    header = <event_picture>
+    ## cardinality = 0..1
+    icon = <icon>
+    ## cardinality = 0..1
+	repeatable = bool
+    ## cardinality = 0..1
+	chance = single_alias_right[chance_block]
+
+    ## cardinality = 0..1
+	ai_chance = single_alias_right[chance_block]
+
+    ## cardinality = 0..1
+    potential = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    ## cardinality = 0..1
+    abort = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    ## cardinality = 0..1
+	on_potential = { 
+		## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+	}
+
+    ## cardinality = 0..1
+	on_abort = { 
+		## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+	}
+
+    ## cardinality = 0..1
+	on_start = {
+		## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+	}
+
+    ## cardinality = 0..1
+	on_completion = { 
+		## cardinality = 0..inf
+        alias_name[effect] = alias_match_left[effect]
+	}
+
+    ## cardinality = 1..inf
+    <mission_task> = {
+        icon = <icon>
+
+        ## cardinality = 0..1
+		requires = { <mission_task> }
+
+        ## cardinality = 0..1
+        prevented_by = { <mission_task> }
+
+        ## cardinality = 0..1
+		final = bool
+
+		## cardinality = 0..1
+        potential = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+        highlight = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        allow = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+        bypass = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+        
+        ## cardinality = 0..1
+	    ai_chance = single_alias_right[chance_block]
+
+        ## cardinality = 0..1
+		duration = int_value_field
+
+        ## cardinality = 0..1
+		monthly_on_action = <on_action>
+    
+        ## cardinality = 0..1
+        on_start = {
+            ## cardinality = 0..inf
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+        on_completion = {
+            ## cardinality = 0..inf
+            alias_name[effect] = alias_match_left[effect]
+        }
+
+        ## cardinality = 0..1
+        on_bypass = {
+            ## cardinality = 0..inf
+            alias_name[effect] = alias_match_left[effect]
+        }
+    }
+}
