@@ -782,6 +782,9 @@ alias[trigger:is_subject_type] = <subject_type>
 ###does a country own a specific propvince
 alias[trigger:owns] = enum[provinces]
 
+###does a country own a specific propvince
+alias[trigger:owns] = scope[province]
+
 ###Is the scope character a PartyLeader?
 alias[trigger:is_party_leader] = bool
 
@@ -1079,10 +1082,10 @@ alias[trigger:is_isolated] = bool
 alias[trigger:political_influence] == int_value_field
 
 ### does a country have the low economic policy for x?
-alias[trigger:has_low_economic_policy] = replace_me
+alias[trigger:has_low_economic_policy] = <economic_policy>
 
 ### Checks if a province is of a specific rank
-alias[trigger:has_province_rank] = replace_me
+alias[trigger:has_province_rank] = <province_rank>
 
 ### Checks
 alias[trigger:oratory_tech] == int_value_field
@@ -1470,10 +1473,10 @@ alias[trigger:has_any_great_work_country] = <country_tags>
 alias[trigger:has_any_great_work_country] = <country>
 
 ### Has this country completed the specified mission?
-alias[trigger:has_completed_mission] = replace_me_mission_type
+alias[trigger:has_completed_mission] = <missions>
 
 ### Has this country completed the specified mission task?
-alias[trigger:has_completed_mission_task] = replace_me_mission_task_type
+alias[trigger:has_completed_mission_task] = <mission_task>
 
 ### check if a country has a specific effect from a great work
 alias[trigger:has_country_great_work_effect] = replace_me
@@ -1488,7 +1491,7 @@ alias[trigger:has_military_access] = <country_tags>
 alias[trigger:has_military_access] = <country>
 
 ### does the country have this party?
-alias[trigger:has_party_type] = replace_me_party_type
+alias[trigger:has_party_type] = <party_type>
 
 ### The country's senate approval
 alias[trigger:has_senate_approval] == float
