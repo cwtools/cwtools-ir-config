@@ -1476,7 +1476,7 @@ alias[trigger:has_any_great_work_country] = <country>
 alias[trigger:has_completed_mission] = <missions>
 
 ### Has this country completed the specified mission task?
-alias[trigger:has_completed_mission_task] = replace_me_mission_task_type
+alias[trigger:has_completed_mission_task] = <mission_task>
 
 ### check if a country has a specific effect from a great work
 alias[trigger:has_country_great_work_effect] = replace_me
