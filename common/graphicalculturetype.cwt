@@ -1,6 +1,8 @@
 enums = {
     complex_enum[graphical_cultures] = {
         path = "game/common/graphical_culture_types"
-        enum_name = {}
+        name = {
+            enum_name = {}
+        }
     }
 }
