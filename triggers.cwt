@@ -602,9 +602,6 @@ alias[trigger:war] = bool
 ###does the country have the required Monthly Balance?
 alias[trigger:has_monthly_balance] == int_value_field
 
-###Does the country have a certain military Tradition
-alias[trigger:has_military_tradition] = <military_tradition_path>
-
 ###Does the scope character have a nickname?
 alias[trigger:has_nickname] = bool
 
@@ -1057,9 +1054,6 @@ alias[trigger:nand] = replace_me
 ### Checks
 alias[trigger:religious_tech] == int_value_field
 
-### Does the country have a certain military Tradition
-alias[trigger:has_military_Tradition] = <military_tradition_path>
-
 ### does the province have the amount of holdings?
 alias[trigger:current_amount_of_holdings] == int_value_field
 
@@ -1119,7 +1113,7 @@ alias[trigger:has_winter] = bool
 alias[trigger:religious_party_support] == int_value_field
 
 ### does a country have the mid economic policy for x?
-alias[trigger:has_mid_economic_policy] = replace_me
+alias[trigger:has_mid_economic_policy] = <economic_policy>
 
 ### AI safety level in percent
 alias[trigger:safety] == int_value_field
@@ -1223,7 +1217,7 @@ alias[trigger:sub_unit_type] = <unit_type>
 alias[trigger:total_power_base] == int_value_field
 
 ### does a country have the high economic policy for x?
-alias[trigger:has_high_economic_policy] = replace_me
+alias[trigger:has_high_economic_policy] = <economic_policy>
 
 ### Can this pop be moved without breaking pop movement rules?
 alias[trigger:pop_can_move] = bool
@@ -1452,7 +1446,7 @@ alias[trigger:boni_party_support] == float
 alias[trigger:can_activate] = replace_me_deity_scope
 
 ### Can a country change to this idea?
-alias[trigger:can_change_idea] = replace_me
+alias[trigger:can_change_idea] = <idea>
 
 ### is the country's trade good exports greater or equal than the value? country_trade_good_exports = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
 alias[trigger:country_trade_good_exports] = replace_me
@@ -1617,13 +1611,13 @@ alias[trigger:deity_religion] = <religion>
 alias[trigger:deity_religion] = replace_me_religion_scope
 
 ### Does this deity have a this active modifier?
-alias[trigger:has_active_modifier] = <modifier_container>
+alias[trigger:has_active_modifier] = replace_me_base_game_modifers
 
 ### does this deity have a holy site??
 alias[trigger:has_holy_site] = bool
 
 ### Does this deity have this passive modifier?
-alias[trigger:has_passive_modifier] = <modifier_container>
+alias[trigger:has_passive_modifier] = replace_me_base_game_modifers
 
 ### Can this province build a port
 alias[trigger:can_have_port] = bool
@@ -1755,7 +1749,7 @@ alias[trigger:num_province_treasures] == float
 alias[trigger:country_culture_pop_count] == float
 
 ### does the country culture have a specific modifier
-alias[trigger:has_country_culture_modifier] = replace_me
+alias[trigger:has_country_culture_modifier] = <modifier_container>
 
 ### Does this country culture have this poptype right
 alias[trigger:has_pop_type_right] = <pop_type>
