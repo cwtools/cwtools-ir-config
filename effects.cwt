@@ -531,9 +531,8 @@ alias[effect:make_pregnant] = {
     number_of_children = int_value_field
 }
 
-# TODO: value_field?
 ###gives (or takes) Loyalty to a character
-alias[effect:add_loyalty] = int_value_field
+alias[effect:add_loyalty] = replace_me_loyalty_type
 
 ###adds or removes aggressive expansion for a country
 alias[effect:add_aggressive_expansion] = value_field
@@ -978,19 +977,19 @@ alias[effect:add_breach] = replace_me
 alias[effect:show_model] = replace_me
 
 ### Adds VFX effects on the map
-alias[effect:add_vfx] = replace_me
+alias[effect:add_vfx] = scalar
 
 ### Adds Loyal Veterans to a character
 alias[effect:add_loyal_veterans] = replace_me
 
 ### Removes VFX effects on the map
-alias[effect:remove_vfx] = replace_me
+alias[effect:remove_vfx] = scalar
 
 ### shows a custom text on the map
-alias[effect:show_animated_text] = replace_me
+alias[effect:show_animated_text] = scalar
 
 ### Sets the rank of a city
-alias[effect:set_city_status] = replace_me
+alias[effect:set_city_status] = <province_rank>
 
 ### gives (or takes) political influence to a country
 alias[effect:add_political_influence] = int_value_field
@@ -1014,10 +1013,10 @@ alias[effect:remove_loyalty] = replace_me
 alias[effect:set_as_minor_character] = replace_me
 
 ### changes the first name of a character
-alias[effect:set_firstname] = replace_me
+alias[effect:set_firstname] = scalar
 
 ### changes country of origin
-alias[effect:set_home_country] = replace_me
+alias[effect:set_home_country] = scope[country]
 
 ### sets the leader for a faction in a country
 alias[effect:set_party_leader] = replace_me
