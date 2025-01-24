@@ -12,6 +12,15 @@ Supported Scopes: state
 
 --------------------
 
+add_trade_route - "adds an import trade route. For example:
+add_trade_route = {
+	target = state # The exporting state
+	goods = grain # The goods to trade
+}"
+Supported Scopes: state
+
+--------------------
+
 every_state_province - Iterate through all provinces in a state
 every_state_province = { limit = { <triggers> } <effects> }
 Supported Scopes: state
@@ -41,6 +50,25 @@ Supported Targets: province
 --------------------
 
 remove_state_modifier - Removes a modifier from a State
+Supported Scopes: state
+
+--------------------
+
+remove_trade_route - "removes a trade route. For example:
+remove_trade_route = {
+	target = state # The exporting state
+	goods = grain # The goods of the trade route
+}"
+Supported Scopes: state
+
+--------------------
+
+set_automated_trading - enables/disables state automated trading
+Supported Scopes: state
+
+--------------------
+
+set_governor_policy - Set the governor policy on a state. example: scope:state set_governor_policy = cultural_assimilation
 Supported Scopes: state
 
 --------------------
@@ -571,6 +599,16 @@ Supported Targets: character
 
 --------------------
 
+set_can_inherit - Changes whether or not the character can inherit
+Supported Scopes: character
+
+--------------------
+
+set_can_marry - Changes whether or not the character can marry
+Supported Scopes: character
+
+--------------------
+
 set_character_religion - Set the religion for this character
 Supported Scopes: character
 Supported Targets: religion
@@ -606,7 +644,7 @@ Supported Targets: country
 
 --------------------
 
-set_party_leader - sets the leader for a faction in a country
+set_party_leader - sets the leader for a faction in a country: set_party_leader = { party = .., party_type = .. } -- so if you have the actual party you can use that OR simply use the type
 Supported Scopes: character
 
 --------------------
@@ -710,6 +748,11 @@ Supported Scopes: country
 
 --------------------
 
+add_deity_to_pantheon - adds a deity to the pantheon of a country, replacing the current one in the same category. Example: add_deity_to_pantheon = {deity = deity:omen_alilat}
+Supported Scopes: country
+
+--------------------
+
 add_guarantee - Country in scope gurantees the target
 Supported Scopes: country
 Supported Targets: country
@@ -798,6 +841,16 @@ Supported Scopes: country
 
 --------------------
 
+allow_trade_goods - The scope country's will allow trade goods if they were previously disaallowed. allow_trade_goods = x
+Supported Scopes: country
+
+--------------------
+
+call_omen - Call an omen for the country of the specified deity_category
+Supported Scopes: country
+
+--------------------
+
 change_country_adjective - changes the adjective of a country
 Supported Scopes: country
 
@@ -853,6 +906,17 @@ Supported Targets: character
 
 declare_war_with_wargoal - Declares a war between this country and the target country
 Supported Scopes: country
+
+--------------------
+
+disallow_trade_goods - The scope country's will disallow trade goods. disallow_trade_goods = x
+Supported Scopes: country
+
+--------------------
+
+end_truce - Ends the truce between both countries
+Supported Scopes: country
+Supported Targets: country
 
 --------------------
 
@@ -1381,6 +1445,11 @@ Supported Scopes: country
 
 --------------------
 
+play_sound_effect - Plays the specified sound effect.
+Supported Scopes: country
+
+--------------------
+
 random_allied_country - Iterate through all allied countries
 random_allied_country = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: country
@@ -1587,13 +1656,18 @@ Supported Scopes: country
 
 --------------------
 
-remove_party_leadership - remove the leader from a party in a country
+remove_party_leadership - remove the leader from a party in a country: remove_party_leadership = { party = .., party_type = .. } -- so if you have the actual party you can use that OR simply use the type
 Supported Scopes: country
 
 --------------------
 
 reverse_add_opinion - Adds an reverse opinion modifier, reverse_add_opinion = { modifier = X target = Z }
 X is a scripted modifier name.
+Supported Scopes: country
+
+--------------------
+
+set_antagonist - country in scope sets antagonist to on/off
 Supported Scopes: country
 
 --------------------
@@ -1623,6 +1697,7 @@ Supported Scopes: country
 
 set_country_religion - Sets religion for a country
 Supported Scopes: country
+Supported Targets: religion
 
 --------------------
 
@@ -1646,15 +1721,33 @@ Supported Scopes: country
 
 --------------------
 
+set_player_country - The scope country's player will now play as the target country. Scope must be player-controlled. Target cannot be player-controlled. Example:set_player_country = c:EGY
+Supported Scopes: country
+Supported Targets: country
+
+--------------------
+
 set_primary_culture - Sets primary culture for a country
 Supported Scopes: country
 Supported Targets: culture
 
 --------------------
 
+start_character_interaction - starts a character interaction as the country { character = x type = interaction }
+Supported Scopes: country
+
+--------------------
+
 start_civil_war - starts a civil-war in a country, setting a specified character as its leader
 Supported Scopes: country
 Supported Targets: character
+
+--------------------
+
+unlock_invention - "unlocks an invention.
+Note that it ignores all preconditions. Use can_unlock_invention to see what can be unlocked. Example usage:
+unlock_invention = global_start_experience_inv_1"
+Supported Scopes: country
 
 --------------------
 
@@ -1816,6 +1909,13 @@ Supported Targets: area
 
 --------------------
 
+every_region_governorship - Iterate through all governorships in a region
+every_region_governorship = { limit = { <triggers> } <effects> }
+Supported Scopes: region
+Supported Targets: governorship
+
+--------------------
+
 every_region_province - Iterate through all ownable provinces in a region
 every_region_province = { limit = { <triggers> } <effects> }
 Supported Scopes: region
@@ -1862,6 +1962,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: region
 Supported Targets: area
+
+--------------------
+
+ordered_region_governorship - Iterate through all governorships in a region
+ordered_region_governorship = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: region
+Supported Targets: governorship
 
 --------------------
 
@@ -1918,6 +2032,13 @@ random_region_area - Iterate through all areas in a region
 random_region_area = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: region
 Supported Targets: area
+
+--------------------
+
+random_region_governorship - Iterate through all governorships in a region
+random_region_governorship = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: region
+Supported Targets: governorship
 
 --------------------
 
@@ -2386,7 +2507,12 @@ Supported Targets: country
 
 --------------------
 
-add_building_level - adds one level of the specified Building
+war_score_value - return the target country's war score against the opposing war leader and saves it into the provided local variable: war_score_value { target = country local_var = x
+Supported Scopes: war
+
+--------------------
+
+add_building_level - adds one level of the specified building in the province
 Supported Scopes: province
 
 --------------------
@@ -2429,6 +2555,16 @@ Supported Scopes: province
 --------------------
 
 begin_great_work_construction - begins construction of a great work
+Supported Scopes: province
+
+--------------------
+
+cancel_building_construction - Cancels the construction of the specified building in the province
+Supported Scopes: province
+
+--------------------
+
+change_climate - Changes the climate type of the province
 Supported Scopes: province
 
 --------------------
@@ -2685,6 +2821,11 @@ Supported Scopes: province
 
 --------------------
 
+start_building_construction - Starts the construction the specified building in the province
+Supported Scopes: province
+
+--------------------
+
 add_country_culture_modifier - adds a modifier to a country culture
 Supported Scopes: country culture
 
@@ -2701,6 +2842,11 @@ Supported Scopes: country culture
 --------------------
 
 set_country_culture_right - Set civic rights to a country culture
+Supported Scopes: country culture
+
+--------------------
+
+set_levy_template - Sets the levy template for the given country culture
 Supported Scopes: country culture
 
 --------------------
@@ -2970,8 +3116,10 @@ Supported Targets: province
 
 --------------------
 
-every_province - Executes on every province
+every_province - Iterate through all existing provinces
+every_province = { limit = { <triggers> } <effects> }
 Supported Scopes: none
+Supported Targets: province
 
 --------------------
 
@@ -3142,6 +3290,20 @@ Supported Targets: province
 
 --------------------
 
+ordered_province - Iterate through all existing provinces
+ordered_province = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: province
+
+--------------------
+
 ordered_region - Iterate through all existing regions
 ordered_region = {
 limit = { <triggers> }
@@ -3256,8 +3418,10 @@ Supported Targets: province
 
 --------------------
 
-random_province - Executes on a random province
+random_province - Iterate through all existing provinces
+random_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: none
+Supported Targets: province
 
 --------------------
 
@@ -3358,8 +3522,20 @@ Supported Scopes: none
 
 --------------------
 
+save_scope_value_as - Saves a numerical or bool value as an arbitrarily-named target to be referenced later in the (unbroken) event chain
+save_scope_value_as = { name = <string> value = x }
+Supported Scopes: none
+
+--------------------
+
 save_temporary_scope_as - Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect
 save_temporary_event_target_as = <string>
+Supported Scopes: none
+
+--------------------
+
+save_temporary_scope_value_as - Saves a numerical or bool value as an arbitrarily-named temporary target to be referenced later in the same effect
+save_temporary_scope_value_as = { name = <string> value = x }
 Supported Scopes: none
 
 --------------------
