@@ -24,26 +24,6 @@ single_alias[chance_block] = {
     <scripted_modifier> = yes
 }
 
-single_alias[mission_chance_block] = {
-    # TODO: Temporary fix for error saying factor isn't allowed in chance block for missions, not a broad fix for when there is already a base value
-    ## cardinality = 0..1
-    base = float
-
-    ## cardinality = 0..1
-    factor = float
-
-    ## cardinality = 0..inf
-    ### Appears in the tooltip only if the conditions are fulfilled.
-    modifier = single_alias_right[weight_chance_modifier]
-
-    ## cardinality = 0..inf
-    ### Always appears in the tooltip, if any.
-    always_modifier = single_alias_right[weight_chance_modifier]
-
-    ## cardinality = 0..inf
-    <scripted_modifier> = yes
-}
-
 single_alias[weight_block] = {
     ## cardinality = 0..1
     base = float

@@ -14,23 +14,23 @@ types = {
 
         localisation = {
             name = "$"
-            description = "$_DESC"
+            description = "$_desc"
         }
     }
 }
 
 missions = {
     ## cardinality = 0..1
-    header = scalar # Should be fine if you're using imperator-tiger as well
+    header = <event_picture>
     ## cardinality = 0..1
-    icon = scalar # Should be fine if you're using imperator-tiger as well
+    icon = <icon>
     ## cardinality = 0..1
 	repeatable = bool
     ## cardinality = 0..1
-	chance = single_alias_right[mission_chance_block]
+	chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
-	ai_chance = single_alias_right[mission_chance_block]
+	ai_chance = single_alias_right[chance_block]
 
     ## cardinality = 0..1
     potential = {
@@ -70,19 +70,13 @@ missions = {
 
     ## cardinality = 1..inf
     <mission_task> = {
-        icon = scalar # Should be fine if you're using imperator-tiger as well
+        icon = <icon>
 
         ## cardinality = 0..1
-		requires = {
-            ## cardinality = 0..inf
-            <mission_task>
-        }
+		requires = { <mission_task> }
 
         ## cardinality = 0..1
-        prevented_by = {
-            ## cardinality = 0..inf
-            <mission_task>
-        }
+        prevented_by = { <mission_task> }
 
         ## cardinality = 0..1
 		final = bool
