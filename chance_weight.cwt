@@ -29,6 +29,9 @@ single_alias[mission_chance_block] = {
     ## cardinality = 0..1
     base = float
 
+    ## cardinality = 0..1
+    factor = float
+
     ## cardinality = 0..inf
     ### Appears in the tooltip only if the conditions are fulfilled.
     modifier = single_alias_right[weight_chance_modifier]
