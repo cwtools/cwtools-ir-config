@@ -27,10 +27,10 @@ missions = {
     ## cardinality = 0..1
 	repeatable = bool
     ## cardinality = 0..1
-	chance = single_alias_right[chance_block]
+	chance = single_alias_right[mission_chance_block]
 
     ## cardinality = 0..1
-	ai_chance = single_alias_right[chance_block]
+	ai_chance = single_alias_right[mission_chance_block]
 
     ## cardinality = 0..1
     potential = {
