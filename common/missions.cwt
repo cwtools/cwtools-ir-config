@@ -21,9 +21,9 @@ types = {
 
 missions = {
     ## cardinality = 0..1
-    header = scalar # Should be fine if you're using imperator-tiger as well
+    header = scalar # event_picture doesn't work for headers, since they aren't defined there
     ## cardinality = 0..1
-    icon = scalar # Should be fine if you're using imperator-tiger as well
+    icon = <icon>
     ## cardinality = 0..1
 	repeatable = bool
     ## cardinality = 0..1
