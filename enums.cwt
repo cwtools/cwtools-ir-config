@@ -60,6 +60,7 @@ enums = {
         "Hellenistic World Flavor Pack"
         "Magna Graecia"
         "Heirs of Alexander"
+        "The Punic Wars"
     }
     enum[duration] = {
         days
