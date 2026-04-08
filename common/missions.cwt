@@ -70,7 +70,7 @@ missions = {
 
     ## cardinality = 1..inf
     <mission_task> = {
-        icon = <icon> # Should be fine if you're using imperator-tiger as well
+        icon = <icon>
 
         ## cardinality = 0..1
 		requires = {
