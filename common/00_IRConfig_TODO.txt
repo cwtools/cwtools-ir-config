@@ -1,0 +1,13 @@
+﻿If all this stuff is done the IR config should be mostly complete
+
+
+• Create Deity cwt file in common and add entries for it in triggers.cwt and effects.cwt, all deity effects use the "deity:" scope, should get "scope[deity]"
+
+• Create Heritage cwt file in common and add entries for <heritage> for heritage in triggers.cwt and set_country_heritage in effects.cwt
+
+• Create Legion Distiction cwt file in common and add <legion_distinction> entries for has_distinction in triggers.cwt, and add_distinction
+and remove_distinction in effects.cwt
+
+• Create Loyalty cwt file in common and add <loyalty> entries for can_add_entire_loyalty_bonus and has_loyalty in triggers.cwt, and remove_loyalty and add_loyalty in effects.cwt
+
+• Tresures need to be added to setup/setup.cwt and then the <treasure> link needs to be created

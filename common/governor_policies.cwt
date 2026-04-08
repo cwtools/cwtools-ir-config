@@ -16,7 +16,7 @@ governor_policy = {
         alias_name[modifier] = alias_match_left[modifier]
     }
 
-    chance = single_alias_right[chance_block]
+    ai_will_do = single_alias_right[chance_block]
 
     ## cardinality = 0..1
     on_action = <on_action>

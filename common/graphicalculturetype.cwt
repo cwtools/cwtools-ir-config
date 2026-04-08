@@ -1,11 +1,8 @@
 enums = {
     complex_enum[graphical_cultures] = {
-        path_strict = yes
-        path = "game/common"
-        path_file = "graphicalculturetype.txt"
-        start_from_root = yes
+        path = "game/common/graphical_culture_types"
         name = {
-            enum_name
+            enum_name = {}
         }
     }
 }

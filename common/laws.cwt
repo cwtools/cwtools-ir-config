@@ -26,7 +26,7 @@ law_category = {
     }
 
     # Based on existing UI. Might be changed based on mod.
-    ## cardinality = 4..4
+    ## cardinality = 0..inf
     <law> = {
         ## cardinality = 0..1
         allow = {

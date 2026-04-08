@@ -15,6 +15,9 @@ terrain = {
     color = colour_field
 
     ## cardinality = 0..1
+    combat_width = int
+
+    ## cardinality = 0..1
     defender = int
 
     modifier = {

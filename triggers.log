@@ -47,12 +47,33 @@ Supported Scopes: state
 
 --------------------
 
+can_create_trade_route - "can create an import trade route. For example
+can_create_trade_route = {
+	target = p:1.state
+	goods = grain
+}
+"
+Supported Scopes: state
+
+--------------------
+
 can_import_trade_good - Checks if a state can import a certain trade good.
 Supported Scopes: state
 
 --------------------
 
 has_any_great_work_state - does the state contain a province with a great work?
+Traits: yes/no 
+Supported Scopes: state
+
+--------------------
+
+has_capital_bonus_for_trade_good - Checks if a state's capital has a bonus for the specific trade good. Example has_capital_bonus_for_trade_good = grain
+Supported Scopes: state
+
+--------------------
+
+has_capital_surplus - Does the state's capital have a trade surplus?
 Traits: yes/no 
 Supported Scopes: state
 
@@ -83,6 +104,12 @@ Supported Scopes: state
 
 incoming_trade_routes - The number of incoming trade routes in this state
 Traits: <, <=, =, !=, >, >=
+Supported Scopes: state
+
+--------------------
+
+is_automated_trading - is the state set to automate trade?
+Traits: yes/no 
 Supported Scopes: state
 
 --------------------
@@ -448,6 +475,18 @@ Supported Scopes: character
 
 --------------------
 
+can_inherit - Is the scope character able to inherit?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+can_marry - Is the scope character able to marry?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
 character_experience - does the character have the required Experience?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -526,7 +565,9 @@ Supported Targets: culture
 --------------------
 
 has_culture_group - Does the character have this culture group?
+Traits: class CCultureDatabase key/culture group scope
 Supported Scopes: character
+Supported Targets: culture group
 
 --------------------
 
@@ -1308,6 +1349,18 @@ Supported Scopes: country
 
 --------------------
 
+can_unlock_invention - "check if a country can unlock an invention
+For example:
+can_unlock_invention = {
+	invention = "invention_name"
+	free = yes # Defaults to no
+	ignore_dependencies = yes # Defaults to no
+	ignore_potential = yes # Defaults to no
+}"
+Supported Scopes: country
+
+--------------------
+
 centralization - does the country have the required centralization?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: country
@@ -1418,6 +1471,13 @@ Supported Scopes: country
 has_civil_war - countryis in civil war ?
 Traits: yes/no 
 Supported Scopes: country
+
+--------------------
+
+has_claim - Does this country have a claim on the target province?
+Traits: province id/province scope
+Supported Scopes: country
+Supported Targets: province
 
 --------------------
 
@@ -1656,6 +1716,12 @@ Supported Targets: country
 
 is_subject_type - Is the country a subject of the specified type?
 Traits: class CSubjectTypeDatabase key
+Supported Scopes: country
+
+--------------------
+
+is_trade_goods_allowed - checks if a country is allowed to trade the specified target goods
+Traits: class CTradeGoodsDataBase key
 Supported Scopes: country
 
 --------------------
@@ -2275,7 +2341,7 @@ Supported Scopes: deity
 
 --------------------
 
-has_holy_site - does this deity have a holy site??
+has_holy_site - Does this deity have a holy site?
 Traits: yes/no 
 Supported Scopes: deity
 
@@ -2360,6 +2426,11 @@ control_range - Is province in control range of country
 Traits: country tag/country scope
 Supported Scopes: province
 Supported Targets: country
+
+--------------------
+
+distance_from - distance from a province
+Supported Scopes: province
 
 --------------------
 
@@ -2535,6 +2606,20 @@ Supported Targets: country
 is_holy_site - is this province a holy site?
 Traits: yes/no 
 Supported Scopes: province
+
+--------------------
+
+is_holy_site_of_deity - Is the province the holy site of the target deity?
+Traits: deity scope
+Supported Scopes: province
+Supported Targets: deity
+
+--------------------
+
+is_holy_site_of_religion - Is the province the holy site of the target religion?
+Traits: class CReligionDatabase key/religion scope
+Supported Scopes: province
+Supported Targets: religion
 
 --------------------
 
@@ -2947,6 +3032,13 @@ Supported Targets: area
 
 --------------------
 
+any_region_governorship - Iterate through all governorships in a region
+any_region_governorship = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: region
+Supported Targets: governorship
+
+--------------------
+
 any_region_province - Iterate through all ownable provinces in a region
 any_region_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: region
@@ -3070,9 +3162,10 @@ Supported Targets: province
 
 --------------------
 
-any_province - Checks if any province meets the specified criteria
-any_province = { triggers }
+any_province - Iterate through all existing provinces
+any_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: none
+Supported Targets: province
 
 --------------------
 

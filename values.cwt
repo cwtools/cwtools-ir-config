@@ -1,7 +1,6 @@
 # Hardcoded values
 values = {
     value[event_target] = {
-        context
         actor
         recipient
         former_ruler
@@ -15,5 +14,10 @@ values = {
         former_overlord
         future_overlord
         old_country
+        target_subject
+        deified_ruler
+        unit
+        target_culture
+        losing_side
     }
 }

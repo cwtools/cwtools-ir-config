@@ -53,5 +53,7 @@ ai_plan_goal = {
     ## cardinality = 0..1
     aggressive = int
     ## cardinality = 0..1
+    ae_ceiling = int
+    ## cardinality = 0..1
     trustworthy = int
 }

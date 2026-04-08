@@ -18,7 +18,7 @@ alias[effect:set_local_variable] = value_set[local_variable]
 alias[effect:create_pop] = <pop_type>
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_variable_list] = replace_me
+alias[effect:clear_variable_list] = value[variable_list]
 
 ###Clamps a variable the specified max and min clamp_variable = { name = X max = Y min = Z } Where X is the name of the variable Where Y and Z are script values
 alias[effect:clamp_local_variable] = {
@@ -227,7 +227,10 @@ alias[effect:set_pop_type] = <pop_type>
 alias[effect:set_as_ruler] = scope[character]
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_local_variable_list] = replace_me
+alias[effect:add_to_local_variable_list] = {
+    name = value_set[local_variable_list]
+    target = scope_field
+}
 
 ###break execution of effects, break = yes/no/boolean event target
 alias[effect:break] = bool
@@ -253,7 +256,7 @@ alias[effect:change_country_color] = enum[named_colors]
 alias[effect:remove_variable] = value[variable]
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_local_variable_list] = replace_me
+alias[effect:clear_local_variable_list] = value[local_variable_list]
 
 ###gives (or takes) Corruption to a character
 alias[effect:add_corruption] = int_value_field
@@ -528,9 +531,8 @@ alias[effect:make_pregnant] = {
     number_of_children = int_value_field
 }
 
-# TODO: value_field?
 ###gives (or takes) Loyalty to a character
-alias[effect:add_loyalty] = int_value_field
+alias[effect:add_loyalty] = replace_me_loyalty_type
 
 ###adds or removes aggressive expansion for a country
 alias[effect:add_aggressive_expansion] = value_field
@@ -604,7 +606,7 @@ alias[effect:add_civilization_value] = value_field
 alias[effect:set_gender_equality] = bool
 
 ###Empties the list clear_variable_list = variable_name
-alias[effect:clear_global_variable_list] = replace_me
+alias[effect:clear_global_variable_list] = value[global_variable_list]
 
 # TODO: Value_field? 0-1 or 0-100?
 ###gives (or takes) morale to a subunit
@@ -731,7 +733,10 @@ alias[effect:add_party_support] = {
 alias[effect:add_prominence] = int_value_field
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_variable_list] = replace_me
+alias[effect:add_to_variable_list] = {
+    name = value_set[variable_list]
+    target = scope_field
+}
 
 # TODO: value_field?
 ###gives (or takes) Treasury to a country
@@ -810,6 +815,7 @@ alias[effect:set_controller] = scope[country]
 alias[effect:add_country_modifier] = {
     name = <modifier_container>
 
+    ## cardinality = 0..1
     duration = int_value_field
 }
 
@@ -846,12 +852,7 @@ alias[effect:trigger_event] = {
 }
 
 ###triggers an event or on_action trigger_event = { id = X days/months/years = Y } (for events) or trigger_event = { on_action = X days/months/years = Y } (for on_actions) Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
-alias[effect:trigger_event] = {
-    on_action = <on_action>
-
-    ## cardinality = 0..1
-    enum[duration] = int_value_field
-}
+alias[effect:trigger_event] = <event>
 
 # TODO: value_field?
 ###adds or subtracts health from a character
@@ -871,6 +872,9 @@ alias[effect:add_war_exhaustion] = int_value_field
 alias[effect:custom_tooltip] = localisation
 
 ###adds a road towards the target
+alias[effect:add_road_towards] = enum[provinces]
+
+###adds a road towards the target
 alias[effect:add_road_towards] = scope[province]
 
 ###Sets the Family of the character
@@ -886,7 +890,11 @@ alias[effect:save_temporary_scope_as] = value_set[temporary_scope]
 alias[effect:remove_character_modifier] = <modifier_container>
 
 ###Adds the event target to a variable list add_to_variable_list = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:add_to_global_variable_list] = replace_me
+alias[effect:add_to_global_variable_list] = {
+    name = value_set[global_variable_list]
+    target = scope_field
+}
+
 
 ###adds a modifier from a Unit
 alias[effect:add_unit_modifier] = {
@@ -930,53 +938,246 @@ alias[effect:random_list] = {
 }
 
 ### adds food to a State
-alias[effect:add_state_food] = replace_me
+alias[effect:add_state_food] = int_value_field
 
 ### Changes the capital of a state
-alias[effect:set_state_capital] = replace_me
+alias[effect:set_state_capital] = scope[province]
 
 ### gives (or takes) military experience to a country
-alias[effect:add_military_experience] = replace_me
+alias[effect:add_military_experience] = int_value_field
 
 ### starts a civil-war in a country, setting a specified character as its leader
-alias[effect:start_civil_war] = replace_me
+alias[effect:start_civil_war] = scope[character]
 
 ### removes one level of the specified Building
-alias[effect:remove_building_level] = replace_me
+alias[effect:remove_building_level] = <building>
 
 ### Divorces two characters
-alias[effect:divorce_character] = replace_me
+alias[effect:divorce_character] = scope[character]
 
 ### hides dynamic object on map
-alias[effect:hide_model] = replace_me
+alias[effect:hide_model] = scope[province]
 
 ### Adds the province as a holding to a character
-alias[effect:add_holding] = replace_me
+alias[effect:add_holding] = enum[provinces]
+
+### Adds the province as a holding to a character
+alias[effect:add_holding] = scope[province]
 
 ### Removes the province as a holding to a character
-alias[effect:remove_holding] = replace_me
+alias[effect:remove_holding] = enum[provinces]
+
+### Removes the province as a holding to a character
+alias[effect:remove_holding] = scope[province]
 
 ### adds/removed a breach to the current siege
 alias[effect:add_breach] = replace_me
 
 ### adds one level of the specified Building
-alias[effect:show_model] = replace_me
+alias[effect:show_model] = scope[province]
 
 ### Adds VFX effects on the map
-alias[effect:add_vfx] = replace_me
+alias[effect:add_vfx] = scalar
 
 ### Adds Loyal Veterans to a character
-alias[effect:add_loyal_veterans] = replace_me
+alias[effect:add_loyal_veterans] = int_value_field
 
 ### Removes VFX effects on the map
-alias[effect:remove_vfx] = replace_me
+alias[effect:remove_vfx] = scalar
 
 ### shows a custom text on the map
-alias[effect:show_animated_text] = replace_me
+alias[effect:show_animated_text] = scalar
 
 ### Sets the rank of a city
-alias[effect:set_city_status] = replace_me
+alias[effect:set_city_status] = <province_rank>
 
 ### gives (or takes) political influence to a country
-alias[effect:add_political_influence] = replace_me
+alias[effect:add_political_influence] = int_value_field
+
+### changes scoped characters surname to reflect on their current family
+alias[effect:adapt_family_name] = bool
+
+### Character becomes a governor
+alias[effect:add_as_governor] = scope[character]
+
+### adds or subtracts experience from a character
+alias[effect:add_character_experience] = int_value_field
+
+### Deifies a character for a given 'deity' and 'country'.
+alias[effect:deify_character] = scope[character]
+
+### Removes an Loyalty modifier, remove_loyalty = X X is a scripted modifier name.
+alias[effect:remove_loyalty] = replace_me_loyalty_type
+
+### changes scoped characters family to the minor, making them a 'minor' character
+alias[effect:set_as_minor_character] = scope[character]
+
+### changes the first name of a character
+alias[effect:set_firstname] = scalar
+
+### changes country of origin
+alias[effect:set_home_country] = scope[country]
+
+### sets the leader for a faction in a country
+alias[effect:set_party_leader] = scope[character]
+
+### Forces a reclaculation of a character's modifiers and status
+alias[effect:update_character] = scope[character]
+
+### adds some history for this legion
+alias[effect:add_legion_history] = replace_me
+
+### add {unit, character} to specific legion. If unit:commander cannot be moved to legion, it will lose its job. If character cannot be moved to legion, the command is invalid.
+alias[effect:add_to_legion] = replace_me
+
+### creates a legion for governorship without deducting price
+alias[effect:disband_legion] = replace_me
+
+### creates a legion for governorship without deducting price
+alias[effect:raise_legion] = replace_me
+
+### destroys a treasure
+alias[effect:destroy_treasure] = bool
+
+### transfers a treasure from current owner to new owner (character)
+alias[effect:transfer_treasure_to_character] = scope[character]
+
+### transfers a treasure from current owner to new owner (country)
+alias[effect:transfer_treasure_to_country] = scope[country]
+
+### transfers a treasure from current owner to new owner (province)
+alias[effect:transfer_treasure_to_province] = scope[province]
+
+### Country in scope gets an alliance with the target
+alias[effect:add_alliance] = scope[country]
+
+### Country in scope gurantees the target
+alias[effect:add_guarantee] = scope[country]
+
+### adds N innovations
+alias[effect:add_innovation] = int_value_field
+
+### Country in scope gets military access through the target
+alias[effect:add_military_access] = scope[country]
+
+### adds party approval for a country
+alias[effect:add_party_approval] = {
+    party_type = <party_type>
+
+    value = int_value_field
+}
+
+### adds country to target war, target = SCOPE_WAR, attacker = BOOL, leader = BOOL
+alias[effect:add_to_war] = scope[country]
+
+### creates a treasure in a country
+alias[effect:create_country_treasure] = {
+    ## cardinality = 1..1
+    key = scalar
+
+    ## cardinality = 1..1
+    icon = scalar
+
+    ## cardinality = 1..1
+    modifier = {
+        ## cardinality = 1..inf
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+}
+
+### Integrates a country culture in a country
+alias[effect:integrate_country_culture] = <culture>
+
+### forces a recalculation of succession
+alias[effect:recalc_succession] = bool
+
+### Makes the target country stop being a subject of the scoped country
+alias[effect:release_subject] = scope[country]
+
+### Country in scope stop guranteeing the target
+alias[effect:remove_gurantee] = scope[country]
+
+### sets the coruler of a country to the specified character
+alias[effect:set_as_coruler] = scope[character]
+
+### Set the heritage of a newly created country
+alias[effect:set_country_heritage] = <heritage> #TODO Not sure if <heritage> is correct
+
+### sets the country to ignore senate approval
+alias[effect:set_ignore_senate_approval] = bool
+
+### sets legion recruitment ( disabled, capital OR enabled )
+alias[effect:set_legion_recruitment] = replace_me
+
+### country in scope instantly recalculates its allowed parties
+alias[effect:update_allowed_parties] = bool
+
+### picks a new political objective for party
+alias[effect:pick_random_agenda] = replace_me
+
+### sets political objective for party
+alias[effect:set_party_agenda] = replace_me
+
+### add {character} to this legion.
+alias[effect:add_commander] = scope[character]
+
+### add a distinction to a legion
+alias[effect:add_distinction] = replace_me
+
+### add {character} to this legion.
+alias[effect:add_legion_unit] = replace_me
+
+### moves legion, characters and units to a new country. Merging legions if necessary
+alias[effect:move_legion] = scope[region]
+
+### remove {character} from this legion.
+alias[effect:remove_commander] = scope[character]
+
+### removes a distinction from a specific legion
+alias[effect:remove_distinction] = replace_me
+
+### remove {unit} from this legion.
+alias[effect:remove_legion_unit] = replace_me
+
+### gives (or takes) Food to a unit
+alias[effect:add_food] = int_value_field
+
+### split until specified number of migrant sub-units
+alias[effect:split_migrants_to] = int_value_field
+
+### Destroys a family, will remove them from the origin country
+alias[effect:remove_family] = scope[family]
+
+### Ends a war in a white peace
+alias[effect:force_white_peace] = scope[war]
+
+### Removes a country from a war, if the country is warleader the war ends in a white peace.
+alias[effect:remove_from_war] = scope[country]
+
+### begins construction of a great work
+alias[effect:begin_great_work_construction] = scope[province]
+
+### changes the name of a province
+alias[effect:change_province_name] = scalar
+
+### finishes construction of a great work
+alias[effect:finish_great_work_construction] = scope[province]
+
+### removes a provincial deity
+alias[effect:remove_province_deity] = bool
+
+### adds a provincial deity
+alias[effect:set_province_deity] = <deity> #TODO Not sure if <deity> is correct
+
+### adds a modifier to a country culture
+alias[effect:add_country_culture_modifier] = replace_me
+
+### Add integration progress to a country culture
+alias[effect:add_integration_progress] = int_value_field
+
+### Removes a modifier from a country culture
+alias[effect:remove_country_culture_modifier] = replace_me
+
+### Set civic rights to a country culture
+alias[effect:set_country_culture_right] = replace_me
 

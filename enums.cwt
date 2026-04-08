@@ -52,11 +52,15 @@ enums = {
         agnatic
         cognatic
         agnatic_seniority
+        elective_monarchy
         old_egyptian_succession
     }
     enum[dlcs] = {
         "Epirus Flavor Pack"
         "Hellenistic World Flavor Pack"
+        "Magna Graecia"
+        "Heirs of Alexander"
+        "The Punic Wars"
     }
     enum[duration] = {
         days

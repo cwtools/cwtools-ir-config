@@ -24,6 +24,15 @@ types = {
 culture_group = {
     color = colour_field
 
+    levy_template = scalar
+
+    primary = <unit_type>
+	second = <unit_type>
+	flank = <unit_type>
+    primary_navy = <unit_type>
+	secondary_navy = <unit_type>
+	flank_navy = <unit_type>
+
     ## cardinality = 0..1
     ### Defaults to no, probably.
     use_latin_name_rules = bool
@@ -88,6 +97,9 @@ culture_group = {
                 ## cardinality = 1..inf
                 localisation
             }
+            
+            ## cardinality = 0..1
+            levy_template = scalar
         }
     }
 
