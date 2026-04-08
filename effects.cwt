@@ -532,7 +532,7 @@ alias[effect:make_pregnant] = {
 }
 
 ###gives (or takes) Loyalty to a character
-alias[effect:add_loyalty] = replace_me_loyalty_type
+alias[effect:add_loyalty] = <loyalty>
 
 ###adds or removes aggressive expansion for a country
 alias[effect:add_aggressive_expansion] = value_field
@@ -1006,8 +1006,8 @@ alias[effect:add_character_experience] = int_value_field
 ### Deifies a character for a given 'deity' and 'country'.
 alias[effect:deify_character] = scope[character]
 
-### Removes an Loyalty modifier, remove_loyalty = X X is a scripted modifier name.
-alias[effect:remove_loyalty] = replace_me_loyalty_type
+### Removes a Loyalty modifier, remove_loyalty = X X is a scripted modifier name.
+alias[effect:remove_loyalty] = <loyalty>
 
 ### changes scoped characters family to the minor, making them a 'minor' character
 alias[effect:set_as_minor_character] = scope[character]
@@ -1101,7 +1101,7 @@ alias[effect:remove_gurantee] = scope[country]
 alias[effect:set_as_coruler] = scope[character]
 
 ### Set the heritage of a newly created country
-alias[effect:set_country_heritage] = <heritage> #TODO Not sure if <heritage> is correct
+alias[effect:set_country_heritage] = <heritage>
 
 ### sets the country to ignore senate approval
 alias[effect:set_ignore_senate_approval] = bool
@@ -1113,16 +1113,16 @@ alias[effect:set_legion_recruitment] = replace_me
 alias[effect:update_allowed_parties] = bool
 
 ### picks a new political objective for party
-alias[effect:pick_random_agenda] = replace_me
+alias[effect:pick_random_agenda] = bool
 
 ### sets political objective for party
-alias[effect:set_party_agenda] = replace_me
+alias[effect:set_party_agenda] = <party_agenda>
 
 ### add {character} to this legion.
 alias[effect:add_commander] = scope[character]
 
 ### add a distinction to a legion
-alias[effect:add_distinction] = replace_me
+alias[effect:add_distinction] = <legion_distinction>
 
 ### add {character} to this legion.
 alias[effect:add_legion_unit] = replace_me
@@ -1134,7 +1134,7 @@ alias[effect:move_legion] = scope[region]
 alias[effect:remove_commander] = scope[character]
 
 ### removes a distinction from a specific legion
-alias[effect:remove_distinction] = replace_me
+alias[effect:remove_distinction] = <legion_distinction>
 
 ### remove {unit} from this legion.
 alias[effect:remove_legion_unit] = replace_me
@@ -1167,7 +1167,7 @@ alias[effect:finish_great_work_construction] = scope[province]
 alias[effect:remove_province_deity] = bool
 
 ### adds a provincial deity
-alias[effect:set_province_deity] = <deity> #TODO Not sure if <deity> is correct
+alias[effect:set_province_deity] = <deity>
 
 ### adds a modifier to a country culture
 alias[effect:add_country_culture_modifier] = replace_me

@@ -1,0 +1,18 @@
+types = {
+	type[faction_impact_validation] = {
+		path = "game/common/faction_impact"
+		type_per_file = yes
+	}
+}
+
+## replace_scope = { this = country root = country }
+faction_impact_validation = {
+	## cardinality = 0..inf
+	scalar = {
+		## cardinality = 0..1
+		effect = {
+			## cardinality = 0..inf
+			alias_name[effect] = alias_match_left[effect]
+		}
+	}
+}

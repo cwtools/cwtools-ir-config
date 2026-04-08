@@ -1,0 +1,19 @@
+types = {
+	type[loyalty] = {
+		path = "game/common/loyalty"
+
+		subtype[decaying] = {
+			yearly_decay = int
+		}
+	}
+}
+
+loyalty = {
+	value = int
+
+	## cardinality = 0..1
+	months = int
+
+	## cardinality = 0..1
+	yearly_decay = int
+}
