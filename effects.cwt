@@ -1107,7 +1107,7 @@ alias[effect:set_country_heritage] = <heritage> #TODO Not sure if <heritage> is 
 alias[effect:set_ignore_senate_approval] = bool
 
 ### sets legion recruitment ( disabled, capital OR enabled )
-alias[effect:set_legion_recruitment] = replace_me
+alias[effect:set_legion_recruitment] = enum[legion_recruitment]
 
 ### country in scope instantly recalculates its allowed parties
 alias[effect:update_allowed_parties] = bool
