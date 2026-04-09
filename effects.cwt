@@ -941,7 +941,7 @@ alias[effect:random_list] = {
 alias[effect:add_state_food] = int_value_field
 
 ### Changes the capital of a state
-alias[effect:set_state_capital] = scope[province]
+alias[effect:set_state_capital] = enum[provinces]
 
 ### gives (or takes) military experience to a country
 alias[effect:add_military_experience] = int_value_field
