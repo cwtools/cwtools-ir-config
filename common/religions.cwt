@@ -9,6 +9,13 @@ types = {
     }
 }
 
+enums = {
+    enum[religion_category] = {
+        pantheon
+        sages
+    }
+}
+
 religion = {
     color = colour_field
 
@@ -16,5 +23,5 @@ religion = {
         alias_name[modifier] = alias_match_left[modifier]
     }
 
-    religion_category = pantheon
+    religion_category = enum[religion_category]
 }
