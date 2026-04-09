@@ -1199,7 +1199,7 @@ alias[trigger:percentage_characters_below_max_loyalty] == int_value_field
 alias[trigger:tribesmen_happiness] == int_value_field
 
 ### Does this country have this heritage?
-alias[trigger:heritage] = replace_me_heritage
+alias[trigger:heritage] = <heritage>
 
 ### does the province have the max amount of holdings?
 alias[trigger:max_amount_of_holdings] == int_value_field
@@ -1235,7 +1235,7 @@ alias[trigger:naval_dominance] == int_value_field
 alias[trigger:total_holdings] == int_value_field
 
 ### Checks if a sub_unit is of a specific ship-category (light/medium/heavy)
-alias[trigger:ship_category] = replace_me
+alias[trigger:ship_category] = enum[ship_category]
 
 ### Checks
 alias[trigger:civic_party_conviction] == int_value_field
@@ -1365,7 +1365,7 @@ alias[trigger:is_carrying_troops] = bool
 alias[trigger:is_idle] = bool
 
 ### check what ability unit uses
-alias[trigger:is_unit_ability_used] = replace_me
+alias[trigger:is_unit_ability_used] = <unit_ability>
 
 ### Checks if a great work includes a specific material
 alias[trigger:great_work_any_material] = replace_me
@@ -1500,7 +1500,7 @@ alias[trigger:is_guaranteed_by] = <country>
 alias[trigger:is_monotheist_deity] = replace_me_deity_scope
 
 ### if a country is allowed tradition tree
-alias[trigger:is_tradition_tree_allowed] = replace_me
+alias[trigger:is_tradition_tree_allowed] = <military_tradition_path>
 
 ### discrete AI migration strategies (discrete)
 alias[trigger:migration_strategy] == float
@@ -1761,7 +1761,7 @@ alias[trigger:integration_progress] == float
 alias[trigger:is_culture] = <culture>
 
 ### Is this this culture the same as the country culture's culture?
-alias[trigger:is_culture] = replace_me_culture_scope
+alias[trigger:is_culture] = scope[culture]
 
 ### is this country culture integrated?
 alias[trigger:is_integrated] = bool

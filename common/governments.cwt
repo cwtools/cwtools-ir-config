@@ -58,6 +58,24 @@ government = {
     }
 
     ## cardinality = 0..1
+    minimum_electable_age = int
+
+    ## cardinality = 0..1
+    can_deify_ruler = bool
+
+    ## cardinality = 1..1
+    color = colour_field
+
+    ## cardinality = 0..1
+    has_co_ruler = bool
+
+    ## cardinality = 0..1
+    ruler_consort_benefits = bool
+
+    ## cardinality = 0..1
+    use_regnal_numbers = bool
+
+    ## cardinality = 0..1
     ### Defaults to 0. 0 is no ruler terms.
     election_delay = int[0..inf]
 

@@ -11,4 +11,10 @@ types = {
 
 religion = {
     color = colour_field
+
+    modifier = {
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+
+    religion_category = pantheon
 }

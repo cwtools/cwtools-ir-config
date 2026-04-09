@@ -15,6 +15,39 @@ pop_type = {
     ## cardinality = 0..inf
     alias_name[modifier] = alias_match_left[modifier]
 
+    ## cardinality = 0..inf
+    output_modifier = {
+        ## cardinality = 0..inf
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+
+    count_modifier = {
+        ## cardinality = 0..inf
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+
+    modification_display = {
+        ## cardinality = 0..inf
+        int_value_field = <modifier_icon>
+    }
+
+    ## cardinality = 0..1
+    levy_tier = enum[levy_tier]
+
+    ## cardinality = 0..1
+    is_citizen = bool
+
+    ## cardinality = 0..1
+    integrated_pop_type_right = bool
+
+    political_weight = float
+
+    ## cardinality = 0..1
+    is_linked_with_holdings = bool
+
+    ## cardinality = 0..1
+    default_pop_right = bool
+
     ## cardinality = 0..1
     ### Defaults to no, probably.
     is_slaves = bool
@@ -39,10 +72,24 @@ pop_type = {
     block_colonization = bool
 
     # GAH
-    base_happyness = float[0.0..1.0]
+    base_happyness = float[-1.0..1.0]
 
     color = colour_field
 
     ## cardinality = 0..1
     ai_max_percentage = int[0..100]
+
+    growing_pop = float
+
+	convert = float
+
+	assimilate = float
+
+	promote = float
+
+	demote = float
+
+	migrant = float
+
+	ui_tier = float
 }

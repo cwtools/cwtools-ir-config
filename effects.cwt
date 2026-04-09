@@ -1061,10 +1061,18 @@ alias[effect:add_innovation] = int_value_field
 alias[effect:add_military_access] = scope[country]
 
 ### adds party approval for a country
-alias[effect:add_party_approval] = {
+alias[effect:add_party_approval] = { # Both of these types can exist
+    ## cardinality = 1..1
+    party = scope[party]
+
+    value = value_field
+}
+
+alias[effect:add_party_approval] = { # Both of these types can exist
+    ## cardinality = 1..1
     party_type = <party_type>
 
-    value = int_value_field
+    value = value_field
 }
 
 ### adds country to target war, target = SCOPE_WAR, attacker = BOOL, leader = BOOL
@@ -1107,13 +1115,13 @@ alias[effect:set_country_heritage] = <heritage> #TODO Not sure if <heritage> is 
 alias[effect:set_ignore_senate_approval] = bool
 
 ### sets legion recruitment ( disabled, capital OR enabled )
-alias[effect:set_legion_recruitment] = replace_me
+alias[effect:set_legion_recruitment] = enum[legion_recruitment]
 
 ### country in scope instantly recalculates its allowed parties
 alias[effect:update_allowed_parties] = bool
 
 ### picks a new political objective for party
-alias[effect:pick_random_agenda] = replace_me
+alias[effect:pick_random_agenda] = bool
 
 ### sets political objective for party
 alias[effect:set_party_agenda] = replace_me
