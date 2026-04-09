@@ -14,7 +14,7 @@ types = {
 
         localisation = {
             name = "$"
-            description = "$desc"
+            description = "$_desc"
         }
     }
     type[combat_tactic] = {
@@ -47,6 +47,9 @@ military_tradition = {
 
         ## cardinality = 0..1
         enable_tactic = <combat_tactic>
+
+        ## cardinality = 0..1
+        enable_ability = <unit_ability>
 
         ## cardinality = 0..1
         on_activate = {
