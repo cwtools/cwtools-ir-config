@@ -6,10 +6,17 @@ enums = {
         religious
         gold
         manpower
+        innovations
     }
     enum[prices_float] = {
         scaled_gold
         scaled_manpower
+        stability
+        tyranny
+        political_influence
+        aggressive_expansion
+        military_experience
+        war_exhaustion
     }
 }
 

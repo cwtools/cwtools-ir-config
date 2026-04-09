@@ -17,6 +17,9 @@ types = {
             description = "$desc"
         }
     }
+    type[combat_tactic] = {
+        path = "game/common/combat_tactics"
+    }
 }
 
 ## replace_scope = { this = country root = country }
@@ -41,6 +44,9 @@ military_tradition = {
             ## cardinality = 1..inf
             alias_name[modifier] = alias_match_left[modifier]
         }
+
+        ## cardinality = 0..1
+        enable_tactic = <combat_tactic>
 
         ## cardinality = 0..1
         on_activate = {

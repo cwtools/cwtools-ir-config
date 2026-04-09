@@ -41,6 +41,12 @@ unit_ability = {
     enum[unit_ability_army_navy_only] = bool
 
     ## cardinality = 0..1
+    is_desecrate = bool
+
+    ## cardinality = 0..1
+    confirm = bool
+
+    ## cardinality = 0..1
     ### Defaults to no.
     map = bool
 
@@ -75,6 +81,12 @@ unit_ability = {
     modifier = {
         ## cardinality = 1..inf
         alias_name[modifier] = alias_match_left[modifier]
+    }
+
+    ## cardinality = 0..1
+    on_entering_province = {
+        ## cardinality = 1..inf
+        alias_name[effect] = alias_match_left[effect]
     }
 
     start_effect = {
