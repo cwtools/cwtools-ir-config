@@ -18,6 +18,14 @@ types = {
     }
 }
 
+enums = {
+    enum[legion_recruitment] = {
+        enabled
+        disabled
+        capital
+    }
+}
+
 ## replace_scope = { this = country root = country }
 law_category = {
     potential = {
@@ -34,7 +42,13 @@ law_category = {
             alias_name[trigger] = alias_match_left[trigger]
         }
 
-        alias_name[modifier] = alias_match_left[modifier]
+        ## cardinality = 0..1
+        succession = enum[succession_types]
+        
+        ## cardinality = 0..1
+        modifier = {
+            alias_name[modifier] = alias_match_left[modifier]
+        }
 
         ## cardinality = 0..1
         on_enact = {

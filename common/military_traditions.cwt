@@ -14,8 +14,11 @@ types = {
 
         localisation = {
             name = "$"
-            description = "$desc"
+            description = "$_desc"
         }
+    }
+    type[combat_tactic] = {
+        path = "game/common/combat_tactics"
     }
 }
 
@@ -41,6 +44,12 @@ military_tradition = {
             ## cardinality = 1..inf
             alias_name[modifier] = alias_match_left[modifier]
         }
+
+        ## cardinality = 0..1
+        enable_tactic = <combat_tactic>
+
+        ## cardinality = 0..1
+        enable_ability = <unit_ability>
 
         ## cardinality = 0..1
         on_activate = {

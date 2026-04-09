@@ -12,7 +12,7 @@ types = {
 
 ## replace_scope = { this = province root = province }
 province_rank = {
-    rank_modifer = {
+    rank_modifier = {
         ## cardinality = 0..inf
         alias_name[modifier] = alias_match_left[modifier]
     }

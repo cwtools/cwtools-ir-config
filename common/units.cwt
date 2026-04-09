@@ -1,3 +1,17 @@
+enums = {
+    enum[ship_category] = {
+        light
+        medium
+        heavy
+    }
+
+    enum[levy_tier] = {
+        basic
+        advanced
+        none
+    }
+}
+
 types = {
     type[unit_type] = {
         path = "game/common/units"
@@ -27,12 +41,9 @@ unit_type = {
     enable = bool
 
     ## cardinality = 0..1
-    ### Defaults to no, probably.
-    assault = bool
-
-    ## cardinality = 0..1
-    ### Defaults to no, probably.
-    default = bool
+    allow = {
+        alias_name[trigger] = alias_match_left[trigger]
+    }
 
     ## cardinality = 0..1
     ### Defaults to no, probably.
@@ -40,55 +51,105 @@ unit_type = {
 
     ## cardinality = 0..1
     ### Defaults to no, probably.
-    reduces_road_building_cost = bool
-
-    ## cardinality = 0..1
-    ### Defaults to no, probably.
     is_flank = bool
 
+    ## cardinality = 1..1
 	maneuver = int
-	movement_speed = int
-	build_cost = {
-        gold = int
-		manpower = float
-    }
-    build_time = int
-    ## cardinality = 0..1
-    watercrossing_negation = float
-    ## cardinality = 0..1
-	siege_impact = float
+
+    ## cardinality = 1..1
+	movement_speed = float
 
     subtype[army] = {
         # TODO: still wanting that "one of each" rule :)
         ## cardinality = 0..inf
         <unit_type.army> = float[0.0..inf]
+
+        ## cardinality = 0..1
+        ### Defaults to no, probably.
+        assault = bool
+
+        ## cardinality = 0..1
+        siege_impact = float
+
+        ## cardinality = 0..1
+        watercrossing_negation = float
+
+        ## cardinality = 0..1
+        ### Defaults to no, probably.
+        default = bool
+
+        ## cardinality = 0..1
+        build_time = int # not needed for army, but you can put it there I guess
+
+        ## cardinality = 0..1
+        ### Defaults to no, probably.
+        reduces_road_building_cost = bool
+        
+        ## cardinality = 1..1
+        levy_tier = enum[levy_tier]
+
+        ## cardinality = 0..1
+        legions = bool
+
+        ## cardinality = 1..1
+        build_cost = {
+            gold = int
+            manpower = float
+        }
+
+        ## cardinality = 0..1
+        attrition_weight = float
+
+        ## cardinality = 1..1
+        attrition_loss = float
+
+        ## cardinality = 1..1
+        food_consumption = float
+
+        ## cardinality = 1..1
+        food_storage = float
+
+        ## cardinality = 0..1
+        setup_fraction = float
+
+        ## cardinality = 0..1
+        merc_cohorts_required = float
+
     }
     subtype[navy] = {
         # TODO: still wanting that "one of each" rule :)
         ## cardinality = 0..inf
         <unit_type.navy> = float[0.0..inf]
+
+        ## cardinality = 1..1
+        build_cost = {
+            gold = int
+        }
+
+        ## cardinality = 1..1
+        build_time = int
+
+        ## cardinality = 1..1
+        category = enum[ship_category]
+
+        ## cardinality = 1..1
+        port_level = int
+
+        ## cardinality = 0..1
+        outside_of_naval_range_attrition = float
     }
 
     ## cardinality = 0..1
-    attrition_weight = float
-    ## cardinality = 0..1
-    attrition_loss = float
-    ## cardinality = 0..1
-	food_consumption = float
-    ## cardinality = 0..1
-	food_storage = float
+    morale_damage_done = float
 
     ## cardinality = 0..1
-    setup_fraction = float
+    strength_damage_done = float
 
     ## cardinality = 0..1
     morale_damage_taken = float
 
     ## cardinality = 0..1
     strength_damage_taken = float
-
-    ## cardinality = 0..1
-    merc_cohorts_required = float
 
     ## cardinality = 0..1
     ai_max_percentage = int[0..100]
