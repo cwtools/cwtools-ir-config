@@ -1500,7 +1500,7 @@ alias[trigger:is_guaranteed_by] = <country>
 alias[trigger:is_monotheist_deity] = replace_me_deity_scope
 
 ### if a country is allowed tradition tree
-alias[trigger:is_tradition_tree_allowed] = <military_tradition_path>
+alias[trigger:is_tradition_tree_allowed] = <military_tradition>
 
 ### discrete AI migration strategies (discrete)
 alias[trigger:migration_strategy] == float
