@@ -1,0 +1,26 @@
+types = {
+	type[legion_distinction] = {
+		path = "game/common/legion_distinctions"
+
+		localisation = {
+			name = "$"
+			description = "$_desc"
+		}
+	}
+}
+
+legion_distinction = {
+	icon = scalar
+
+	## cardinality = 0..1
+	commander = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	unit = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}

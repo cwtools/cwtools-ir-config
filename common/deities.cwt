@@ -1,0 +1,58 @@
+enums = {
+	enum[deity_categories] = {
+		war
+		economy
+		culture
+		fertility
+	}
+}
+
+types = {
+	type[deity] = {
+		path = "game/common/deities"
+
+		localisation = {
+			name = "$"
+			description = "$_desc"
+		}
+	}
+}
+
+## replace_scope = { this = country root = country }
+deity = {
+	## cardinality = 0..1
+	trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	icon = scalar
+
+	## cardinality = 0..1
+	passive_modifier = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	omen = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	religion = <religion>
+
+	deity_category = enum[deity_categories]
+
+	## cardinality = 0..1
+	deification_trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	on_activate = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
