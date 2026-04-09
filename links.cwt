@@ -450,4 +450,20 @@ links = {
         input_scopes = { country province state governorship }
         output_scope = character
     }
+    deity = {
+        desc =  eventtarget_link_desc_deity
+        from_data = yes
+        type = scope
+        prefix = deity:
+        data_source = <deity>
+        output_scope = deity
+    }
+    treasure = {
+        desc =  eventtarget_link_desc_treasure
+        from_data = yes
+        type = scope
+        prefix = treasure:
+        data_source = <treasure>
+        output_scope = treasure
+    }
 }

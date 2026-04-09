@@ -1,0 +1,23 @@
+types = {
+	type[heritage] = {
+		path = "game/common/heritage"
+
+		localisation = {
+			name = "$"
+			description = "$_desc"
+		}
+	}
+}
+
+## replace_scope = { this = country root = country }
+heritage = {
+	modifier = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}

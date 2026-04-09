@@ -1279,8 +1279,8 @@ alias[trigger:has_city_status] = bool
 ### doess the character have a holding in the target province?
 alias[trigger:has_holding_in] = <provinces>
 
-### doess the character have a holding in the target province?
-alias[trigger:has_holding_in] = replace_me_province_scope
+### does the character have a holding in the target province?
+alias[trigger:has_holding_in] = scope[province]
 
 ### Checks population of a specified type
 alias[trigger:num_of_slaves] == int_value_field
@@ -1368,7 +1368,7 @@ alias[trigger:is_idle] = bool
 alias[trigger:is_unit_ability_used] = <unit_ability>
 
 ### Checks if a great work includes a specific material
-alias[trigger:great_work_any_material] = replace_me
+alias[trigger:great_work_any_material] = <great_work_material>
 
 ### Did the specified country build this GW?
 alias[trigger:great_work_builder] = <country_tags>
@@ -1377,13 +1377,13 @@ alias[trigger:great_work_builder] = <country_tags>
 alias[trigger:great_work_builder] = <country>
 
 ### Checks if a great work has a specific category
-alias[trigger:great_work_category] = replace_me
+alias[trigger:great_work_category] = <great_work_category>
 
 ### compare a value to the great work's lowest effect tier level
 alias[trigger:great_work_min_effect_tier] == float
 
 ### Checks if a great work is made of one specific material
-alias[trigger:great_work_only_material] = replace_me
+alias[trigger:great_work_only_material] = <great_work_material>
 
 ### is this great work an ancient wonder?
 alias[trigger:is_ancient_wonder] = bool
@@ -1392,7 +1392,7 @@ alias[trigger:is_ancient_wonder] = bool
 alias[trigger:boni_party_conviction] == float
 
 ### Checks if value for loyalty type can be added without passing the types limit for the given scripted modifier.
-alias[trigger:can_add_entire_loyalty_bonus] = replace_me_loyalty_type
+alias[trigger:can_add_entire_loyalty_bonus] = <loyalty>
 
 ### does the character have the required Experience?
 alias[trigger:character_experience] == float
@@ -1401,7 +1401,7 @@ alias[trigger:character_experience] == float
 alias[trigger:democratic_party_conviction] == float
 
 ### Checks where a character has a certain loyalty modifier. has_loyalty = X X is a scripted modifier name.
-alias[trigger:has_loyalty] = replace_me_loyalty_type
+alias[trigger:has_loyalty] = <loyalty>
 
 ### Checks if a character has been deified
 alias[trigger:is_deified] = bool
@@ -1443,7 +1443,7 @@ alias[trigger:treasure_count] == float
 alias[trigger:boni_party_support] == float
 
 ### Can omen be activated for this deity?
-alias[trigger:can_activate] = replace_me_deity_scope
+alias[trigger:can_activate] = scope[deity]
 
 ### Can a country change to this idea?
 alias[trigger:can_change_idea] = <idea>
@@ -1473,10 +1473,10 @@ alias[trigger:has_completed_mission] = <missions>
 alias[trigger:has_completed_mission_task] = <mission_task>
 
 ### check if a country has a specific effect from a great work
-alias[trigger:has_country_great_work_effect] = replace_me
+alias[trigger:has_country_great_work_effect] = <great_work_effect>
 
 ### Does this country have this deity in it's pantheon?
-alias[trigger:has_deity_in_pantheon] = replace_me
+alias[trigger:has_deity_in_pantheon] = <deity>
 
 ### Does this country have military access through the other country?
 alias[trigger:has_military_access] = <country_tags>
@@ -1497,7 +1497,7 @@ alias[trigger:is_guaranteed_by] = <country_tags>
 alias[trigger:is_guaranteed_by] = <country>
 
 ### Is this deity monotheistic?
-alias[trigger:is_monotheist_deity] = replace_me_deity_scope
+alias[trigger:is_monotheist_deity] = scope[deity]
 
 ### if a country is allowed tradition tree
 alias[trigger:is_tradition_tree_allowed] = <military_tradition>
@@ -1536,7 +1536,7 @@ alias[trigger:populares_party_support] == float
 alias[trigger:primary_culture] = <culture>
 
 ### Is the country this culture?
-alias[trigger:primary_culture] = replace_me_culture_scope
+alias[trigger:primary_culture] = scope[culture]
 
 ### country is on the way towards civil war ?
 alias[trigger:towards_civil_war] = bool
@@ -1584,7 +1584,7 @@ alias[trigger:commander_count] == float
 alias[trigger:distinction_count] == float
 
 ### does this legion have that distinction?
-alias[trigger:has_distinction] = replace_me_mission_task_type
+alias[trigger:has_distinction] = <legion_distinction>
 
 ### how many units does this legion have?
 alias[trigger:unit_count] == float
@@ -1608,7 +1608,7 @@ alias[trigger:war_score] = replace_me
 alias[trigger:deity_religion] = <religion>
 
 ### Does this deity have this religion?
-alias[trigger:deity_religion] = replace_me_religion_scope
+alias[trigger:deity_religion] = scope[religion]
 
 ### Does this deity have a this active modifier?
 alias[trigger:has_active_modifier] = replace_me_base_game_modifers
@@ -1770,7 +1770,7 @@ alias[trigger:is_integrated] = bool
 alias[trigger:culture_pops_in_country] == float
 
 ### Does the country have any agenda?
-alias[trigger:has_agenda] = replace_me
+alias[trigger:has_agenda] = <party_agenda>
 
 ### If a country's religion is monotheistic
 alias[trigger:is_monotheist_religion] = bool
