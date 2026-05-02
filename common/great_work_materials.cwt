@@ -1,0 +1,16 @@
+types = {
+    type[great_work_material] = {
+        path = "game/common/great_work_materials"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+great_work_material = {
+    icon = icon[gfx/interface/icons/great_work/materials]
+    great_work_prestige = int
+    great_work_trade_good = <trade_goods>
+    great_work_uv_offset = { float float } #TODO not sure if that's right
+}

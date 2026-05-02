@@ -17,6 +17,10 @@ enums = {
         ask_to_join_defensive_league
         enforce_peace
         threaten_war
+        transfer_subject_action
+        request_subject_action
+        demand_access
+        will_lose_capital_bonus
     }
     enum[ai_diplochance_factors] = {
         at_war
@@ -94,6 +98,12 @@ enums = {
         common_threat
         competing_power
         at_peace
+        rank_difference
+        num_of_allies
+        is_antagonist
+        positive_opinion
+        negative_opinion
+        no_access
     }
     # For cardinality
     enum[ai_diplochance_offset_scale] = {

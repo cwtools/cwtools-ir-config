@@ -221,7 +221,22 @@ alias[effect:add_rival] = scope[character]
 alias[effect:remove_trait] = <trait>
 
 ###creates a country in the given province
-alias[effect:create_country] = scope[province]
+## push_scope = country
+alias[effect:create_country] = {
+    ## cardinality = 0..1
+    name = {
+        name = localisation
+        adjective = localisation
+    }
+    
+    ## cardinality = 0..inf
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[effect:set_primary_culture_cleanup_effect] = {
+    NEW_PRIMARY_CULTURE = scope[culture]
+    MAKE_OLD_CULTURE_INTEGRATED = bool
+}
 
 ###Set the pop_type for this pop
 alias[effect:set_pop_type] = <pop_type>
@@ -1093,7 +1108,7 @@ alias[effect:create_country_treasure] = {
     key = scalar
 
     ## cardinality = 1..1
-    icon = scalar
+    icon = icon[gfx/interface/icons/treasures]
 
     ## cardinality = 1..1
     modifier = {

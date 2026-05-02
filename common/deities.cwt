@@ -26,7 +26,7 @@ deity = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	icon = scalar
+	icon = icon[gfx/interface/icons/deities]
 
 	## cardinality = 0..1
 	passive_modifier = {
