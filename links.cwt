@@ -178,17 +178,17 @@ links = {
     }
     area = {
         desc =  eventtarget_link_desc_area
-        input_scopes = { province state }
+        input_scopes = { province state character pop unit }
         output_scope = area
     }
     region = {
         desc =  eventtarget_link_desc_region
-        input_scopes = { province area state }
+        input_scopes = { province area state character pop unit }
         output_scope = region
     }
     governorship = {
         desc =  eventtarget_link_desc_governorship
-        input_scopes = { province state }
+        input_scopes = { province state character }
         output_scope = governorship
     }
     red = {
@@ -387,7 +387,7 @@ links = {
         from_data = yes
         type = scope
         prefix = job:
-        data_source = <job>
+        data_source = <office>
         input_scopes = { country province state governorship }
         output_scope = job
     }
@@ -446,7 +446,7 @@ links = {
         from_data = yes
         type = scope
         prefix = job_holder:
-        data_source = <job_holder>
+        data_source = <office>
         input_scopes = { country province state governorship }
         output_scope = character
     }

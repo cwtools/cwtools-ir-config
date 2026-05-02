@@ -1,0 +1,18 @@
+types = {
+	type[levy_template] = {
+		path = "game/common/levy_templates"
+
+		localisation = {
+			## optional
+			name = "$"
+		}
+	}
+}
+
+levy_template = {
+	## cardinality = 0..1
+	default = bool
+
+	## cardinality = 1..inf
+	<unit> = float
+}

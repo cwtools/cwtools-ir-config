@@ -56,4 +56,6 @@ ai_plan_goal = {
     ae_ceiling = int
     ## cardinality = 0..1
     trustworthy = int
+    ## cardinality = 0..1
+    migration_chance = int
 }

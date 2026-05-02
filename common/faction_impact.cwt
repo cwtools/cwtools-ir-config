@@ -1,18 +1,32 @@
-types = {
-	type[faction_impact_validation] = {
-		path = "game/common/faction_impact"
-		type_per_file = yes
+## replace_scope = { this = country root = country }
+single_alias[faction_impact_effect_block] = {
+	## cardinality = 0..1
+	effect = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
 	}
 }
 
-## replace_scope = { this = country root = country }
-faction_impact_validation = {
-	## cardinality = 0..inf
-	scalar = {
-		## cardinality = 0..1
-		effect = {
-			## cardinality = 0..inf
-			alias_name[effect] = alias_match_left[effect]
-		}
+types = {
+	## path_strict = yes
+	type[faction_impact_changing_laws] = {
+		path = "game/common/faction_impact/changing_laws"
+	}
+	## path_strict = yes
+	type[faction_impact_character_interactions] = {
+		path = "game/common/faction_impact/character_interactions"
+	}
+	## path_strict = yes
+	type[faction_impact_diplomatic_actions] = {
+		path = "game/common/faction_impact/diplomatic_actions"
 	}
 }
+
+## type_key_filter = <law>
+faction_impact_changing_laws = single_alias_right[faction_impact_effect_block]
+
+## type_key_filter = <character_interaction>
+faction_impact_character_interactions = single_alias_right[faction_impact_effect_block]
+
+## type_key_filter = enum[diplomatic_actions]
+faction_impact_diplomatic_actions = single_alias_right[faction_impact_effect_block]

@@ -1,0 +1,10 @@
+types = {
+	type[tradition_group] = {
+		path = "game/common/tradition_groups"
+	}
+}
+
+tradition_group = {
+	## cardinality = 0..inf
+	scalar = scalar
+}

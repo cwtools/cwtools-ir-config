@@ -63,7 +63,7 @@ customizable_localization = {
     ### Defaults to no, probably.
     random_valid = bool
 
-    ## cardinality = 2..inf
+    ## cardinality = 1..inf
     text = {
         localization_key = localisation
 

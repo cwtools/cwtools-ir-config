@@ -1,0 +1,14 @@
+types = {
+	type[deity_category] = {
+		path = "game/common/deity_categories"
+
+		localisation = {
+			## optional
+			name = "$"
+		}
+	}
+}
+
+deity_category = {
+	icon = scalar
+}
