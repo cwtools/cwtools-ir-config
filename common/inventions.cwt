@@ -66,5 +66,8 @@ invention_category = {
 
         ## cardinality = 0..1
         keystone = bool
+
+        ## cardinality = 0..1
+        icon_override = scalar
     }
 }
