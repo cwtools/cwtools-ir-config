@@ -1,0 +1,17 @@
+types = {
+    type[great_work_category] = {
+        path = "game/common/great_work_categories"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+enums = {
+    enum[great_work_slot_types] = {
+        base
+        middle
+        top
+    }
+}
