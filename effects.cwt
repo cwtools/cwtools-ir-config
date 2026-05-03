@@ -209,7 +209,10 @@ alias[effect:set_pop_culture] = <culture>
 alias[effect:set_pop_culture] = scope[culture]
 
 ###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:remove_list_local_variable] = replace_me
+alias[effect:remove_list_local_variable] = {
+    name = value[local_variable]
+    target = scope_field
+}
 
 ###Adds a rival to the character
 alias[effect:add_rival] = scope[character]
@@ -218,7 +221,22 @@ alias[effect:add_rival] = scope[character]
 alias[effect:remove_trait] = <trait>
 
 ###creates a country in the given province
-alias[effect:create_country] = scope[province]
+## push_scope = country
+alias[effect:create_country] = {
+    ## cardinality = 0..1
+    name = {
+        name = localisation
+        adjective = localisation
+    }
+    
+    ## cardinality = 0..inf
+    alias_name[effect] = alias_match_left[effect]
+}
+
+alias[effect:set_primary_culture_cleanup_effect] = {
+    NEW_PRIMARY_CULTURE = scope[culture]
+    MAKE_OLD_CULTURE_INTEGRATED = bool
+}
 
 ###Set the pop_type for this pop
 alias[effect:set_pop_type] = <pop_type>
@@ -410,7 +428,7 @@ alias[effect:assert_read] = bool
 alias[effect:assert_read] = scalar
 
 ###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the same effect add_to_temporary_list = <string> NOTE, if adding a temporary target to a permanent list, the list will stay permanent
-alias[effect:add_to_temporary_list] = replace_me
+alias[effect:add_to_temporary_list] = value_set[variable_list]
 
 ###Removes a Office from a character
 alias[effect:remove_office] = <office>
@@ -514,7 +532,7 @@ alias[effect:make_subject] = {
 }
 
 ###Removes the current scope from a named list remove_from_list = <string>
-alias[effect:remove_from_list] = replace_me
+alias[effect:remove_from_list] = value[variable_list]
 
 ###Adds martial skill
 alias[effect:add_martial] = int_value_field
@@ -581,7 +599,10 @@ alias[effect:assert_if] = {
 }
 
 ###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:remove_list_global_variable] = replace_me
+alias[effect:remove_list_global_variable] = {
+    name = value[global_variable_list]
+    target = scope_field
+}
 
 # TODO: value_field?
 ###the scope character pays gold to the target character, pay_gold = { target = X gold = Y }
@@ -592,7 +613,7 @@ alias[effect:pay_gold] = {
 }
 
 ###Adds the current scope to an arbitrarily-named list (or creates the list if not already present) to be referenced later in the (unbroken) event chain add_to_list = <string> NOTE, if adding a permanent target to a temporary list, the whole list becomes permanent
-alias[effect:add_to_list] = replace_me
+alias[effect:add_to_list] = value_set[variable_list]
 
 ###Release the target character if imprisoned, release_prisoner = { target = X  }, where X is a character
 alias[effect:release_prisoner] = {
@@ -881,7 +902,10 @@ alias[effect:add_road_towards] = scope[province]
 alias[effect:set_family] = scope[family]
 
 ###Removes the target from a variable list remove_list_variable = { name = X target = Y } Where X is the name of the variable Where Y is an event target
-alias[effect:remove_list_variable] = replace_me
+alias[effect:remove_list_variable] = {
+    name = value[variable_list]
+    target = scope_field
+}
 
 ###Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_event_target_as = <string>
 alias[effect:save_temporary_scope_as] = value_set[temporary_scope]
@@ -1084,7 +1108,7 @@ alias[effect:create_country_treasure] = {
     key = scalar
 
     ## cardinality = 1..1
-    icon = scalar
+    icon = icon[gfx/interface/icons/treasures]
 
     ## cardinality = 1..1
     modifier = {

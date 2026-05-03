@@ -10,7 +10,7 @@ types = {
 }
 
 legion_distinction = {
-	icon = scalar
+	icon = icon[gfx/interface/icons/phalera]
 
 	## cardinality = 0..1
 	commander = {

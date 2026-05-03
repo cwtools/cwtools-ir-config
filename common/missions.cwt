@@ -21,9 +21,9 @@ types = {
 
 missions = {
     ## cardinality = 0..1
-    header = scalar # event_picture doesn't work for headers, since they aren't defined there
+    header = icon[gfx/interface/missions]
     ## cardinality = 0..1
-    icon = scalar
+    icon = icon[gfx/interface/icons/missions]
     ## cardinality = 0..1
 	repeatable = bool
     ## cardinality = 0..1
@@ -70,7 +70,7 @@ missions = {
 
     ## cardinality = 1..inf
     <mission_task> = {
-        icon = <icon>
+        icon = icon[gfx/interface/icons/mission_tasks]
 
         ## cardinality = 0..1
 		requires = {
