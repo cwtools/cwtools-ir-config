@@ -67,4 +67,14 @@ enums = {
         months
         years
     }
+
+    ## Character IDs from setup/characters files. Format: "TAG" = { <id> = { ... } }
+    complex_enum[character_ids] = {
+        path = "game/setup/characters"
+        name = {
+            scalar = {
+                enum_name = { }
+            }
+        }
+    }
 }

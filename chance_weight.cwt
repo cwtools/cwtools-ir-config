@@ -8,9 +8,12 @@ enums = {
 # TODO: Figure out if the chance-weight difference is really needed
 
 single_alias[chance_block] = {
-    # TODO: Requires further testing, might necessiate splitting into chance_block and chance_block_with_base or something
     ## cardinality = 0..1
+    ### defaults to 1 if omitted
     base = float
+
+    ## cardinality = 0..1
+    factor = value_field
 
     ## cardinality = 0..inf
     ### Appears in the tooltip only if the conditions are fulfilled.

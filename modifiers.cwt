@@ -309,6 +309,10 @@ alias[modifier:<terrain>_combat_bonus] = float
 ## scopes = country
 alias[modifier:<price>_cost_modifier] = float
 
+## scopes = country
+### Boolean modifier that unlocks the anti-piracy casus belli.
+alias[modifier:anti_piracy_cb] = bool
+
 ## scopes = character
 alias[modifier:disallow_job] = yes
 

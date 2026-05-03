@@ -50,9 +50,9 @@ culture_group = {
     ## cardinality = 0..1
     ### Family names. Format is just localisation or "masculine.feminine.plural.adjective"
     family = {
-        ## cardinality = 1..inf
+        ## cardinality = 0..inf
         localisation
-        ## cardinality = 1..inf
+        ## cardinality = 0..inf
         ir_family_name_field
     }
 
@@ -86,9 +86,9 @@ culture_group = {
             ## cardinality = 0..1
             ### Family names. Format is just localisation or "masculine.feminine.plural.adjective"
             family = {
-                ## cardinality = 1..inf
+                ## cardinality = 0..inf
                 localisation
-                ## cardinality = 1..inf
+                ## cardinality = 0..inf
                 ir_family_name_field
             }
 

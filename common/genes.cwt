@@ -33,10 +33,9 @@ single_alias[morph_gene_settings] = {
             max = float[-1.0..1.0]
         }
 
-        # TODO: Figure out because this might be only for age because the first float is age percentage. Also cardinalities probably wrong, based on vanilla.
         ## cardinality = 0..1
         animation_curve = {
-            ## cardinality = 3..3
+            ## cardinality = 2..inf
             {
                 ## cardinality = 2..2
                 float
