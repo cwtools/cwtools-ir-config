@@ -80,8 +80,9 @@ coat_of_arms_validation = {
     ## cardinality = 0..inf
     ir_country_tag_field = single_alias_right[coat_of_arms_rhs]
 
+    # Non-tag keys are arbitrary flag names, referenced by the change_country_flag effect.
     ## cardinality = 0..inf
-    value[country_flag] = single_alias_right[coat_of_arms_rhs]
+    value_set[country_flag] = single_alias_right[coat_of_arms_rhs]
 
     ## cardinality = 0..inf
     template = {

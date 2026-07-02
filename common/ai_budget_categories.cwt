@@ -1,0 +1,46 @@
+types = {
+    type[ai_budget_category] = {
+        path = "game/common/ai_budget_categories"
+    }
+}
+
+### Defines higher level ai budget categories composed from atomic ones (see ai_budget).
+ai_budget_category = {
+    ## cardinality = 0..inf
+    contains = enum[ai_budget_atomic_categories]
+
+    ## cardinality = 0..inf
+    contains = <ai_budget_category>
+}
+
+enums = {
+    ### The atomic budget expense categories hardcoded in the game.
+    enum[ai_budget_atomic_categories] = {
+        savings
+        building_construction
+        fort_maintenance
+        fort_construction
+        army_maintenance
+        army_construction
+        navy_maintenance
+        navy_construction
+        wages
+        tribute
+        omens
+        endorse_party
+        governor_policy
+        invention
+        military_tradition
+        idea
+        colonization
+        stance
+        war_exhaustion
+        stability
+        legitimacy
+        trade
+        laws
+        claims
+        opinion_diplomacy
+        diplomacy
+    }
+}

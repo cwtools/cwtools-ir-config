@@ -8,10 +8,43 @@ types = {
     }
 }
 
-enums = {
-    enum[great_work_slot_types] = {
-        base
-        middle
-        top
+great_work_category = {
+    great_work_prestige = int
+    price = {
+        gold = int
+    }
+    material_price = {
+        gold = int
+    }
+
+    ### Base material and the amount needed for construction.
+    great_work_material = {
+        ## cardinality = 1..inf
+        <great_work_material> = int
+    }
+
+    ### Amount of each material needed to use it as surface material.
+    great_work_surface_materials = {
+        ## cardinality = 1..inf
+        <great_work_material> = int
+    }
+
+    great_work_category_slots = {
+        ## cardinality = 1..inf
+        {
+            key = scalar
+            index = int
+            localization_key = localisation
+
+            ## cardinality = 0..1
+            attachments = {
+                ## cardinality = 1..inf
+                {
+                    ### The key of the slot attached here.
+                    key = scalar
+                    function = enum[great_work_attachment_functions]
+                }
+            }
+        }
     }
 }

@@ -304,7 +304,7 @@ alias[effect:declare_war_with_wargoal] = {
     province = enum[provinces]
 
     target = scope[country]
-    target = enum[country_tags]
+    target = ir_country_tag_field
 }
 
 ###Moves a family to another country
@@ -555,9 +555,8 @@ alias[effect:add_loyalty] = <loyalty>
 ###adds or removes aggressive expansion for a country
 alias[effect:add_aggressive_expansion] = value_field
 
-# TODO: I guess I'll have to rename the validation part now that it turns out it's used :P
-###changes the flag of a country
-alias[effect:change_country_flag] = <coat_of_arms_validation>
+###changes the flag of a country to a coat of arms defined in common/coat_of_arms
+alias[effect:change_country_flag] = value[country_flag]
 
 # TODO: Confirm
 ###Character stops being a governor

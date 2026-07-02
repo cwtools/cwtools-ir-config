@@ -1,0 +1,79 @@
+types = {
+    type[advice] = {
+        path = "game/common/advice"
+    }
+}
+
+## replace_scope = { this = country root = country }
+advice = {
+    ## cardinality = 0..1
+    ### Simple advice that only highlights gui elements, without an advice window.
+    only_highlight = bool
+
+    ## cardinality = 0..1
+    ### Maximum number of advice items shown at once.
+    max_advice = int
+
+    ## cardinality = 0..1
+    title = localisation
+    ## cardinality = 0..1
+    description = localisation
+    ## cardinality = 0..1
+    icon = filepath
+    ## cardinality = 0..1
+    background = filepath
+
+    ## cardinality = 0..1
+    highlight_elements = {
+        ## cardinality = 1..inf
+        ### Gui element names to highlight.
+        scalar
+    }
+
+    ## cardinality = 0..inf
+    item = {
+        title = localisation
+        description = localisation
+        icon = filepath
+
+        ## cardinality = 0..1
+        button_text = localisation
+
+        ## cardinality = 0..1
+        ### Marks this item as the fallback shown when no other item applies.
+        fallback = bool
+
+        ## cardinality = 0..1
+        initial_view = enum[advice_views]
+
+        ## cardinality = 0..1
+        chain_length = int
+
+        ## cardinality = 0..1
+        highlight_elements = {
+            ## cardinality = 1..inf
+            ### Gui element names to highlight.
+            scalar
+        }
+
+        ## cardinality = 0..1
+        ### The item is offered if the effect manages to save a scope as scope:result. scope:actor is the advised country.
+        effect = {
+            ## cardinality = 0..inf
+            alias_name[effect] = alias_match_left[effect]
+        }
+    }
+}
+
+enums = {
+    enum[advice_views] = {
+        character
+        economy
+        government
+        laws
+        overview
+        province
+        religion
+        single_unit
+    }
+}
