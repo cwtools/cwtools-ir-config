@@ -1,5 +1,11 @@
 alias[trigger:<scripted_trigger>] = bool
 
+# Parametrized invocation: my_trigger = { PARAM = value }
+alias[trigger:<scripted_trigger>] = {
+    ## cardinality = 0..inf
+    scalar = scalar
+}
+
 types = {
     type[scripted_trigger] = {
         path = "game/common/scripted_triggers"

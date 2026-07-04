@@ -2,11 +2,6 @@ Trigger Documentation:
 
 --------------------
 
-debug_log = yes - Outputs to the game log when this trigger is hit
-debug_log_details = yes - Outputs full trigger content when this trigger is hit
-
---------------------
-
 any_area_including_unownable_province - Iterate through all provinces in an area
 any_area_including_unownable_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: area

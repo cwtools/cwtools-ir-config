@@ -2,8 +2,10 @@ enums = {
     enum[event_types] = {
         country_event
         major_country_event
+        minor_country_event
         province_event
         character_event
+        minor_character_event
         state_event
     }
 }
@@ -11,6 +13,15 @@ enums = {
 single_alias[complex_event_desc] = {
     ## cardinality = 0..inf
     desc = localisation
+
+    ## cardinality = 0..inf
+    triggered_desc = {
+        desc = localisation
+        trigger = {
+            ## cardinality = 1..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+    }
 
     ## cardinality = 0..inf
     random_valid = {

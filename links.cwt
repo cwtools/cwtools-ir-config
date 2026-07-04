@@ -29,6 +29,26 @@ links = {
         desc =  eventtarget_link_desc_named_script_value
         output_scope = value
     }
+    # Reads the current value of a modifier as a script value, e.g. modifier:army_maintenance_cost
+    modifier_value = {
+        desc =  eventtarget_link_desc_named_script_value
+        from_data = yes
+        type = value
+        prefix = modifier:
+        data_source = enum[modifiers]
+        output_scope = value
+    }
+    # Makes named script values from common/script_values usable as bare values in any
+    # value field (the engine registers them with empty scopes otherwise).
+    # NOTE: must stay <script_value> (the type). An enum source built from the files also
+    # picks up nested keys (limit/if/war/...), which then shadow real triggers as values.
+    named_script_value_data = {
+        desc =  eventtarget_link_desc_named_script_value
+        from_data = yes
+        type = value
+        data_source = <script_value>
+        output_scope = value
+    }
     from = {
         desc =  eventtarget_link_desc_from
     }
@@ -63,7 +83,7 @@ links = {
     }
     culture = {
         desc =  eventtarget_link_desc_culture
-        input_scopes = { country character province pop }
+        input_scopes = { country character province pop country_culture }
         output_scope = culture
     }
     location = {
@@ -162,6 +182,11 @@ links = {
         output_scope = character
     }
     current_ruler = {
+        desc =  eventtarget_link_desc_current_ruler
+        input_scopes = country
+        output_scope = character
+    }
+    current_co_ruler = {
         desc =  eventtarget_link_desc_current_ruler
         input_scopes = country
         output_scope = character
@@ -381,7 +406,7 @@ links = {
         from_data = yes
         type = scope
         prefix = char:
-        data_source = enum[character_ids]
+        data_source = enum[character_setup_ids]
         output_scope = character
     }
     job = {

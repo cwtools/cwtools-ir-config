@@ -14,5 +14,5 @@ levy_template = {
 	default = bool
 
 	## cardinality = 1..inf
-	<unit> = float
+	<unit_type> = float
 }

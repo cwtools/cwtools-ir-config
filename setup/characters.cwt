@@ -47,8 +47,12 @@ character_setup_validation = {
             ### Character id of the father.
             father = int
             ## cardinality = 0..1
+            father = scope[character]
+            ## cardinality = 0..1
             ### Character id of the mother.
             mother = int
+            ## cardinality = 0..1
+            mother = scope[character]
 
             ## cardinality = 0..1
             ### If yes, stats are not randomly generated.

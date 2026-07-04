@@ -510,7 +510,7 @@ alias[trigger:assert_read] = yes
 alias[trigger:assert_read] = scalar
 
 ###Saves a temporary target for use during the trigger execution
-alias[trigger:add_to_temporary_list] = replace_me
+alias[trigger:add_to_temporary_list] = value_set[variable_list]
 
 # TODO: Might be value_field
 ###does the province have the required province_unrest?
@@ -636,6 +636,9 @@ alias[trigger:has_dlc] = enum[dlcs]
 
 ###Checks whether the specified socope target exists (check for not being the null object) exists = from.owner.var:cool_var.mother
 alias[trigger:exists] = scope_field
+
+###is the target a valid variable? exists = var:my_variable
+alias[trigger:exists] = variable_field
 
 ###does the province have the amount of free building slots?
 alias[trigger:free_building_slots] == int_value_field
@@ -1013,7 +1016,7 @@ alias[trigger:is_coastal] = bool
 alias[trigger:days_since_last_unit_victory] == int_value_field
 
 ###Saves a temporary target for use during the trigger execution
-alias[trigger:save_temporary_scope_as] = value_set[temporary_scope]
+alias[trigger:save_temporary_scope_as] = value_set[event_target]
 
 ###unit is Exiled
 alias[trigger:is_exiled] = bool
@@ -1034,7 +1037,7 @@ alias[trigger:num_of_unit_type] = {
 }
 
 ###Checks if a target in in a list
-alias[trigger:is_in_list] = replace_me
+alias[trigger:is_in_list] = value[variable_list]
 
 ## scopes = country
 alias[trigger:num_of_civic_ideas] == int_value_field
@@ -1049,7 +1052,10 @@ alias[trigger:num_of_religious_ideas] == int_value_field
 alias[trigger:debug_log] = bool
 
 ### a negated AND trigger
-alias[trigger:nand] = replace_me
+alias[trigger:nand] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
 
 ### Checks
 alias[trigger:religious_tech] == int_value_field
@@ -1088,14 +1094,17 @@ alias[trigger:oratory_tech] == int_value_field
 alias[trigger:religious_party_conviction] == int_value_field
 
 ### Do the province has the model shown. Written as is_model_shown=name_of_model
-alias[trigger:is_model_shown] = replace_me
+alias[trigger:is_model_shown] = <great_work_module>
 
 ### does the state have the required loyalty (from state level)?
 ## scopes = state
 alias[trigger:state_level_loyalty] == int_value_field
 
 ### negates content of trigger
-alias[trigger:not] = replace_me
+alias[trigger:not] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
 
 ### Checks population of a specified type
 alias[trigger:num_of_citizen] == int_value_field
@@ -1159,7 +1168,10 @@ alias[trigger:military_tech] == int_value_field
 alias[trigger:citizen_happiness] == int_value_field
 
 ### a negated OR trigger
-alias[trigger:nor] = replace_me
+alias[trigger:nor] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
 
 ### AI regression test: % of countries at peace with healthy economy
 alias[trigger:healthy_economy_percentage] == int_value_field
@@ -1223,7 +1235,10 @@ alias[trigger:has_high_economic_policy] = <economic_policy>
 alias[trigger:pop_can_move] = bool
 
 ### all inside trigger must be true
-alias[trigger:and] = replace_me
+alias[trigger:and] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
 
 ### How many percent morale does this subunit have???
 alias[trigger:subunit_morale_percentage] == int_value_field
@@ -1289,7 +1304,10 @@ alias[trigger:num_of_slaves] == int_value_field
 alias[trigger:num_active_relations] == int_value_field
 
 ### at least one entry inside trigger must be true
-alias[trigger:or] = replace_me
+alias[trigger:or] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
 
 ### AI distress level (discrete)
 alias[trigger:distress_level] == int_value_field
@@ -1343,11 +1361,17 @@ alias[trigger:state_monthly_food_income] == float
 
 ### is the state's trade good exports greater or equal than the value?
 ## scopes = state
-alias[trigger:trade_good_exports] = replace_me
+alias[trigger:trade_good_exports] = {
+    target = <trade_goods>
+    value == int_value_field
+}
 
 ### is the state's trade good imports greater or equal than the value?
 ## scopes = state
-alias[trigger:trade_good_imports] = replace_me
+alias[trigger:trade_good_imports] = {
+    target = <trade_goods>
+    value == int_value_field
+}
 
 ### How many percent of food does this unit have???
 alias[trigger:food_percentage] == float
@@ -1449,10 +1473,16 @@ alias[trigger:can_activate] = scope[deity]
 alias[trigger:can_change_idea] = <idea>
 
 ### is the country's trade good exports greater or equal than the value? country_trade_good_exports = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
-alias[trigger:country_trade_good_exports] = replace_me
+alias[trigger:country_trade_good_exports] = {
+    target = <trade_goods>
+    value == int_value_field
+}
 
 ### is the country's trade good imports greater or equal than the value? country_trade_good_imports = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
-alias[trigger:country_trade_good_imports] = replace_me
+alias[trigger:country_trade_good_imports] = {
+    target = <trade_goods>
+    value == int_value_field
+}
 
 ### Checks
 alias[trigger:democratic_party_support] == float
@@ -1602,7 +1632,10 @@ alias[trigger:is_war_leader] = scope[country]
 alias[trigger:is_war_over] = bool
 
 ### is the target country's war score against the opposing war leader COMPARATOR VALUE? war_score = { target = X [*value >/</>=/<= Y* or *value = { min max }*  }
-alias[trigger:war_score] = replace_me
+alias[trigger:war_score] = {
+    target = scope[country]
+    value == int_value_field
+}
 
 ### Does this deity have this religion?
 alias[trigger:deity_religion] = <religion>
@@ -1611,28 +1644,28 @@ alias[trigger:deity_religion] = <religion>
 alias[trigger:deity_religion] = scope[religion]
 
 ### Does this deity have a this active modifier?
-alias[trigger:has_active_modifier] = replace_me_base_game_modifers
+alias[trigger:has_active_modifier] = enum[modifiers]
 
 ### does this deity have a holy site??
 alias[trigger:has_holy_site] = bool
 
 ### Does this deity have this passive modifier?
-alias[trigger:has_passive_modifier] = replace_me_base_game_modifers
+alias[trigger:has_passive_modifier] = enum[modifiers]
 
 ### Can this province build a port
 alias[trigger:can_have_port] = bool
 
 ### check if a Unit can use a unit ability in province (sent to ability's scope:province)
-alias[trigger:can_use_unit_ability] = replace_me
+alias[trigger:can_use_unit_ability] = <unit_ability>
 
 ### does the province have the required Population Capacity?
 alias[trigger:distance_to_migration_target] == float
 
 ### Is the great work locator in the province free. Written as great_work_locator_is_free = primary_great_work
-alias[trigger:great_work_locator_is_free] = replace_me
+alias[trigger:great_work_locator_is_free] = scalar
 
 ### Do the province has the ancient wonder. Written as has_ancient_wonder = key_of_ancient_wonder
-alias[trigger:has_ancient_wonder] = replace_me
+alias[trigger:has_ancient_wonder] = enum[great_work_keys]
 
 ### has great work
 alias[trigger:has_great_work] = bool
@@ -1778,8 +1811,20 @@ alias[trigger:is_monotheist_religion] = bool
 ### Checks the size of a list list_size = { name = X value >= Y } Where X is the name of the list Where Y is a script value
 alias[trigger:list_size] == float
 
+###Checks the size of a list list_size = { name = X value >= Y }
+alias[trigger:list_size] = {
+    name = value[variable_list]
+    value == value_field
+}
+
 ### The percentage of pops in country matching this religion
 alias[trigger:religion_pops_in_country] == float
+
+###The percentage of pops in country matching this religion
+alias[trigger:religion_pops_in_country] = {
+    target = <religion>
+    value == value_field
+}
 
 ### Does this country culture have this poptype right
 alias[trigger:is_pop_type_right] = <pop_type>

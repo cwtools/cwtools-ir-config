@@ -9,8 +9,12 @@ event_picture = {
     theme = <event_theme>
 
     # Subtypes wouldn't work well so I guess just doc it up
-    ## cardinality = 1..inf
+    ## cardinality = 0..inf
     picture = filepath
+
+    # Theme-only pictures use an empty string.
+    ## cardinality = 0..inf
+    picture = ""
 
     ## cardinality = 1..inf
     picture = {

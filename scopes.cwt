@@ -1,5 +1,39 @@
 #Scopes and Logical Operators
 
+# Full scope list, from the Supported Scopes/Targets lines of triggers.log and effects.log.
+# This replaces CWTools' builtin fallback list, which is missing deity, great_work, legion,
+# siege, treasure, war and country_culture.
+scopes = {
+    Value = { aliases = { value } }
+    Bool = { aliases = { bool } }
+    Flag = { aliases = { flag } }
+    Color = { aliases = { color } }
+    Country = { aliases = { country } }
+    Character = { aliases = { character } }
+    Province = { aliases = { province } }
+    Combat = { aliases = { combat } }
+    Unit = { aliases = { unit } }
+    Subunit = { aliases = { subunit } }
+    Pop = { aliases = { pop poptype } }
+    Family = { aliases = { family } }
+    Party = { aliases = { party } }
+    Religion = { aliases = { religion } }
+    Culture = { aliases = { culture } }
+    CultureGroup = { aliases = { culture_group "culture group" } }
+    CountryCulture = { aliases = { country_culture "country culture" } }
+    Job = { aliases = { job } }
+    Area = { aliases = { area } }
+    State = { aliases = { state } }
+    Governorship = { aliases = { governorship } }
+    Region = { aliases = { region } }
+    Deity = { aliases = { deity } }
+    GreatWork = { aliases = { great_work } }
+    Legion = { aliases = { legion } }
+    Siege = { aliases = { siege } }
+    Treasure = { aliases = { treasure } }
+    War = { aliases = { war } }
+}
+
 #CWTools magic scope
 alias[trigger:scope_field] = { alias_name[trigger] = alias_match_left[trigger] }
 alias[effect:scope_field] = { alias_name[effect] = alias_match_left[effect] }

@@ -112,6 +112,20 @@ enums = {
         }
     }
 
+    ## Great work keys from the great works database in setup/main (used by has_ancient_wonder).
+    complex_enum[great_work_keys] = {
+        path = "game/setup/main"
+        name = {
+            great_work_manager = {
+                great_works_database = {
+                    scalar = {
+                        key = enum_name
+                    }
+                }
+            }
+        }
+    }
+
     ## Treasure keys from the treasure database in setup/main.
     complex_enum[treasure_keys] = {
         path = "game/setup/main"
@@ -127,7 +141,7 @@ enums = {
     }
 
     ## Character IDs from setup/characters files. Format: "TAG" = { <id> = { ... } }
-    complex_enum[character_ids] = {
+    complex_enum[character_setup_ids] = {
         path = "game/setup/characters"
         name = {
             scalar = {

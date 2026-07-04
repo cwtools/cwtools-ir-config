@@ -1,6 +1,7 @@
 types = {
     type[history_setup_validation] = {
         path = "game/setup/main"
+        type_per_file = yes
     }
 }
 
@@ -15,12 +16,17 @@ history_setup_validation = {
                 icon = icon[gfx/interface/icons/treasures]
 
                 ## cardinality = 0..1
+                dlc = scalar
+
+                ## cardinality = 0..1
+                ## replace_scope = { this = province root = province }
                 state_modifier = {
                     ## cardinality = 0..inf
                     alias_name[modifier] = alias_match_left[modifier]
                 }
 
                 ## cardinality = 0..1
+                ## replace_scope = { this = country root = country }
                 country_modifier = {
                     ## cardinality = 0..inf
                     alias_name[modifier] = alias_match_left[modifier]
@@ -37,6 +43,14 @@ history_setup_validation = {
             int = {
                 key = scalar
                 deity = <deity>
+
+                ## cardinality = 0..1
+                ### Character id of the deified character.
+                deify_ruler = int
+                ## cardinality = 0..1
+                deify_ruler_permanent = bool
+                ## cardinality = 0..1
+                is_universal_deity = bool
             }
         }
     }
@@ -154,6 +168,13 @@ history_setup_validation = {
 
             ## cardinality = 0..1
             great_work = int
+
+            ## cardinality = 0..inf
+            modifier = {
+                modifier = <modifier_container>
+                ## cardinality = 0..1
+                always = bool
+            }
 
             ## cardinality = 0..inf
             <building> = int
