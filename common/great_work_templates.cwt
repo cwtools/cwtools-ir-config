@@ -1,0 +1,41 @@
+types = {
+    type[great_work_template] = {
+        path = "game/common/great_work_templates"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+great_work_template = {
+    great_work_category = <great_work_category>
+
+    ## cardinality = 0..1
+    icon = scalar
+
+    ## cardinality = 0..1
+    ### If no, the template cannot be built by players (used for the ancient wonders).
+    can_build = bool
+
+    ## cardinality = 0..1
+    localization_key = localisation
+
+    great_work_components = {
+        ## cardinality = 1..inf
+        {
+            great_work_module = <great_work_module>
+            ## cardinality = 0..1
+            great_work_material = <great_work_material>
+        }
+    }
+
+    ## cardinality = 0..1
+    great_work_effect_selections = {
+        ## cardinality = 1..inf
+        {
+            great_work_effect = <great_work_effect>
+            great_work_effect_tier = <great_work_effect_tier>
+        }
+    }
+}

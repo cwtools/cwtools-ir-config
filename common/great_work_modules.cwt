@@ -1,0 +1,77 @@
+types = {
+    type[great_work_module] = {
+        path = "game/common/great_work_modules"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+great_work_module = {
+    ## cardinality = 0..1
+    icon = scalar
+
+    entity_name = {
+        ## cardinality = 1..inf
+        ### Entity names from gfx asset files.
+        scalar
+    }
+
+    great_work_category = <great_work_category>
+    great_work_category_slot = int
+
+    ## cardinality = 0..1
+    great_work_building_type = enum[great_work_building_types]
+
+    ## cardinality = 0..1
+    great_work_attachment_data = {
+        ## cardinality = 0..1
+        min_distance = float
+        locator_min = scalar
+        locator_max = scalar
+    }
+
+    ## cardinality = 0..1
+    great_work_attachments = {
+        ## cardinality = 1..inf
+        {
+            function = enum[great_work_attachment_functions]
+            data = {
+                ## cardinality = 1..inf
+                {
+                    ## cardinality = 0..1
+                    locator = scalar
+                    ## cardinality = 0..1
+                    locator_min = scalar
+                    ## cardinality = 0..1
+                    locator_max = scalar
+                    ## cardinality = 0..1
+                    include_min = bool
+                    ## cardinality = 0..1
+                    include_max = bool
+                    ## cardinality = 0..1
+                    attach_multiple_type = enum[great_work_attach_multiple_types]
+                }
+            }
+        }
+    }
+}
+
+enums = {
+    enum[great_work_attachment_functions] = {
+        great_work_function_attach_one_and_scale
+        great_work_function_attach_multiple
+    }
+
+    enum[great_work_attach_multiple_types] = {
+        attach_multiple_line
+        attach_multiple_round
+    }
+
+    enum[great_work_building_types] = {
+        great_work_building_type_rectangular
+        great_work_building_type_round
+        great_work_building_type_square
+    }
+}

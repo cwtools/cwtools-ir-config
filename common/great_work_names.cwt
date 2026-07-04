@@ -1,0 +1,29 @@
+types = {
+    type[great_work_name] = {
+        path = "game/common/great_work_names"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+great_work_name = {
+    ## cardinality = 0..1
+    ### Marks this name as a prefix adjective.
+    prefix = bool
+
+    ## cardinality = 0..1
+    category = {
+        ## cardinality = 1..inf
+        <great_work_category>
+    }
+
+    ## cardinality = 0..1
+    ### Conditions on the province the great work is located in.
+    ## replace_scope = { this = province root = province }
+    conditions = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}

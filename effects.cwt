@@ -76,6 +76,9 @@ alias[effect:death] = {
     ## cardinality = 0..1
     killer = scope[character]
     death_reason = <death_reason>
+    ## cardinality = 0..1
+    ### If yes, no death notification is shown.
+    silent = bool
 }
 
 ###gives (or takes) Tyranny to a country
@@ -300,11 +303,14 @@ alias[effect:add_military_power] = int_value_field
 alias[effect:declare_war_with_wargoal] = {
     war_goal = <war_goal>
 
+    # Only wargoals that target a province (e.g. take_province) use this.
+    ## cardinality = 0..1
     province = scope[province]
+    ## cardinality = 0..1
     province = enum[provinces]
 
     target = scope[country]
-    target = enum[country_tags]
+    target = ir_country_tag_field
 }
 
 ###Moves a family to another country
@@ -356,7 +362,24 @@ alias[effect:create_character] = {
     first_name = scalar
 
     ## cardinality = 0..1
+    name = scalar
+
+    ## cardinality = 0..1
+    family_name = scalar
+
+    ## cardinality = 0..1
     age = int
+
+    ## cardinality = 0..1
+    ### If yes, stats are not randomly generated.
+    no_stats = bool
+
+    ## cardinality = 0..1
+    ### If yes, traits are not randomly generated.
+    no_traits = bool
+
+    ## cardinality = 0..1
+    dna = scalar
 
     ## cardinality = 0..1
     female = bool
@@ -414,7 +437,11 @@ alias[effect:add_permanent_province_modifier] = {
     name = <modifier_container>
 
     ## cardinality = 0..1
-    duration = -1
+    duration = int_value_field
+
+    ## cardinality = 0..1
+    ### add stacks the modifier if already present.
+    mode = enum[modifier_stack_modes]
 }
 
 ## scopes = none
@@ -502,7 +529,13 @@ alias[effect:change_local_variable] = {
 alias[effect:add_province_modifier] = {
     name = <modifier_container>
 
+    ### Omitted duration means the modifier is permanent.
+    ## cardinality = 0..1
     duration = int_value_field
+
+    ## cardinality = 0..1
+    ### add stacks the modifier if already present.
+    mode = enum[modifier_stack_modes]
 }
 
 ###Removes a modifier from a State
@@ -555,9 +588,8 @@ alias[effect:add_loyalty] = <loyalty>
 ###adds or removes aggressive expansion for a country
 alias[effect:add_aggressive_expansion] = value_field
 
-# TODO: I guess I'll have to rename the validation part now that it turns out it's used :P
-###changes the flag of a country
-alias[effect:change_country_flag] = <coat_of_arms_validation>
+###changes the flag of a country to a coat of arms defined in common/coat_of_arms
+alias[effect:change_country_flag] = value[country_flag]
 
 # TODO: Confirm
 ###Character stops being a governor
@@ -637,6 +669,8 @@ alias[effect:add_subunit_morale] = int_value_field
 alias[effect:add_character_modifier] = {
     name = <modifier_container>
 
+    ### Omitted duration means the modifier is permanent.
+    ## cardinality = 0..1
     duration = int_value_field
 }
 
@@ -686,6 +720,9 @@ alias[effect:set_graphical_culture] = enum[graphical_cultures]
 alias[effect:create_unit] = {
     ## cardinality = 0..1
     name = scalar
+
+    ## cardinality = 0..inf
+    sub_unit = <unit_type>
 
     ## cardinality = 0..1
     ### Defaults to no.
@@ -740,7 +777,12 @@ alias[effect:add_subunit] = <unit_type>
 alias[effect:add_state_modifier] = {
     name = <modifier_container>
 
+    ## cardinality = 0..1
     duration = int_value_field
+
+    ## cardinality = 0..1
+    ### add stacks the modifier if already present.
+    mode = enum[modifier_stack_modes]
 }
 
 ###adds party support for a country
@@ -866,7 +908,11 @@ alias[effect:add_legitimacy] = int_value_field
 
 ###triggers an event or on_action trigger_event = { id = X days/months/years = Y } (for events) or trigger_event = { on_action = X days/months/years = Y } (for on_actions) Days/months/years are optional and equal to 0 if not specified. If specified, Y can be a value or an inclusive interval "{ A B }" from which the duration will be picked randomly.
 alias[effect:trigger_event] = {
+    ## cardinality = 0..1
     id = <event>
+
+    ## cardinality = 0..1
+    on_action = <on_action>
 
     ## cardinality = 0..1
     enum[duration] = int_value_field
@@ -908,7 +954,7 @@ alias[effect:remove_list_variable] = {
 }
 
 ###Saves the current scope as an arbitrarily-named temporary target to be referenced later in the same effect save_temporary_event_target_as = <string>
-alias[effect:save_temporary_scope_as] = value_set[temporary_scope]
+alias[effect:save_temporary_scope_as] = value_set[event_target]
 
 ###Removes a modifier from a Character
 alias[effect:remove_character_modifier] = <modifier_container>
@@ -924,13 +970,21 @@ alias[effect:add_to_global_variable_list] = {
 alias[effect:add_unit_modifier] = {
     name = <modifier_container>
 
+    ### Omitted duration means the modifier is permanent.
+    ## cardinality = 0..1
     duration = int_value_field
 }
 
 ###sets up a pop culture/religion/type possible to set.
 alias[effect:define_pop] = {
     type = <pop_type>
+    ## cardinality = 0..1
+    religion = <religion>
+    ## cardinality = 0..1
     religion = scope[religion]
+    ## cardinality = 0..1
+    culture = <culture>
+    ## cardinality = 0..1
     culture = scope[culture]
 }
 
@@ -967,6 +1021,9 @@ alias[effect:add_state_food] = int_value_field
 ### Changes the capital of a state
 alias[effect:set_state_capital] = enum[provinces]
 
+### Changes the capital of a state
+alias[effect:set_state_capital] = scope[province]
+
 ### gives (or takes) military experience to a country
 alias[effect:add_military_experience] = int_value_field
 
@@ -995,13 +1052,20 @@ alias[effect:remove_holding] = enum[provinces]
 alias[effect:remove_holding] = scope[province]
 
 ### adds/removed a breach to the current siege
-alias[effect:add_breach] = replace_me
+alias[effect:add_breach] = int_value_field
 
 ### adds one level of the specified Building
 alias[effect:show_model] = scope[province]
 
 ### Adds VFX effects on the map
 alias[effect:add_vfx] = scalar
+
+###Adds VFX effects on the map
+alias[effect:add_vfx] = {
+    name = scalar
+    ## cardinality = 0..1
+    duration = int_value_field
+}
 
 ### Adds Loyal Veterans to a character
 alias[effect:add_loyal_veterans] = int_value_field
@@ -1049,16 +1113,27 @@ alias[effect:set_party_leader] = scope[character]
 alias[effect:update_character] = scope[character]
 
 ### adds some history for this legion
-alias[effect:add_legion_history] = replace_me
+alias[effect:add_legion_history] = {
+    key = scalar
+    ## cardinality = 0..1
+    commander = scope[character]
+    ## cardinality = 0..1
+    province = scope[province]
+    ## cardinality = 0..1
+    date = date_field
+}
 
 ### add {unit, character} to specific legion. If unit:commander cannot be moved to legion, it will lose its job. If character cannot be moved to legion, the command is invalid.
-alias[effect:add_to_legion] = replace_me
+alias[effect:add_to_legion] = scope[legion]
 
 ### creates a legion for governorship without deducting price
-alias[effect:disband_legion] = replace_me
+alias[effect:disband_legion] = bool
 
 ### creates a legion for governorship without deducting price
-alias[effect:raise_legion] = replace_me
+alias[effect:raise_legion] = {
+    ## cardinality = 1..inf
+    alias_name[effect] = alias_match_left[effect]
+}
 
 ### destroys a treasure
 alias[effect:destroy_treasure] = bool
@@ -1120,6 +1195,9 @@ alias[effect:create_country_treasure] = {
 ### Integrates a country culture in a country
 alias[effect:integrate_country_culture] = <culture>
 
+###Integrates a country culture in a country
+alias[effect:integrate_country_culture] = scope[country_culture]
+
 ### forces a recalculation of succession
 alias[effect:recalc_succession] = bool
 
@@ -1157,10 +1235,10 @@ alias[effect:add_commander] = scope[character]
 alias[effect:add_distinction] = <legion_distinction>
 
 ### add {character} to this legion.
-alias[effect:add_legion_unit] = replace_me
+alias[effect:add_legion_unit] = scope[unit]
 
 ### moves legion, characters and units to a new country. Merging legions if necessary
-alias[effect:move_legion] = scope[region]
+alias[effect:move_legion] = scope[governorship]
 
 ### remove {character} from this legion.
 alias[effect:remove_commander] = scope[character]
@@ -1169,7 +1247,7 @@ alias[effect:remove_commander] = scope[character]
 alias[effect:remove_distinction] = <legion_distinction>
 
 ### remove {unit} from this legion.
-alias[effect:remove_legion_unit] = replace_me
+alias[effect:remove_legion_unit] = scope[unit]
 
 ### gives (or takes) Food to a unit
 alias[effect:add_food] = int_value_field
@@ -1202,14 +1280,24 @@ alias[effect:remove_province_deity] = bool
 alias[effect:set_province_deity] = <deity>
 
 ### adds a modifier to a country culture
-alias[effect:add_country_culture_modifier] = replace_me
+alias[effect:add_country_culture_modifier] = {
+    name = <modifier_container>
+    ## cardinality = 0..1
+    duration = int_value_field
+}
 
 ### Add integration progress to a country culture
 alias[effect:add_integration_progress] = int_value_field
 
 ### Removes a modifier from a country culture
-alias[effect:remove_country_culture_modifier] = replace_me
+alias[effect:remove_country_culture_modifier] = <modifier_container>
 
 ### Set civic rights to a country culture
-alias[effect:set_country_culture_right] = replace_me
+alias[effect:set_country_culture_right] = <pop_type>
 
+
+enums = {
+    enum[modifier_stack_modes] = {
+        add
+    }
+}

@@ -1,5 +1,11 @@
 alias[effect:<scripted_effect>] = yes
 
+# Parametrized invocation: my_effect = { PARAM = value }
+alias[effect:<scripted_effect>] = {
+    ## cardinality = 0..inf
+    scalar = scalar
+}
+
 types = {
     type[scripted_effect] = {
         path = "game/common/scripted_effects"

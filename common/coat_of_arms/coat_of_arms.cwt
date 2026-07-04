@@ -1,16 +1,36 @@
 single_alias[coat_of_arms_rhs] = {
-    # I think we need a "list format" for a bunch of stuff here, not just colours
+    ## cardinality = 0..1
     pattern = filepath[gfx/coat_of_arms/patterns/]
-    # pattern = list <pattern_texture_list>
 
-    # Using colour field assuming it supports adding the list thing
+    ## cardinality = 0..1
     color1 = enum[named_colors]
+    ## cardinality = 0..1
+    color1 = colour_field
+    ## cardinality = 0..1
+    ### Template list reference: color1 = list "some_list"
+    color1 = enum[coa_list_marker]
 
     ## cardinality = 0..1
     color2 = enum[named_colors]
+    ## cardinality = 0..1
+    color2 = colour_field
+    ## cardinality = 0..1
+    color2 = enum[coa_list_marker]
 
     ## cardinality = 0..1
     color3 = enum[named_colors]
+    ## cardinality = 0..1
+    color3 = colour_field
+    ## cardinality = 0..1
+    color3 = enum[coa_list_marker]
+
+    ## cardinality = 0..1
+    ### Template list reference: pattern = list "some_list"
+    pattern = enum[coa_list_marker]
+
+    # The list "name" syntax parses as a stray value after the list marker.
+    ## cardinality = 0..inf
+    scalar
 
     # TODO: Based on usage in vanilla; might want to dig a bit deeper
     ## cardinality = 0..1
@@ -18,20 +38,34 @@ single_alias[coat_of_arms_rhs] = {
         texture = filepath[gfx/coat_of_arms/textured_emblems/]
     }
 
-    # TODO: cardinality based on usage in vanilla, might be actually different but I doubt it; still, confirm; quite possibly based on pattern
-    ## cardinality = 0..2
+    ## cardinality = 0..inf
     colored_emblem = {
         ## cardinality = 0..1
         pattern = filepath[gfx/coat_of_arms/colored_emblems/]
-        # ## cardinality = 0..1
-        # pattern = list <colored_emblem_texture_list>
+        ## cardinality = 0..1
+        pattern = enum[coa_list_marker]
 
         ## cardinality = 0..1
         texture = filepath[gfx/coat_of_arms/colored_emblems/]
+        ## cardinality = 0..1
+        texture = enum[coa_list_marker]
 
+        ## cardinality = 0..1
         color1 = enum[named_colors]
         ## cardinality = 0..1
+        color1 = colour_field
+        ## cardinality = 0..1
+        color1 = enum[coa_list_marker]
+        ## cardinality = 0..1
         color2 = enum[named_colors]
+        ## cardinality = 0..1
+        color2 = colour_field
+        ## cardinality = 0..1
+        color2 = enum[coa_list_marker]
+
+        # The list "name" syntax parses as a stray value after the list marker.
+        ## cardinality = 0..inf
+        scalar
 
         # TODO: Figure out
         ## cardinality = 0..1
@@ -80,12 +114,19 @@ coat_of_arms_validation = {
     ## cardinality = 0..inf
     ir_country_tag_field = single_alias_right[coat_of_arms_rhs]
 
+    # Non-tag keys are arbitrary flag names, referenced by the change_country_flag effect.
     ## cardinality = 0..inf
-    value[country_flag] = single_alias_right[coat_of_arms_rhs]
+    value_set[country_flag] = single_alias_right[coat_of_arms_rhs]
 
     ## cardinality = 0..inf
     template = {
         ## cardinality = 1..inf
         <coat_of_arms_template> = single_alias_right[coat_of_arms_rhs]
+    }
+}
+enums = {
+    # The literal keyword used by the template list syntax, e.g. pattern = list "some_list"
+    enum[coa_list_marker] = {
+        list
     }
 }

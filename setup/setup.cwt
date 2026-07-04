@@ -1,6 +1,7 @@
 types = {
     type[history_setup_validation] = {
         path = "game/setup/main"
+        type_per_file = yes
     }
 }
 
@@ -15,16 +16,98 @@ history_setup_validation = {
                 icon = icon[gfx/interface/icons/treasures]
 
                 ## cardinality = 0..1
+                dlc = scalar
+
+                ## cardinality = 0..1
+                ## replace_scope = { this = province root = province }
                 state_modifier = {
                     ## cardinality = 0..inf
                     alias_name[modifier] = alias_match_left[modifier]
                 }
 
                 ## cardinality = 0..1
+                ## replace_scope = { this = country root = country }
                 country_modifier = {
                     ## cardinality = 0..inf
                     alias_name[modifier] = alias_match_left[modifier]
                 }
+            }
+        }
+    }
+
+    ## cardinality = 0..1
+    deity_manager = {
+        ## cardinality = 0..1
+        deities_database = {
+            ## cardinality = 0..inf
+            int = {
+                key = scalar
+                deity = <deity>
+
+                ## cardinality = 0..1
+                ### Character id of the deified character.
+                deify_ruler = int
+                ## cardinality = 0..1
+                deify_ruler_permanent = bool
+                ## cardinality = 0..1
+                is_universal_deity = bool
+            }
+        }
+    }
+
+    ## cardinality = 0..1
+    great_work_manager = {
+        ## cardinality = 0..1
+        great_works_database = {
+            ## cardinality = 0..inf
+            int = {
+                ## cardinality = 0..1
+                ancient_wonder = bool
+                key = scalar
+                ## cardinality = 0..1
+                dlc = scalar
+                great_work_category = <great_work_category>
+                great_work_state = enum[great_work_states]
+                ## cardinality = 0..1
+                finished_date = date_field
+
+                great_work_name = {
+                    name = scalar
+                }
+
+                great_work_components = {
+                    ## cardinality = 1..inf
+                    {
+                        great_work_module = <great_work_module>
+                        ## cardinality = 0..1
+                        great_work_material = <great_work_material>
+                    }
+                }
+
+                ## cardinality = 0..1
+                great_work_effect_selections = {
+                    ## cardinality = 0..inf
+                    {
+                        great_work_effect = <great_work_effect>
+                        great_work_effect_tier = <great_work_effect_tier>
+                    }
+                }
+            }
+        }
+    }
+
+    ## cardinality = 0..1
+    family = {
+        ## cardinality = 0..1
+        families = {
+            ## cardinality = 0..inf
+            int = {
+                key = scalar
+                owner = enum[country_tags]
+                culture = <culture>
+                prestige = float
+                ## cardinality = 0..1
+                color = int
             }
         }
     }
@@ -73,6 +156,29 @@ history_setup_validation = {
 
     ## cardinality = 0..1
     provinces = {
+        ## cardinality = 0..inf
+        enum[provinces] = {
+            ## cardinality = 0..1
+            treasure_slots = {
+                treasures = {
+                    ## cardinality = 1..inf
+                    int
+                }
+            }
+
+            ## cardinality = 0..1
+            great_work = int
+
+            ## cardinality = 0..inf
+            modifier = {
+                modifier = <modifier_container>
+                ## cardinality = 0..1
+                always = bool
+            }
+
+            ## cardinality = 0..inf
+            <building> = int
+        }
     }
 
     ## cardinality = 0..1
@@ -82,36 +188,86 @@ history_setup_validation = {
             BAR = {
                 government = <government>
             }
-    
+
             ## cardinality = 0..inf
             enum[country_tags] = {
                 government = <government>
-    
+
                 ## cardinality = 0..1
                 diplomatic_stance = <diplomatic_stance>
-    
+
                 primary_culture = <culture>
-    
+
                 religion = <religion>
-    
+
                 ## cardinality = 0..1
                 agressive_expansion = float
-    
+
                 # TODO: Maybe bother with doing this through a subtype, but that's very deeply nested so not sure if worth it
                 ## cardinality = 0..1
                 ### Required for tribal gov types.
                 centralization = int
-    
+
                 ## cardinality = 0..1
                 ### Probably only for monarchies.
                 succession = enum[succession_types]
-    
+
                 # TODO: Make sure those match
                 ## cardinality = 0..inf
                 <law_category> = <law>
-    
+
                 capital = enum[provinces]
-    
+
+                ## cardinality = 0..inf
+                ### References a family id from the families database.
+                family = int
+
+                ## cardinality = 0..1
+                technology = {
+                    ## cardinality = 0..1
+                    military_tech = { level = int progress = float }
+                    ## cardinality = 0..1
+                    civic_tech = { level = int progress = float }
+                    ## cardinality = 0..1
+                    oratory_tech = { level = int progress = float }
+                    ## cardinality = 0..1
+                    religious_tech = { level = int progress = float }
+                }
+
+                ## cardinality = 0..1
+                pantheon = {
+                    ## cardinality = 1..inf
+                    {
+                        ### References a deity id from the deities database.
+                        deity = int
+                    }
+                }
+
+                ## cardinality = 0..1
+                ### Treasure ids from the treasure database.
+                treasures = {
+                    ## cardinality = 1..inf
+                    int
+                }
+
+                ## cardinality = 0..1
+                is_antagonist = bool
+
+                ## cardinality = 0..1
+                poptype_rights = {
+                    ## cardinality = 1..inf
+                    {
+                        culture = <culture>
+                        type = <pop_type>
+                    }
+                }
+
+                ## cardinality = 0..1
+                historical_regnal_numbers = {
+                    ## cardinality = 1..inf
+                    scalar = int
+                }
+
                 ### One must match capital.
                 own_control_core = {
                     ## cardinality = 1..inf
@@ -129,5 +285,12 @@ history_setup_validation = {
             to = enum[provinces]
             trade_goods = <trade_goods>
         }
+    }
+}
+
+enums = {
+    enum[great_work_states] = {
+        great_work_state_completed
+        great_work_state_under_construction
     }
 }

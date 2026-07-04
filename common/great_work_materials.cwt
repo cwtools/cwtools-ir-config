@@ -12,5 +12,9 @@ great_work_material = {
     icon = icon[gfx/interface/icons/great_work/materials]
     great_work_prestige = int
     great_work_trade_good = <trade_goods>
-    great_work_uv_offset = { float float } #TODO not sure if that's right
+    ### Values use a trailing f, e.g. { 0.40f 0.0f }
+    great_work_uv_offset = {
+        ## cardinality = 2..2
+        scalar
+    }
 }

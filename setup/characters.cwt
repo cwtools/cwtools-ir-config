@@ -1,0 +1,79 @@
+types = {
+    type[character_setup_validation] = {
+        path = "game/setup/characters"
+        type_per_file = yes
+    }
+}
+
+character_setup_validation = {
+    # Each group is an arbitrarily named block holding the characters of one country.
+    ## cardinality = 1..inf
+    scalar = {
+        country = enum[country_tags]
+
+        ## cardinality = 1..inf
+        ### The character id. Must be unique across all files.
+        int = {
+            first_name = scalar
+
+            ## cardinality = 0..1
+            family_name = scalar
+
+            ## cardinality = 0..1
+            nickname = localisation
+
+            birth_date = date_field
+
+            ## cardinality = 0..1
+            death_date = date_field
+
+            culture = <culture>
+            religion = <religion>
+
+            ## cardinality = 0..1
+            ### Defaults to no.
+            female = bool
+
+            ## cardinality = 0..1
+            dna = scalar
+
+            ## cardinality = 0..inf
+            ### Family id from setup/main, or a link like c:TAG.fam:Key.
+            family = int
+            ## cardinality = 0..inf
+            family = scalar
+
+            ## cardinality = 0..1
+            ### Character id of the father.
+            father = int
+            ## cardinality = 0..1
+            father = scope[character]
+            ## cardinality = 0..1
+            ### Character id of the mother.
+            mother = int
+            ## cardinality = 0..1
+            mother = scope[character]
+
+            ## cardinality = 0..1
+            ### If yes, stats are not randomly generated.
+            no_stats = bool
+            ## cardinality = 0..1
+            add_martial = int
+            ## cardinality = 0..1
+            add_charisma = int
+            ## cardinality = 0..1
+            add_finesse = int
+            ## cardinality = 0..1
+            add_zeal = int
+
+            ## cardinality = 0..1
+            ### If yes, traits are not randomly generated.
+            no_traits = bool
+
+            # Anything else executed here is a regular character-scope effect (add_trait, add_gold, give_office, set_as_ruler...).
+            ## cardinality = 0..inf
+            ## replace_scope = { this = character root = character }
+            alias_name[effect] = alias_match_left[effect]
+        }
+    }
+}

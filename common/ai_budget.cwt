@@ -1,0 +1,84 @@
+types = {
+    type[ai_budget] = {
+        path = "game/common/ai_budget"
+    }
+}
+
+### AI scriptable budget logic. Categories can be atomic ones or composites from ai_budget_categories.
+## replace_scope = { this = country root = country }
+ai_budget = {
+    ## cardinality = 0..1
+    ### Decides if this budget applies to a country.
+    trigger = {
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+
+    # Category constraints for the default currency (gold).
+    ## cardinality = 0..inf
+    enum[ai_budget_atomic_categories] = single_alias_right[ai_budget_constraints]
+    ## cardinality = 0..inf
+    <ai_budget_category> = single_alias_right[ai_budget_constraints]
+
+    # Category constraints for a specific currency.
+    ## cardinality = 0..inf
+    enum[ai_budget_currencies] = {
+        ## cardinality = 0..inf
+        enum[ai_budget_atomic_categories] = single_alias_right[ai_budget_constraints]
+        ## cardinality = 0..inf
+        <ai_budget_category> = single_alias_right[ai_budget_constraints]
+    }
+}
+
+single_alias[ai_budget_constraints] = {
+    ## cardinality = 0..1
+    weight = value_field
+    ## cardinality = 0..1
+    weight = single_alias_right[ai_budget_value_block]
+
+    ## cardinality = 0..1
+    min = value_field
+    ## cardinality = 0..1
+    min = single_alias_right[ai_budget_value_block]
+
+    ## cardinality = 0..1
+    max = value_field
+    ## cardinality = 0..1
+    max = single_alias_right[ai_budget_value_block]
+}
+
+single_alias[ai_budget_value_block] = {
+    base = float
+
+    ## cardinality = 0..inf
+    modifier = {
+        ## cardinality = 0..1
+        trigger = {
+            ## cardinality = 0..inf
+            alias_name[trigger] = alias_match_left[trigger]
+        }
+
+        ## cardinality = 0..1
+        add = value_field
+        ## cardinality = 0..1
+        factor = value_field
+
+        # Conditions can also be written inline, without the trigger block.
+        ## cardinality = 0..inf
+        alias_name[trigger] = alias_match_left[trigger]
+    }
+}
+
+enums = {
+    enum[ai_budget_currencies] = {
+        gold
+        manpower
+        stability
+        tyranny
+        political_influence
+        military_experience
+        war_exhaustion
+        aggressive_expansion
+        innovations
+    }
+}

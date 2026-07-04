@@ -27,7 +27,7 @@ military_tradition = {
     ## cardinality = 0..1
     color = colour_field
     ## cardinality = 0..1
-    image = <icon>
+    image = icon[gfx/interface/icons/military_traditions]
 
     allow = {
         ## cardinality = 1..inf
@@ -57,7 +57,7 @@ military_tradition = {
             alias_name[effect] = alias_match_left[effect]
         }
 
-        icon = <icon>
+        icon = icon[gfx/interface/icons/military_traditions]
 
         ## cardinality = 0..1
         requires = {

@@ -1,0 +1,37 @@
+types = {
+    type[great_work_effect_tier] = {
+        path = "game/common/great_work_effect_tiers"
+
+        localisation = {
+            name = "$"
+        }
+    }
+}
+
+great_work_effect_tier = {
+    icon = scalar
+    level = int
+    tier_threshold = int
+    tier_cost_factor = float
+
+    great_work_effect_upgrade_costs = {
+        ## cardinality = 1..inf
+        {
+            level = int
+            price = single_alias_right[great_work_price]
+        }
+    }
+
+    great_work_effect_tier_addition_cost = {
+        level = int
+        price = single_alias_right[great_work_price]
+    }
+}
+
+single_alias[great_work_price] = {
+    ## cardinality = 0..inf
+    enum[prices_int] = int
+
+    ## cardinality = 0..inf
+    enum[prices_float] = float
+}

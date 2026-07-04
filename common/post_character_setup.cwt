@@ -1,30 +1,39 @@
 types = {
     type[post_character_setup_validation] = {
-        path = "game/common"
-        path_file = "post_character_setup.txt"
+        path = "game/setup/post_character"
         type_per_file = yes
     }
 }
 
 post_character_setup_validation = {
+    ## cardinality = 0..1
     country = {
         countries = {
             ## cardinality = 0..inf
             enum[country_tags] = {
-                ## cardinality = 1..inf
+                ## cardinality = 0..inf
+                ruler_term = {
+                    character = enum[character_setup_ids]
+                    start_date = date_field
+                    ## cardinality = 0..1
+                    government = <government>
+                }
+
+                ## cardinality = 0..inf
                 governorship = {
                     region = <region>
-                    governor = enum[character_ids]
+                    governor = enum[character_setup_ids]
                 }
             }
         }
     }
 
+    ## cardinality = 0..1
     jobs = {
         ## cardinality = 0..inf
         province_job = {
             who = enum[country_tags]
-            character = enum[character_ids]
+            character = enum[character_setup_ids]
             start_date = date_field
             governorship = <region>
         }

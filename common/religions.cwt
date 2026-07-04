@@ -12,6 +12,15 @@ types = {
 religion = {
     color = colour_field
 
+    ## cardinality = 0..1
+    sacrifice_icon = scalar
+
+    ## cardinality = 0..1
+    sacrifice_sound = scalar
+
+    ## cardinality = 0..1
+    can_deify_ruler = bool
+
     modifier = {
         alias_name[modifier] = alias_match_left[modifier]
     }

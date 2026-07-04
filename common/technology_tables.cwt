@@ -10,7 +10,8 @@ types = {
 
 ## replace_scope = { this = country }
 technology_table = {
-    icon = <icon>
+    ### A gui font icon name (see gui/shared/font_icons.gui), not a texture path.
+    icon = scalar
     skill = enum[character_skills]
 
     ## cardinality = 0..inf
